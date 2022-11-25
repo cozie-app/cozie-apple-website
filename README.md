@@ -1,46 +1,44 @@
-# Cozie Apple
-> Cozie an iOS app app for human comfort data collection 
+# Website
 
-Cozie allows building occupants to provide feedback in real time
+This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
-## Features
+### Installation
 
-- [x] **Free and Easy to Use** - Building occupants can complete a right-here-right now survey directly from their Apple watch. Without the need of having to open an app on their Phone or a survey link.
-- [x] **Open source** - Cozie is an Open Source project and together with [Cozie for Fitbit](https://cozie.app), allows researchers to focus on the data collection. We have taken care of all the programming for you!
-- [x] **Powered by Apple ResearchKit** - Cozie iOS app uses [Apple's Research Kit](https://www.researchandcare.org/researchkit/). A software framework for Apple apps that let researchers gather robust and meaningful data.
+Change directory to my-website
 
-## Documentation and tutorials
+```
+$ cd my-website
+$ yarn install
+```
 
-- [Documentation](https://www.cozie-apple.app/docs/)
-- [Overview](https://www.youtube.com/watch?v=5e4FwVydYRE&t=109s)
-- [Official website](https://www.cozie-apple.app/)
+### Local Development
 
-## Installation
+```
+$ yarn start
+```
 
-I have created a [video tutorial](https://www.youtube.com/watch?v=gSNPvoGc8Zw) so you can see all the steps required to clone Cozie on your computer.
+This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
-1. Clone the `cozie-app` repository on your computer, then `cd` into the repo. 
+### Build
 
-```git clone https://github.com/Cozie-IEQ/cozie-apple.git```
+```
+$ yarn build
+```
 
-2. Install the CocoaPods with the following command `pod install`. You need to have CocoaPods installed on your Mac. You can install CocoaPods using the following command `sudo gem install cocoapods`. If you are using a new Mac with M1 chip you will need to use the following command to install CocoaPods `sudo arch -x86_64 gem install ffi` followed by `arch -x86_64 pod install`.
-3. Open the `Cozie.xcworkspace` file with XCode.
-4. Add Watch to iPhone simulaor `Window>Devices and Simulators>Create a new simulator`
-5. Select Cozie as Target and press play button in XCode.
-6. Select CozieWatchkitApp and press play button.
-7. Prior completing a survey sync the watch and the phone.
-8. If something is not working uninstall the app from both simulators and install it again.
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-For more information please visit the [official documentation website](https://cozie-apple.app/docs/)
+### Deployment
 
-## Contribute
+On Linux (or using Git Bash on Windows) you can deploy using the following command:
+```
+$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+```
 
-We would love you for the contribution to our project, check the ``LICENSE`` file for more info.
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
-## Authors
+### Upgrade Docusaurus
 
-* [Federico Tartarini](https://github.com/FedericoTartarini) - Main developer
-* [Clayton Miller](https://www.linkedin.com/in/claytonmiller/) - Supervisor
-* [Stefano Schiavon](https://www.linkedin.com/in/stefanoschiavon/) - Supervisor
-
-See ``LICENSE`` file for more information.
+```
+yarn upgrade 
+yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
+```
