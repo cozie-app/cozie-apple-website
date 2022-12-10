@@ -31,16 +31,15 @@ const features = [
     ),
   },
   {
-    title: <>Powered by Apple ResearchKit</>,
+    title: <>Powered by Apple HealthKit</>,
     imageUrl: "img/undraw_drag_5i9w.svg",
     description: (
       <>
         Cozie iOS app uses{" "}
-        <a href={"https://www.researchandcare.org/researchkit/"}>
-          Apple's Research Kit
+        <a href={"https://developer.apple.com/documentation/healthkit"}>
+          Apple's HealthKit
         </a>
-        . A software framework for Apple apps that let researchers gather robust
-        and meaningful data.
+        . A software framework for Apple apps that lets researchers physological data, e.g., heart rate.
       </>
     ),
   },
