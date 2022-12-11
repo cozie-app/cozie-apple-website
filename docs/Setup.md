@@ -41,7 +41,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 4. Go to the watch app on your Iphone. Ensure that the Cozie application was successfully installed on your Apple Watch. 
 
-<img alt="watch app" src={useBaseUrl('img/watch app.png')}width="100" /> 
+<img alt="watch app" src={useBaseUrl('img/watch_app.png')}width="100" /> 
 
 <img alt="Install cozie on watch" src={useBaseUrl('img/Install cozie on watch.png')}width="424" />
 
