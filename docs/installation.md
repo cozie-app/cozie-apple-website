@@ -19,7 +19,7 @@ Please also send us your email address (Apple ID) that is linked to your Apple a
 
 This short guide will explain how to set up and install Cozie on your Apple.
 
-1. Install [Cozie from the Apple App Store](https://apps.apple.com/sg/app/cozie/id1625029501).). Please make sure that your phone is running at least iOS 9 and your Apple Watch is at least gen 3 or newer.
+1. Install [Cozie from the Apple App Store](https://apps.apple.com/sg/app/cozie/id1625029501). Please make sure that your phone is running at least iOS 9 and your Apple Watch is at least Series 3 or newer.
 
 <br/> 
 
