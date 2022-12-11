@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Cozie - An iOS application for IEQ and physiological data collection Blog</title>
+        <link>https://cozie-apple.app/blog</link>
+        <description>Cozie - An iOS application for IEQ and physiological data collection Blog</description>
+        <lastBuildDate>Tue, 19 Jul 2022 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Update - Latest version]]></title>
+            <link>https://cozie-apple.app/blog/updateLatest</link>
+            <guid>updateLatest</guid>
+            <pubDate>Tue, 19 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Apologise on the lack of updates for some time. The latest version of Cozie is now available for testing!]]></description>
+            <content:encoded><![CDATA[<p>Apologise on the lack of updates for some time. The latest version of Cozie is now available for testing! </p><p>Thank to all of you who help us testing the Alpha and Beta version.</p><p>Please use the link in the home page and click on the 'contact us' button if you are interested and would like to learn more on this project.
+You can also proceed to <a href="/docs/installation.md">Installation</a> and follow the steps to install the latest version.</p>]]></content:encoded>
+            <category>cozie-apple</category>
+            <category>cozie</category>
+        </item>
+        <item>
+            <title><![CDATA[Update - Beta testing]]></title>
+            <link>https://cozie-apple.app/blog/updateBeta</link>
+            <guid>updateBeta</guid>
+            <pubDate>Mon, 30 Sep 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[We have successfully tested the Alpha version of Cozie and everything is working fine. We are now started testing the Beta version on the Apple Watch 6 and we are planning to open-source the code very soon.]]></description>
+            <content:encoded><![CDATA[<p>We have successfully tested the Alpha version of Cozie and everything is working fine. We are now started testing the Beta version on the Apple Watch 6 and we are planning to open-source the code very soon.</p><p>Thank to all of you who help us testing the Alpha version.</p><p>Please use the link in the home page to contact me if you are interested and would like to learn more or to contribute to the project.</p>]]></content:encoded>
+            <category>cozie-apple</category>
+            <category>cozie</category>
+            <category>thermal-comfort</category>
+            <category>ResearchKit</category>
+        </item>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://cozie-apple.app/blog/welcome</link>
+            <guid>welcome</guid>
+            <pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to Cozie Apple. I am currently working on a Alpha version of Cozie]]></description>
+            <content:encoded><![CDATA[<p>Welcome to Cozie Apple. I am currently working on a Alpha version of Cozie
+Apple and I am planning to release it by the end of 2020.</p><p>Please contact me if you are interested and would like to learn more or to contribute to the project.</p><p>Cozie Apple is iOS app for human comfort data collection.</p><p>Cozie Apple complements the <a href="https://cozie.app" target="_blank" rel="noopener noreferrer">Cozie clock face for Fitbit</a>. With Apple
+dominating the global smartwatch market share we decided to develop Cozie Apple.</p><p>Cozie Apple will include the following functionalities, such as:</p><ul><li>The consent procedure will be enbedded in the app, using Apple Research Kit.</li><li>Push notifications.</li><li>Integration with all the Apple watch sensors.</li><li>Integration with Apple Health Kit.</li></ul>]]></content:encoded>
+            <category>cozie-apple</category>
+            <category>cozie</category>
+            <category>thermal-comfort</category>
+            <category>ResearchKit</category>
+        </item>
+    </channel>
+</rss>
