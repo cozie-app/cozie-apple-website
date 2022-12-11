@@ -71,7 +71,7 @@ module.exports = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/FedericoTartarini",
+              href: "https://github.com/cozie-app/cozie-apple",
             },
             {
               label: "Privacy Policy",
