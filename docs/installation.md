@@ -6,15 +6,6 @@ sidebar_label: Installation
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Sign up to become a tester
-
-Cozie Apple is still in Beta version and cannot be installed from the Apple Store yet. 
-However, please contact us if you would like to become a tester and try the app. Please email us at cozie.app@gmail.com.
-
-In the email please introduce yourself and let us know why you are interested in testing Cozie. 
-To test Cozie you need to be an Apple user, your phone should be running iOS 9 or newer and your Apple Watch should be gen 3 or newer. 
-Please also send us your email address (Apple ID) that is linked to your Apple account so we can add you to the Beta testers list.
-
 ## Instructions for testers
 
 This short guide will explain how to set up and install Cozie on your Apple.
