@@ -6,7 +6,7 @@ sidebar_label: Installation
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Instructions for testers
+## Instructions for Testers
 
 This short guide will explain how to set up and install Cozie on your Apple.
 
