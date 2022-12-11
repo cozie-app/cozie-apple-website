@@ -24,7 +24,7 @@ const features = [
     description: (
       <>
         Cozie is an Open Source project and together with{" "}
-        <a href={"https://cozie.app"}>Cozie Fitbit</a>, allows researchers to
+        <a href={"https://cozie-fitbit.app"}>Cozie Fitbit</a>, allows researchers to
         focus on the data collection. We have taken care of all the programming
         for you!
       </>
