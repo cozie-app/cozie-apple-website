@@ -19,17 +19,7 @@ Please also send us your email address (Apple ID) that is linked to your Apple a
 
 This short guide will explain how to set up and install Cozie on your Apple.
 
-1. First you need to have received a link from us which invite you to be a tester. Please contact us if you have not been invited yet. Please make sure that your phone is running at least iOS 9 and your Apple Watch is at least gen 3 or newer.
-
-2. Install [Test Flight](https://apps.apple.com/us/app/testflight/id899247664) on your phone.
-
-3. Accept the invitation link you received from us and install Cozie on your phone. Alternatively, enter the code you received via email in Test Flight.<br/> 
-
-<img alt="Testflight email invitation" src={useBaseUrl('img/Testflight email invitation.png')}width="250" />
-
-<img alt="Testflight accept" src={useBaseUrl('img/Testflight accept.png')}width="250" />
-
-<img alt="Testflight accept" src={useBaseUrl('img/Testflight accept.png')}width="250" /> <br/> 
+1. Install [Cozie from the Apple App Store](https://apps.apple.com/sg/app/cozie/id1625029501).). Please make sure that your phone is running at least iOS 9 and your Apple Watch is at least gen 3 or newer.
 
 <br/> 
 
