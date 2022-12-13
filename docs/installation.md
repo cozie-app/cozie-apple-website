@@ -16,19 +16,19 @@ This short guide will explain how to set up and install Cozie on your Apple.
 
 2. Open Cozie, allow notifications and health data on Cozie 
 
-<img alt="Notifcation accept" src={useBaseUrl('img/Notifcation accept.png')}width="250" />
+<img alt="Notifcation accept" src={useBaseUrl('img/installation_notifcation_accept.png')}width="33%" />
 
-<img alt="Health data accept" src={useBaseUrl('img/Health data accept.png')}width="250" /> <br/>  
+<img alt="Health data accept" src={useBaseUrl('img/installation_health_data_accept.png')}width="33%" /> <br/>  
 
 <br/>  
 
 3. In the Cozie app, you will see three tabs. The home page , my data and settings tab. 
 
-<img alt="Home page" src={useBaseUrl('img/Home page.png')}width="250" />
+<img alt="Home page" src={useBaseUrl('img/cozie_tab_home.png')}width="33%" />
 
-<img alt="My data page" src={useBaseUrl('img/My data page.png')}width="250" />
+<img alt="My data page" src={useBaseUrl('img/cozie_tab_data.png')}width="33%" />
 
-<img alt="Settings page" src={useBaseUrl('img/Settings page.png')}width="250" /> <br/> 
+<img alt="Settings page" src={useBaseUrl('img/cozie_tab_settings.png')}width="33%" /> <br/> 
 
 <br/> 
 
