@@ -140,25 +140,11 @@ function Home() {
             <div className={clsx("col", styles.profileHeroContainer)}>
               <h1 className="hero__title">{siteConfig.title}</h1>
               <p className="hero__subtitle">{siteConfig.tagline}</p>
-              
-              <Link
-                className={clsx(
-                  "button button--outline button--active button--secondary button--lg margin--sm"
-                )}
-                to={useBaseUrl("blog/")}
-              >
-              Latest version
-              
-              </Link>
-              <a
-                className={clsx(
-                  "button button--outline button--active button--secondary button--lg margin--sm"
-                )}
-                href={"mailto:cozie.app@gmail.com"}
-              >
-                Contact us
-           
+
+              <a href={"https://apps.apple.com/sg/app/cozie/id1625029501"}>
+                <img src="img/app_store_badge_black.svg" />
               </a>
+
             </div>
           </div>
         </div>
@@ -183,7 +169,7 @@ function Home() {
                 <img
                   alt="cozie main question"
                   className={styles.mainImage}
-                  src={"img/main face.png"}
+                  src={"img/cozie_clock_face_main.png"}
                 />
               </div>
               <div className={clsx("col col--9")}>
