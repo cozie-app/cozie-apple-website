@@ -28,10 +28,12 @@ To find out more about Cozie please watch the following video.
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/5e4FwVydYRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ## Research
+Please cite us as [Tartarini, F., Miller, C. and Schiavon, S., 2022. Cozie Apple: An iOS mobile and smartwatch application for environmental quality satisfaction and physiological data collection. arXiv preprint arXiv:2210.13977.](ttps://arxiv.org/abs/2210.13977).
 
 We have used Cozie successfully in the field for research which lead to several peer-reviewed publications:
 
 - **Cozie-Apple**
+    - [Cozie Apple: An iOS mobile and smartwatch application for environmental quality satisfaction and physiological data collection](https://arxiv.org/abs/2210.13977) (currently under review)
     - [Towards smartwatch-driven just-in-time adaptive interventions (JITAI) for building occupants](https://dl.acm.org/doi/10.1145/3563357.3566135)
 - **Cozie-Fitbit**
     - [Is your clock-face cozie? A smartwatch methodology for the in-situ collection of occupant comfort data](https://www.researchgate.net/publication/337376844_Is_your_clock-face_cozie_A_smartwatch_methodology_for_the_in-situ_collection_of_occupant_comfort_data)

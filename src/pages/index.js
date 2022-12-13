@@ -198,6 +198,14 @@ function Home() {
             </div>
           </section>
         )}
+
+        <hr />
+        <section className={styles.features}>
+          <div className="container">
+            Please cite us as:<br/>
+            <a href="https://arxiv.org/abs/2210.13977" > Tartarini, F., Miller, C. and Schiavon, S., 2022. Cozie Apple: An iOS mobile and smartwatch application for environmental quality satisfaction and physiological data collection. arXiv preprint arXiv:2210.13977.</a>
+          </div>
+        </section>
       </main>
     </Layout>
   );
