@@ -134,7 +134,7 @@ function Home() {
               <img
                 alt="cozie main question"
                 className={styles.mainImage}
-                src={useBaseUrl('img/main face.png')}  width="500"
+                src={useBaseUrl('img/cozie_clock_face_main.png')}  width="500"
               />
             </div>
             <div className={clsx("col", styles.profileHeroContainer)}>
