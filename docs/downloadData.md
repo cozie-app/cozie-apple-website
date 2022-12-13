@@ -10,8 +10,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 You can download the data you have collected using the Cozie Apple Watch survey using the following Python code.
 Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT` and `API_KEY`.
-Therefore, it is very important that you have successfully completed Step 5 in [Instructions for testers](installation.md).
-You can get these information by emailing us at cozie.app@gmail.com
+You can request an `API_KEY` by emailing us a request at cozie.app@gmail.com
 
 All the data you have queried are saved inside the Pandas dataframe called `df`.
 
