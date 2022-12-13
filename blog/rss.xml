@@ -4,18 +4,29 @@
         <title>Cozie - An iOS application for IEQ and physiological data collection Blog</title>
         <link>https://cozie-apple.app/blog</link>
         <description>Cozie - An iOS application for IEQ and physiological data collection Blog</description>
-        <lastBuildDate>Tue, 19 Jul 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 13 Dec 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Update - Cozie is now on the App Store]]></title>
+            <link>https://cozie-apple.app/blog/appStore</link>
+            <guid>appStore</guid>
+            <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Cozie is now available on the official Apple App Store. Thank you to all of you who help us test during the development]]></description>
+            <content:encoded><![CDATA[<p>Cozie is now available on the official <a href="https://apps.apple.com/sg/app/cozie/id1625029501" target="_blank" rel="noopener noreferrer">Apple App Store</a>. Thank you to all of you who help us test during the development</p><p>Until now, Cozie for Apple has been deployed four times in research experiments with up to 50 participants and counting. </p><p>We have updated the documentation for <a href="/docs/installation">installation</a>, <a href="/docs/setup">setup</a>, and <a href="/docs/downloadData">data retrieval</a>. We are still working on updating the documentation for <a href="/docs/gettingStarted">customization of Cozie</a>.</p>]]></content:encoded>
+            <category>cozie-apple</category>
+            <category>cozie</category>
+            <category>app store</category>
+        </item>
         <item>
             <title><![CDATA[Update - Latest version]]></title>
             <link>https://cozie-apple.app/blog/updateLatest</link>
             <guid>updateLatest</guid>
             <pubDate>Tue, 19 Jul 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Apologise on the lack of updates for some time. The latest version of Cozie is now available for testing!]]></description>
-            <content:encoded><![CDATA[<p>Apologise on the lack of updates for some time. The latest version of Cozie is now available for testing! </p><p>Thank to all of you who help us testing the Alpha and Beta version.</p><p>Please use the link in the home page and click on the 'contact us' button if you are interested and would like to learn more on this project.
-You can also proceed to <a href="/docs/installation.md">Installation</a> and follow the steps to install the latest version.</p>]]></content:encoded>
+            <description><![CDATA[Apologies on the lack of updates for some time. The latest version of Cozie is now available for testing!]]></description>
+            <content:encoded><![CDATA[<p>Apologies on the lack of updates for some time. The latest version of Cozie is now available for testing! </p><p>Thank to all of you who help us testing the Alpha and Beta version.</p><p>Please use the link in the home page and click on the 'contact us' button if you are interested and would like to learn more on this project.
+You can also proceed to <a href="/docs/installation">Installation</a> and follow the steps to install the latest version.</p>]]></content:encoded>
             <category>cozie-apple</category>
             <category>cozie</category>
         </item>

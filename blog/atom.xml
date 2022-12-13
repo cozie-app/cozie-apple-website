@@ -2,19 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cozie-apple.app/blog</id>
     <title>Cozie - An iOS application for IEQ and physiological data collection Blog</title>
-    <updated>2022-07-19T00:00:00.000Z</updated>
+    <updated>2022-12-13T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cozie-apple.app/blog"/>
     <subtitle>Cozie - An iOS application for IEQ and physiological data collection Blog</subtitle>
     <icon>https://cozie-apple.app/img/favicon.ico</icon>
     <entry>
+        <title type="html"><![CDATA[Update - Cozie is now on the App Store]]></title>
+        <id>appStore</id>
+        <link href="https://cozie-apple.app/blog/appStore"/>
+        <updated>2022-12-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Cozie is now available on the official Apple App Store. Thank you to all of you who help us test during the development]]></summary>
+        <content type="html"><![CDATA[<p>Cozie is now available on the official <a href="https://apps.apple.com/sg/app/cozie/id1625029501" target="_blank" rel="noopener noreferrer">Apple App Store</a>. Thank you to all of you who help us test during the development</p><p>Until now, Cozie for Apple has been deployed four times in research experiments with up to 50 participants and counting. </p><p>We have updated the documentation for <a href="/docs/installation">installation</a>, <a href="/docs/setup">setup</a>, and <a href="/docs/downloadData">data retrieval</a>. We are still working on updating the documentation for <a href="/docs/gettingStarted">customization of Cozie</a>.</p>]]></content>
+        <author>
+            <name>Mario Frei</name>
+            <uri>https://github.com/mariofrei</uri>
+        </author>
+        <category label="cozie-apple" term="cozie-apple"/>
+        <category label="cozie" term="cozie"/>
+        <category label="app store" term="app store"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Update - Latest version]]></title>
         <id>updateLatest</id>
         <link href="https://cozie-apple.app/blog/updateLatest"/>
         <updated>2022-07-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Apologise on the lack of updates for some time. The latest version of Cozie is now available for testing!]]></summary>
-        <content type="html"><![CDATA[<p>Apologise on the lack of updates for some time. The latest version of Cozie is now available for testing! </p><p>Thank to all of you who help us testing the Alpha and Beta version.</p><p>Please use the link in the home page and click on the 'contact us' button if you are interested and would like to learn more on this project.
-You can also proceed to <a href="/docs/installation.md">Installation</a> and follow the steps to install the latest version.</p>]]></content>
+        <summary type="html"><![CDATA[Apologies on the lack of updates for some time. The latest version of Cozie is now available for testing!]]></summary>
+        <content type="html"><![CDATA[<p>Apologies on the lack of updates for some time. The latest version of Cozie is now available for testing! </p><p>Thank to all of you who help us testing the Alpha and Beta version.</p><p>Please use the link in the home page and click on the 'contact us' button if you are interested and would like to learn more on this project.
+You can also proceed to <a href="/docs/installation">Installation</a> and follow the steps to install the latest version.</p>]]></content>
         <author>
             <name>Federico Tartarini</name>
             <uri>https://github.com/FedericoTartarini</uri>
