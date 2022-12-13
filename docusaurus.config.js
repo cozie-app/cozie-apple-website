@@ -46,7 +46,7 @@ module.exports = {
           ],
         },
         {
-          title: "Community",
+          title: "About us",
           items: [
             {
               label: "BUDS Lab",
@@ -57,8 +57,8 @@ module.exports = {
               href: "https://sinberbest.berkeley.edu",
             },
             {
-              label: "Twitter",
-              href: "https://twitter.com/FedericoTartar1",
+              label: "Contact us",
+              href: "mailto:cozie.app@gmail.com",
             }
           ],
         },
