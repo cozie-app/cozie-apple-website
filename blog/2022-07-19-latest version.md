@@ -8,7 +8,7 @@ author_image_url: https://federicotartarini.github.io/img/profile.jpg
 tags: [cozie-apple, cozie]
 ---
 
-Apologise on the lack of updates for some time. The latest version of Cozie is now available for testing! 
+Apologies on the lack of updates for some time. The latest version of Cozie is now available for testing! 
 
 Thank to all of you who help us testing the Alpha and Beta version.
 
