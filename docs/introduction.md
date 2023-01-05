@@ -47,6 +47,6 @@ While Cozie Apple was developed using iPhone 11 and Apple watch 6, it is compati
 
 ## License
 
-The Cozie is released under at GPLv3 License.
+The Cozie is released under at LGPL-3.0 license
 
 
