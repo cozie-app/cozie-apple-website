@@ -106,12 +106,12 @@ ax[1].set_xlabel("Time", fontsize=14)
 | Field name       | Type   | Watch survey name | Question | Response options |
 |------------------|--------|-------------------|----------|------------------|
 | `noise-nearby` | String | Noise and privacy | Noise distractions nearby? (without earphones) |"None", "A Little", "A lot" |
-| `noise-kind` | String | Noise and privacy |What kind of noise? | "Talking","Traffic","Weather","Appliances","Construction","Other"|
-| `earphones` | String | Noise and privacy | Wearing earphones? | "No earphones","Earphones","Noise cancelling" |
-| `thermal-preference` | String | Noise and privacy |Thermally, what do you prefer now? | "Cooler","No change","Warmer" |
-| `location` | String | Noise and privacy | Where are you? | "Indoor - Office","Indoor - Class","Indoor - Home","Indoor - Other","Outdoor","Transportation" |
-| `location-office` | String | Noise and privacy | What kind of office? | "Individual","Small shared","Large open plan","Cubicles","Conference room" |
-| `location-transport` | String | Noise and privacy | What kind of transport? | "Bus","Train","Car","Taxi","Other"|
-| `alone-group` | String | Noise and privacy | Alone or in a group? |  "Alone","Group","Online group"|
-| `activity-category` | String | Noise and privacy | Category of activity? | "Focus","Leisure","Other"|
-| `activity-category` | String | Noise and privacy | Category of activity? | "Socialize","Collaborate","Learn","Other"|
+| `noise-kind` | String | Noise and privacy |What kind of noise? | "Talking", "Traffic", "Weather","Appliances","Construction","Other"|
+| `earphones` | String | Noise and privacy | Wearing earphones? | "No earphones", "Earphones", "Noise cancelling" |
+| `thermal-preference` | String | Noise and privacy |Thermally, what do you prefer now? | "Cooler", "No change", "Warmer" |
+| `location` | String | Noise and privacy | Where are you? | "Indoor - Office", "Indoor - Class", "Indoor - Home", "Indoor - Other", "Outdoor","Transportation" |
+| `location-office` | String | Noise and privacy | What kind of office? | "Individual", "Small shared", "Large open plan", "Cubicles", "Conference room" |
+| `location-transport` | String | Noise and privacy | What kind of transport? | "Bus", "Train", "Car", "Taxi", "Other"|
+| `alone-group` | String | Noise and privacy | Alone or in a group? |  "Alone", "Group", "Online group"|
+| `activity-category` | String | Noise and privacy | Category of activity? | "Focus", "Leisure", "Other"|
+| `activity-category` | String | Noise and privacy | Category of activity? | "Socialize", "Collaborate", "Learn", "Other"|
