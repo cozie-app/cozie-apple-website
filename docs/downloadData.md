@@ -164,7 +164,7 @@ ax[1].set_xlabel("Time", fontsize=14)
 | `distracting` | Possibly distracting others? | String |   "Yes", "No" |
 | `distractions` | Distractions nearby? | String | "None", "A little", "A lot" |
 | `activity` | Category of activity? | String | "Focus", "Leisure" |
-| `"more_privacy` | Feeling like you need more privacy? | String |  "Yes", "No" |
+| `more_privacy` | Feeling like you need more privacy? | String |  "Yes", "No" |
 | `kind_distraction` | What kind of distraction | String | "Visual", "Audio", "Others" |
 | `why_more_privacy` | Why is more privacy needed? | String |  "See me", "Hear me", "Both" |
 | `what_privacy` | What is it? | String | "Thermal", "Scent", "Glare" |
