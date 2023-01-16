@@ -144,6 +144,8 @@ ax[1].set_xlabel("Time", fontsize=14)
 | `within_5m` | Currently, how many people within 5m? | String | "0 pax", "1-4 pax", "5+ pax" |
 
 ### Movement
+| Feature name | Question | Type | Response options |
+|--------------|----------|------|------------------|
 | `last_60min` | In the past 60min, I used | String | "Lift", "Stairs", "Both", "Neither" |
 | `lift_why` | Took lift, why? | String | "Convenient", "Less effort", "No stairs" |
 | `stairs_why` | Took stairs, why? | String | "Convenient", "No lift", "Save energy", "Healthy" |
@@ -153,8 +155,3 @@ ax[1].set_xlabel("Time", fontsize=14)
 | `workstation` | What kind of workstation? | String |  "Adjustable", "Standing", "Sitting" |
 | `adj_height` | Adjusted height today? | String |   "Up & down", "Down", "Up", "Never" |
 | `current` | Are you | String | "Standing", "Sitting" |
-
-
-
-
-
