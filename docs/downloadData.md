@@ -143,4 +143,18 @@ ax[1].set_xlabel("Time", fontsize=14)
 | `concerns` | Specifically, what concerns you? | String |  "Density", "Proximity", "Both" |
 | `within_5m` | Currently, how many people within 5m? | String | "0 pax", "1-4 pax", "5+ pax" |
 
+### Movement
+| `last_60min` | In the past 60min, I used | String | "Lift", "Stairs", "Both", "Neither" |
+| `lift_why` | Took lift, why? | String | "Convenient", "Less effort", "No stairs" |
+| `stairs_why` | Took stairs, why? | String | "Convenient", "No lift", "Save energy", "Healthy" |
+| `lift_con` | Lift convenient because? | String |  "Easiest", "Fastest", "Both" |
+| `stairs_con` | Stairs convenient because | String | "Easiest", "Fastest", Both" |
+| `working` | Are you working right now? | String | "Yes", "No" |
+| `workstation` | What kind of workstation? | String |  "Adjustable", "Standing", "Sitting" |
+| `adj_height` | Adjusted height today? | String |   "Up & down", "Down", "Up", "Never" |
+| `current` | Are you | String | "Standing", "Sitting" |
+
+
+
+
 
