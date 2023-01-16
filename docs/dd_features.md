@@ -1,5 +1,5 @@
 ---
-id: features
+id: dd_features
 title: Features
 sidebar_label: Features
 ---

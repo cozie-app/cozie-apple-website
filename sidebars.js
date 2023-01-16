@@ -6,7 +6,7 @@ module.exports = {
       "setup", {
         "Download Data": [
           "downloadData",
-          "features", 
+          "dd_features", 
           "dd_ws_thermal_short",
           "dd_ws_thermal_long",
           "dd_ws_noise_and_privacy",
