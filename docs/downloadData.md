@@ -135,3 +135,12 @@ ax[1].set_xlabel("Time", fontsize=14)
 | `activity-category` | Category of activity? | String | "Focus", "Leisure", "Other"|
 | `activity-category` | Category of activity? | String | "Socialize", "Collaborate", "Learn", "Other"|
 
+### Infection Risk
+| Feature name | Question | Type | Response options |
+|--------------|----------|------|------------------|
+| `surroundings_infection` | Do your surroundings increase infection risk? | String | "Not at all", "A Little", "A lot"|
+| `cause_risk` | What causes more risk? | String | "Ventilation", "People", "Surface" |
+| `concerns` | Specifically, what concerns you? | String |  "Density", "Proximity", "Both" |
+| `within_5m` | Currently, how many people within 5m? | String | "0 pax", "1-4 pax", "5+ pax" |
+
+
