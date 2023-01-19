@@ -17,7 +17,7 @@ Apple being one of the major players in wearable devices market and with the App
 
 Cozie for Apple is available on the App Store. Please follow our [installation guide](installation) to get started.
 
-## Taylor your survey
+## Tailor your survey
 
 Choose the questions to display to the users by changing the [source code](https://github.com/cozie-app/cozie-apple) which open-source.
 

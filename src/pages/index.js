@@ -173,7 +173,7 @@ function Home() {
                 />
               </div>
               <div className={clsx("col col--9")}>
-                <h1 className="hero__title">Taylor your survey</h1>
+                <h1 className="hero__title">Tailor your survey</h1>
                 <p className="hero__subtitle">
                   Choose which questions to show to the study participants
                 </p>
