@@ -7,7 +7,11 @@ sidebar_label: Watch Survey - Noise and Privacy
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+# Watch Survey Flow
+<img src={useBaseUrl('/img/ws_noise_and_privacy_apple.png')} />
 
+
+# Feature Descriptions
 | Feature name | Question | Type | Response options |
 |--------------|----------|------|------------------|
 | `noise-nearby` | Noise distractions nearby? (without earphones) | String | "None", "A Little", "A lot" |
