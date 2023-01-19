@@ -9,6 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Watch Survey Flow
 <img src={useBaseUrl('/img/ws_noise_and_privacy_apple.png')} />
+The image above is to show the flow of the questions. The questions will look slightly different on the Apple Watch. Not all questions are necessarily visible and scrolling might be required. Further, the font will be slightly different and depending on the Apple Watch model size the text might be rendered differently.
 
 
 # Feature Descriptions
