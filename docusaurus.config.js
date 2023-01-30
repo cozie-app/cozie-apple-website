@@ -27,8 +27,13 @@ module.exports = {
           position: "right",
         },
         {
-          href: "https://cozie.app",
+          href: "https://cozie-fitbit.app",
           label: "Cozie Fitbit",
+          position: "right",
+        },
+        {
+          href: "https://cozie.app",
+          label: "Cozie Research",
           position: "right",
         },
       ],
