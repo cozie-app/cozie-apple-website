@@ -35,6 +35,7 @@ data = json.loads(response.content)
 
 # Convert response in Pandas Dataframe
 df = pd.DataFrame.from_dict(data).T
+df = df.set_index('index')
 df.index = pd.to_datetime(df.index, unit='ms')
 df.index = df.index.tz_localize('UTC').tz_convert(YOUR_TIMEZONE)
 pd.options.display.max_columns = None
