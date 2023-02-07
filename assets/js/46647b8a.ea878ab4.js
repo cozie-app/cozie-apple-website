@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[8648],{7446:function(e){e.exports=JSON.parse('{"label":"app store","permalink":"/blog/tags/app-store","allTagsPath":"/blog/tags","count":2}')}}]);
