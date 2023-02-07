@@ -19,6 +19,7 @@ import requests
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
+import shutil
 
 # Settings
 YOUR_TIMEZONE = 'Asia/Singapore'
