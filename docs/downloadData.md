@@ -31,14 +31,21 @@ API_KEY = '' # reach out to cozie.app@gmail.com for an API_KEY
 payload = {'id_participant': ID_PARTICIPANT,'id_experiment': ID_EXPERIMENT, 'weeks': WEEKS}
 headers = {"Accept": "application/json", 'x-api-key': API_KEY}
 response = requests.get('https://m7cy76lxmi.execute-api.ap-southeast-1.amazonaws.com/default/cozie-apple-researcher-read-influx', params=payload, headers=headers)
-data = json.loads(response.content)
+url = response.content
 
-# Convert response in Pandas Dataframe
-df = pd.DataFrame.from_dict(data).T
+# Download zipped CSV file with Cozie data
+with requests.get(url, stream=True) as r:
+    with open('cozie.zip', 'wb') as f:
+        shutil.copyfileobj(r.raw, f)
+
+# Convert zipped CSV file with Cozie to dataframe
+with open('cozie.zip', 'rb') as f:
+      df = pd.read_csv(f, compression={'method': 'zip', 'archive_name': 'sample.csv'})
+
+df = df.drop(columns=['Unnamed: 0'])
+df['index'] = pd.to_datetime(df['index'])
 df = df.set_index('index')
-df.index = pd.to_datetime(df.index, unit='ms')
-df.index = df.index.tz_localize('UTC').tz_convert(YOUR_TIMEZONE)
-pd.options.display.max_columns = None
+df.index = df.index.tz_convert(YOUR_TIMEZONE)
 
 # Display dataframe
 df.head()
