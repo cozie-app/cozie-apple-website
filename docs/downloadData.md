@@ -12,7 +12,7 @@ You can download the data you have collected using the Cozie Apple Watch survey 
 Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT` and `API_KEY`.
 You can request an `API_KEY` by emailing us a request at cozie.app@gmail.com
 
-All the data you have queried are saved inside the Pandas dataframe called `df`.
+All the data you have queried are saved inside the Pandas dataframe called `df`. The example below is tested with Pandas version 1.3.5
 
 ```
 import requests
