@@ -43,7 +43,7 @@ We have used Cozie successfully in the field for research which lead to several 
 
 ## Compatibility
 
-While Cozie Apple was developed using iPhone 11 and Apple watch 6, it is compatible with iOS 9 or newer and with the Apple Watch gen 3 or newer.
+While Cozie Apple was developed using iPhone 11 and Apple Watch 6, it is compatible with iOS 14 or newer and with the Apple Watch Series 3 or newer.
 
 ## License
 
