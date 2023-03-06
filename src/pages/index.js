@@ -141,8 +141,15 @@ function Home() {
               <h1 className="hero__title">{siteConfig.title}</h1>
               <p className="hero__subtitle">{siteConfig.tagline}</p>
 
-              <a href={"https://apps.apple.com/sg/app/cozie/id1625029501"}>
-                <img src="img/app_store_badge_black.svg" />
+              <a className={clsx("button button--outline button--active button--secondary button--lg margin--sm")}
+                href={"https://github.com/cozie-app/cozie-apple/discussions/78"}>
+                Forum
+              </a>
+
+              <a className={clsx("button button--outline button--active button--lg margin--sm button-with-image")}
+                href={"https://apps.apple.com/sg/app/cozie/id1625029501"}>
+                <img className={clsx("button-image")} 
+                src="img/app_store_badge_black.svg" />
               </a>
 
             </div>
