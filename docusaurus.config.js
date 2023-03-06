@@ -64,6 +64,10 @@ module.exports = {
             {
               label: "Contact us",
               href: "mailto:cozie.app@gmail.com",
+            },
+            {
+              label: "Forum",
+              href: "https://github.com/cozie-app/cozie-apple/discussions/78",
             }
           ],
         },
