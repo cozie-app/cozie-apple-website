@@ -78,14 +78,14 @@ const contributors = [
     imageUrl: "img/clayton.png",
     role: <>Project coordinator and supervisor</>,
     profession: <>Assistant Professor at NUS</>,
-    link: "https://www.linkedin.com/in/stefanoschiavon/",
+    link: "https://www.linkedin.com/in/claytonmiller/",
   },
   {
     name: <>Stefano Schiavon</>,
     imageUrl: "img/stefano.jpeg",
     role: <>Project coordinator and supervisor</>,
     profession: <>Associate Professor at UC Berkeley</>,
-    link: "https://www.linkedin.com/in/claytonmiller/",
+    link: "https://www.linkedin.com/in/stefanoschiavon/",
   },
   {
     name: <>Mario Frei</>,
