@@ -13,6 +13,7 @@ module.exports = {
           "dd_ws_infection_risk",
           "dd_ws_movement",
           "dd_ws_privacy",
+          "dd_ws_interaction",
         ],
       },
     ],

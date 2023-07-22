@@ -3,11 +3,18 @@ id: dd_ws_privacy
 title: Watch Survey - Privacy
 sidebar_label: Watch Survey - Privacy
 ---
----
+
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+# Watch Survey Flow
+[![Image](/img/watch_survey_privacy.png)](/img/watch_survey_privacy.png)
 
+Click on the image to enlarge it.
+
+The image above shows the flow of the survey questions. The questions and responses will look slightly different on the Apple Watch depending on the Apple Watch model size the text might be rendered differently. Not all questions are necessarily visible and scrolling might be required.
+
+# Feature Descriptions
 
 | Feature name | Question | Type | Response options |
 |--------------|----------|------|------------------|

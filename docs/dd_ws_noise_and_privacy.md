@@ -3,13 +3,16 @@ id: dd_ws_noise_and_privacy
 title: Watch Survey - Noise and Privacy
 sidebar_label: Watch Survey - Noise and Privacy
 ---
----
+
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Watch Survey Flow
-<img src={useBaseUrl('/img/ws_noise_and_privacy_apple.png')} />
-The image above is to show the flow of the questions. The questions will look slightly different on the Apple Watch. Not all questions are necessarily visible and scrolling might be required. Further, the font will be slightly different and depending on the Apple Watch model size the text might be rendered differently.
+[![Image](/img/watch_survey_noise_and_privacy.png)](/img/watch_survey_noise_and_privacy.png)
+
+Click on the image to enlarge it.
+
+The image above shows the flow of the survey questions. The questions and responses will look slightly different on the Apple Watch depending on the Apple Watch model size the text might be rendered differently. Not all questions are necessarily visible and scrolling might be required.
 
 
 # Feature Descriptions

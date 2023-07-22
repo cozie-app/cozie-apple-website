@@ -3,11 +3,17 @@ id: dd_ws_movement
 title: Watch Survey - Movement
 sidebar_label: Watch Survey - Movement
 ---
----
+
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+# Watch Survey Flow
+[![Image](/img/watch_survey_movement.png)](/img/watch_survey_movement.png)
 
+Click on the image to enlarge it.
+
+
+# Feature Descriptions
 
 | Feature name | Question | Type | Response options |
 |--------------|----------|------|------------------|
