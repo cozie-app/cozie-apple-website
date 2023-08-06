@@ -47,7 +47,7 @@ All data that the Cozie app collects is listed below.
   - App name
   - OneSignal Player ID (3rd party push notification service)
 
-Users of the Cozie app will be asked to provide permission to share physological data and location data. Users can revoke the permission in the Settings app and/or in the Health app from Apple.
+Users of the Cozie app will be asked to provide permission to share physiological data and location data. Users can revoke the permission in the Settings app and/or in the Health app from Apple.
 
 All data transmitted by the Cozie app to the Database and requested by the Cozie app from the database is transmitted using HTTPS requests. All data transmitted by the Cozie app is stored in a password protected database. The data in the database is stored in clear text. All data transmitted to the database is tagged with the “experiment ID” and “participant ID”.
 

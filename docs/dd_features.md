@@ -14,7 +14,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `vote_count` | Integer | Increasing key for each micro-survey response. Resets when Cozie app is (re-)installed. |
 | `longitude` | Float | longitude in ° provided by GPS |
 | `latitude` | Float | Latitude in ° provided by GPS |
-| `body_mass` | Integer | Body mass in kg, provided by Apple Health Kit, only available if manually provided in the Apple Health App. Not used for Osk or Orenth |
+| `body_mass` | Integer | Body mass in kg, provided by Apple Health Kit, only available if manually provided in the Apple Health App. |
 | `heart_rate` | Integer | Heart rate in bpm, provided by Apple Health Kit, submitted as background task. Sampled every 5 min (sometimes less) |
 | `ts_heartRate` | Integer | Heart rate in bpm, provided by Apple Health Kit, submitted when iPhone Cozie app is opened. Sampled every 5 min (sometimes less) |
 | `ts_oxygenSaturation` | Integer | Blood oxygen saturation in % provided by Apple Health Kit |

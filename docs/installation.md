@@ -13,7 +13,7 @@ This short guide will explain how to set up and install Cozie on your iPhone and
 
 2. Open Cozie, allow notifications and health data on Cozie 
 
-    <img alt="Notifcation accept" src={useBaseUrl('img/installation_notifcation_accept.png')}width="30%" /> &nbsp;
+    <img alt="Notification accept" src={useBaseUrl('img/installation_notification_accept.png')}width="30%" /> &nbsp;
     <img alt="Health data accept" src={useBaseUrl('img/installation_health_data_accept.png')}width="30%" /> 
     <br/>  
 
