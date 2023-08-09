@@ -2,6 +2,7 @@
 id: gettingStarted
 title: Getting Started with Cozie
 sidebar_label: Getting Started
+sidebar_position: 1
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

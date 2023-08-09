@@ -1,5 +1,4 @@
 ---
-id: downloadData
 title: Download Data
 sidebar_label: Download Data
 ---

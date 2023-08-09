@@ -2,6 +2,7 @@
 id: introduction
 title: Introduction
 sidebar_label: Introduction
+sidebar_position: 1
 slug: /
 ---
 
@@ -15,7 +16,7 @@ Cozie for iOS builds on the knowledge that the [BUDS Lab](https://www.budslab.or
 
 Apple being one of the major players in wearable devices market and with the Apple Watch dominating the global smartwatch market share, we decided to develop Cozie for iOS. 
 
-Cozie for Apple is available on the App Store. Please follow our [installation guide](installation) to get started.
+Cozie for Apple is available on the App Store. Please follow our [installation guide](project_overview/installation) to get started.
 
 ## Tailor your survey
 

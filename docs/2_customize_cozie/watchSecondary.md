@@ -2,6 +2,7 @@
 id: watchSecondary
 title: Watch OS App Notification, Complication, HealthStore
 sidebar_label: Watch OS - Part 2
+sidebar_position: 14
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

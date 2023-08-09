@@ -2,6 +2,7 @@
 id: notifications
 title: Send Notifications with OneSignal
 sidebar_label: iOS - Push notifications
+sidebar_position: 11
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

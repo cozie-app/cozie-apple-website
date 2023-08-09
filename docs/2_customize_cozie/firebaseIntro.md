@@ -2,6 +2,7 @@
 id: firebaseIntro
 title: Firebase Introduction
 sidebar_label: iOS - Firebase Intro
+sidebar_position: 8
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

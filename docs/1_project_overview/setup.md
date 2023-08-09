@@ -2,6 +2,7 @@
 id: setup
 title: Setup
 sidebar_label: Setup
+sidebar_position: 3
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

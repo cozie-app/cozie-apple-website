@@ -2,6 +2,7 @@
 id: secureFirebase
 title: Secure Firebase Implementing Security Rules
 sidebar_label: iOS - Secure Firebase
+sidebar_position: 9
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

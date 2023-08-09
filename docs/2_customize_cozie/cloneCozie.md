@@ -2,6 +2,7 @@
 id: cloneCozie
 title: Clone Cozie on your machine
 sidebar_label: Clone repository
+sidebar_position: 2
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

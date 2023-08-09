@@ -2,6 +2,7 @@
 id: testFlight
 title: Test Flight
 sidebar_label: Test Flight
+sidebar_position: 16
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

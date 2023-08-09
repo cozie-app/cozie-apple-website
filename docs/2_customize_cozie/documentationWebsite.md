@@ -2,6 +2,7 @@
 id: documentationWebsite
 title: Edit the documentation website
 sidebar_label: Doc Website
+sidebar_position: 17
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

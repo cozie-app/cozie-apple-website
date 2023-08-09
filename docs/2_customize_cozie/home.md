@@ -2,6 +2,7 @@
 id: home
 title: Home View
 sidebar_label: iOS - Home View
+sidebar_position: 5
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

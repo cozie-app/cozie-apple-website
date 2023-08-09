@@ -2,6 +2,7 @@
 id: projectStructure
 title: Project Structure
 sidebar_label: Project Structure
+sidebar_position: 3
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

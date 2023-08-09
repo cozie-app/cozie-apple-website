@@ -2,6 +2,7 @@
 id: researchKit
 title: Research Kit Tasks and Functionalities
 sidebar_label: iOS - Research Kit
+sidebar_position: 10
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -2,6 +2,7 @@
 id: validateDistribute
 title: Validated and Distribute App on the App Store
 sidebar_label: Distribute App
+sidebar_position: 15
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

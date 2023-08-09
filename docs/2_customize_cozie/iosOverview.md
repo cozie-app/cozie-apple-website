@@ -2,6 +2,7 @@
 id: iosOverview
 title: iOS App Overview
 sidebar_label: iOS - Intro
+sidebar_position: 4
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
