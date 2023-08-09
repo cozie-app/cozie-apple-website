@@ -2,7 +2,7 @@
 slug: web_api_update
 title: Update - Web API
 author: Mario Frei
-author_title: Postodoc at BUDS Lab
+author_title: Postdoc at BUDS Lab
 author_url: https://github.com/mariofrei
 author_image_url: ../img/mario.jpeg
 tags: [cozie-apple, cozie, app store, web API]

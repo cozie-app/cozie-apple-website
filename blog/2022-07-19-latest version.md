@@ -2,7 +2,7 @@
 slug: updateLatest
 title: Update - Latest version
 author: Federico Tartarini
-author_title: Postodoc at SinBerBEST
+author_title: Postdoc at SinBerBEST
 author_url: https://github.com/FedericoTartarini
 author_image_url: https://federicotartarini.github.io/img/profile.jpg
 tags: [cozie-apple, cozie]
