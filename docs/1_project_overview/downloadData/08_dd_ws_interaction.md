@@ -2,6 +2,7 @@
 id: dd_ws_interaction
 title: Watch Survey - Interaction
 sidebar_label: Watch Survey - Interaction
+slug: /dd_ws_interaction
 ---
 
 

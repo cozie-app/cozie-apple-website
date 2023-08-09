@@ -2,6 +2,7 @@
 id: dd_ws_thermal_short
 title: Watch Survey - Thermal (short)
 sidebar_label: Watch Survey - Thermal (short)
+slug: /dd_ws_thermal_short
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

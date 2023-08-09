@@ -1,5 +1,5 @@
 ---
-id: watch_survey_icons
+id: c3_watch_survey_icons
 title: Watch Survey Icons
 sidebar_label: Watch Survey Icons
 sidebar_position: 4

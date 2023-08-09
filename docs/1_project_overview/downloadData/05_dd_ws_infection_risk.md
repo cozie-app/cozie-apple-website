@@ -2,6 +2,7 @@
 id: dd_ws_infection_risk
 title: Watch Survey - Infection Risk
 sidebar_label: Watch Survey - Infection Risk
+slug: /dd_ws_infection_risk
 ---
 
 

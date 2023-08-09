@@ -2,6 +2,7 @@
 id: dd_ws_privacy
 title: Watch Survey - Privacy
 sidebar_label: Watch Survey - Privacy
+slug: /dd_ws_privacy
 ---
 
 

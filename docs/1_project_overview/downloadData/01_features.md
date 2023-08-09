@@ -2,6 +2,7 @@
 id: dd_features
 title: Features
 sidebar_label: Features
+slug: /dd_features
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -1,5 +1,5 @@
 ---
-id: qr_code
+id: c3_qr_code
 title: Creating a QR Code for Onboarding
 sidebar_label: QR Code
 sidebar_position: 5

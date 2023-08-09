@@ -2,6 +2,7 @@
 id: dd_ws_noise_and_privacy
 title: Watch Survey - Noise and Privacy
 sidebar_label: Watch Survey - Noise and Privacy
+slug: /dd_ws_noise_and_privacy
 ---
 
 

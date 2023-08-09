@@ -1,5 +1,5 @@
 ---
-id: watch_survey
+id: c3_watch_survey
 title: How to Create a Custom Watch Survey
 sidebar_label: Watch Survey
 sidebar_position: 3
@@ -106,7 +106,7 @@ In Cozie v3, it is possible to create a custom watch survey. The entire watch su
 | `question_id`      | The question ID is used as column name in the database. It has to have the prefix `q_` | `q_preference_thermal` |
 | `response_options` | Array of response options objects | - |
 | `text`             | Response text that is show in the watch survey on the Apple Watch and text that is stored in the database. | `Cooler`  |
-| `icon`             | [Filename or SF symbol name](/c3_watch_survey_icons.md) of icon that is shown on the left hand side of the response option text | `snow_flake` |
+| `icon`             | [Filename or SF symbol name](c3_watch_survey_icons) of icon that is shown on the left hand side of the response option text | `snow_flake` |
 | `use_sf_symbols`   | Boolean that indicates whether the value specified in `icon` is a filename or an SF symbol name  | `false` |
 | `sf_symbols_color` | Background color that is shown for SF symbols | `#000000` |
 | `next_question_id` | Question ID of the next question shown if this response option is selected. If it watch survey should end after selecting the response option, then the `next question_id` is an empty string. | `q_location` |

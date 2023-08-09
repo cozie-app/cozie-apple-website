@@ -2,6 +2,7 @@
 id: dd_ws_movement
 title: Watch Survey - Movement
 sidebar_label: Watch Survey - Movement
+slug: /dd_ws_movement 
 ---
 
 

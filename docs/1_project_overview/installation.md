@@ -3,6 +3,7 @@ id: installation
 title: Installation
 sidebar_label: Installation
 sidebar_position: 2
+slug: /installation
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
