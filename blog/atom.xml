@@ -78,7 +78,7 @@ You can also proceed to <a href="/docs/installation">Installation</a> and follow
         <summary type="html"><![CDATA[Welcome to Cozie Apple. I am currently working on a Alpha version of Cozie]]></summary>
         <content type="html"><![CDATA[<p>Welcome to Cozie Apple. I am currently working on a Alpha version of Cozie
 Apple and I am planning to release it by the end of 2020.</p><p>Please contact me if you are interested and would like to learn more or to contribute to the project.</p><p>Cozie Apple is iOS app for human comfort data collection.</p><p>Cozie Apple complements the <a href="https://cozie.app" target="_blank" rel="noopener noreferrer">Cozie clock face for Fitbit</a>. With Apple
-dominating the global smartwatch market share we decided to develop Cozie Apple.</p><p>Cozie Apple will include the following functionalities, such as:</p><ul><li>The consent procedure will be enbedded in the app, using Apple Research Kit.</li><li>Push notifications.</li><li>Integration with all the Apple watch sensors.</li><li>Integration with Apple Health Kit.</li></ul>]]></content>
+dominating the global smartwatch market share we decided to develop Cozie Apple.</p><p>Cozie Apple will include the following functionalities, such as:</p><ul><li>The consent procedure will be embedded in the app, using Apple Research Kit.</li><li>Push notifications.</li><li>Integration with all the Apple watch sensors.</li><li>Integration with Apple Health Kit.</li></ul>]]></content>
         <author>
             <name>Federico Tartarini</name>
             <uri>https://github.com/FedericoTartarini</uri>
