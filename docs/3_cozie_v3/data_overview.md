@@ -39,7 +39,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `id_onesignal` | String | Logged with any other data point | - |Unique OneSignal player id provided by OneSignal | `id_one_signal` |
 | `id_participant` | String | Logged with any other data point | - | Unique identifier for each participant | `id_participant` |
 | `id_password` | String | Logged with any other data point | - | 'Backend tab': Password for participant. It should be unique for each participant. It prevents data corruption by participants changing their `id_participant` or `id_experiment` | not available |
-| `location_change` | Boolean | *** | ? | Indicates location change of more than 50m | not available |
+| `location_change` | Boolean | *** | - | Indicates location change of more than 50m | not available |
 |  |  |  |  |  |
 | `pss_reminder_days` | String | Logged when any sync button in the Cozie iPhone app  | -| Days on which the phone survey reminder is shown. | not available |
 | `pss_reminder_enabled` | Boolean | Logged when any sync button in the Cozie iPhone app | - | Indicates whether the a phone survey reminder is enabled. (enabled: `True`) | not available |
@@ -68,11 +68,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `transmit_trigger` | String | Logged with any other data point | - | Action that triggered the logging of the data corresponding to the same row | not available |
 | `time`/`index` | String | Logged with any other data point | - | Timestamp (UTC) of when micro survey was submitted, also serves as index (`timestamp_end`) | `timestamp_start` |
 |  |  |  |  |  |
-| `ts_HRV` | Integer | * | 15min | Heart Rate Variability in ms, provided by Apple HealthKit | not available |
-| `ts_altitude` | Float? | *** | - | Altitude in m | `` |
-| `ts_audio_exposure_`<br/>`environment` | Integer | * | 30min | Noise level in dB(A), provided by Apple HealthKit | `ts_hearingEnvironmental`<br/>`Exposure`, `sound_pressure` | 
-| `ts_audio_exposure_`<br/>`headphones` | Float? | * | 30min? |  | not available |
-| `ts_heart_rate` | Integer? | * | 3-6min (sometimes less) |Heart rate in bpm, provided by Apple HealthKit, submitted when iPhone Cozie app is opened. | `ts_heartRate`, `heart_rate` |
+| `ts_HRV` | Integer | * | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
+| `ts_altitude` | Integer | *** | - | Altitude in m | not available |
+| `ts_audio_exposure_`<br/>`environment` | Integer | * | 30min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | `ts_hearingEnvironmental`<br/>`Exposure`, `sound_pressure` | 
+| `ts_audio_exposure_`<br/>`headphones` | Float? | * | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
+| `ts_heart_rate` | Integer? | * | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate)| `ts_heartRate`, `heart_rate` |
 | `ts_altitude` | Float | *** | - | Latitude in ° | not available |
 | `ts_location_`<br/>`accuracy_horizontal` | Float? | *** | - | Horizontal positioning accuracy in m (see `ts_latitude`, `ts_longitude`) | not available |
 | `ts_location_`<br/>`accuracy_vertical` | Float? | *** | - | Vertical positioning accuracy in m (see `ts_altitude`) | not available |
@@ -80,23 +80,24 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ts_location_floor` | Float? | *** | - |  | not available |
 | `ts_location_`<br/>`source_device` | String? | *** | - |  | not available |
 | `ts_longitude` | Float | *** | - | Longitude in ° | not available |
-| `ts_oxygen_saturation` | Integer | ** | - | Blood oxygen saturation in % provided by Apple HealthKit | `ts_oxygenSaturation` |
-| `ts_resting_heart_rate` | Integer | * | 1d | Resting heart rate in bpm, provided by Apple HealthKit | `ts_restingHeartRate` |
+| `ts_oxygen_saturation` | Integer | ** | - | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | `ts_oxygenSaturation` |
+| `ts_resting_heart_rate` | Integer | * | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | `ts_restingHeartRate` |
 | `ts_sleep_REM` | Float? | * | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ts_sleep_awake` | Float? | * | - | Duration of the participant being awake in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ts_sleep_core` | Float? | * | - | Duration of light or intermediate sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ts_sleep_deep` | Float? | * | - | Duration of deep sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ts_sleep_in_bed` | Float? | * | - | Duration of the participant being in bed in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ts_stand_time` | Integer | * | - | Stand time in ?, provided by Apple HealthKit | `ts_standTime` |
-| `ts_step_count` | Integer | * | ? | Number of steps walked, provided by Apple HealthKit | `ts_stepCount` |
+| `ts_stand_time` | Integer | * | - | Stand time in min?, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3174858-applestandtime) | `ts_standTime` |
+| `ts_step_count` | Integer | * | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount) | `ts_stepCount` |
 | `ts_timestamp_location`| String | * | ? | Timestamp (UTC) of when the GPS was retrieved | `timestamp_location` | 
-| `ts_walking_distance` | Float | * | ? | Distance walked in m, provided by Apple HealthKit | `ts_walkingDistance` |
+| `ts_walking_distance` | Float | * | ? | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning) | `ts_walkingDistance` |
 | `ts_wrist_temperature` | Integer | * | 1d | Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
 |  |  |  |  |  |
-| `ws_HRV` | Float? | ** | 15min |  | not available |
-| `ws_altitude` | Float? | ** | - |  | not available |
-| `ws_audio_exposure_`<br/>`environment` | Float? | ** | 15min |  | not available |
-| `ws_audio_exposure_`<br/>`headphones` | Float? | ** | 15min |  | not available |
+| `ws_HRV` | Float? | ** | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
+| `ws_altitude` | Integer | ** | - | Altitude in m  | not available |
+| `ws_audio_exposure_`<br/>`environment` | Float? | ** | 15min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | not available |
+| `ws_audio_exposure_`<br/>`headphones` | Float? | ** | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
+| `ws_heart_rate`| Float? | ** | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate), submitted when iPhone Cozie app is opened. | not available |
 | `ws_latitude` | Float | ** | - | Latitude in ° provided by GPS | `latitude` |
 | `ws_location_`<br/>`accuracy_horizontal` | Float? | ** | - | Horizontal positioning accuracy in m (see `ws_latitude`, `ws_longitude`) | not available |
 | `ws_location_`<br/>`accuracy_vertical` | Float? | ** | - | Vertical positioning accuracy in m (see `ws_altitude`) | not available |
@@ -104,29 +105,29 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ws_location_floor` | Integer? | ** | - |  | not available |
 | `ws_location_`<br/>`source_device` | String | ** | - |  | not available |
 | `ws_longitude` | Float | ** | - | Longitude in ° provided by GPS | `longitude` |
-| `ws_oxygen_saturation` | Integer | ** | 15min | Blood oxygen saturation in % provided by Apple HealthKit | not available |
-| `ws_resting_heart_rate` | Float? | ** | 1d |  | not available |
+| `ws_oxygen_saturation` | Integer | ** | 15min | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | not available |
+| `ws_resting_heart_rate` | Float? | ** | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | not available |
 | `ws_sleep_REM` | Float? | ** | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ws_sleep_awake` | Float? | ** | - | Duration of the participant being awake in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ws_sleep_core` | Float? | ** | - | Duration of light or intermediate sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ws_sleep_deep` | Float? | ** | - | Duration of deep sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ws_sleep_in_bed` | Float? | ** | - | Duration of the participant being in bed in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ws_stand_time` | Float? | ** | ? |  | not available |
-| `ws_step_count` | Integer? | ** | ? |  | not available |
+| `ws_stand_time` | Float? | ** | ? | Stand time in min?, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3174858-applestandtime) | not available |
+| `ws_step_count` | Integer? | ** | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount) | not available |
 | `ws_survey_count` | Integer | ** | - | Increasing key for each micro-survey response. Resets when Cozie app is (re-)installed. | `vote_count` |
 | `ws_timestamp_location` | String | ** | - | Timestamp of the location measurement in UTC, Format: "%Y-%m-%dT%H:%M:%S.%fZ" | `timestamp_location` |
 | `ws_timestamp_start` | String | ** | - | Timestamp (UTC) of when micro survey was started |`timestamp_start` |
-| `ws_walking_distance` | Float | ** | - | Distance walked in m, provided by Apple HealthKit | not available |
+| `ws_walking_distance` | Float | ** | - | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning) | not available |
 | `ws_wrist_temperature` | Float | ** | 1d |  Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
 |  |  |  |  |  |
-| `wss_goal` | Integer? | Logged when any sync button in the Cozie iPhone app | - |  | not available |
+| `wss_goal` | Integer? | Logged when any sync button in the Cozie iPhone app | - |Watch survey response goal in the 'Settings' tab | not available |
 | `wss_participation_days`| String | Logged when any sync button in the Cozie iPhone app | - | Participation days set in the Cozie app by the participant | `settings_participation_days` |
 | `wss_participation_`<br/>`time_end` | String | Logged when any sync button in the Cozie iPhone app | - | Daily reminder end time set in the Cozie app by the participant | `settings_participation_`<br/>`time_end` |
 | `wss_participation_`<br/>`time_start` | String | Logged when any sync button in the Cozie iPhone app | - | Daily reminder start time set in the Cozie app by the participant | `settings_participation_`<br/>`time_start` |
-| `wss_reminder_enabled` | Boolean? | Logged when any sync button in the Cozie iPhone app | - |  | not available |
+| `wss_reminder_enabled` | Boolean? | Logged when any sync button in the Cozie iPhone app | - | Enable setting for the watch survey reminder in the 'Settings' tab | not available |
 | `wss_reminder_interval` | String | Logged when any sync button in the Cozie iPhone app | - | Reminder frequency set in the Cozie app by the participant | `settings_notification_frequency` |
-| `wss_time_out` | Integer | Logged when any sync button in the Cozie iPhone app | - |  | not available |
-| `wss_title` | String | Logged when any sync button in the Cozie iPhone app | - |  | not available |
+| `wss_time_out` | Integer | Not yet implemented | - | Minimal allowed duration between two watch survey responses | not available |
+| `wss_title` | String | Logged when any sync button in the Cozie iPhone app | - | Title of watch survey selected in the 'Settings' tab | not available |
 
 ## Difference between `ts_` and `ws_`
 \* The logging of time series data with the `ts_` prefix is triggered by several actions:
