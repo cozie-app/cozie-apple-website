@@ -80,7 +80,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ts_location_floor` | Float? | *** | - |  | not available |
 | `ts_location_`<br/>`source_device` | String? | *** | - |  | not available |
 | `ts_longitude` | Float | *** | - | Longitude in ° | not available |
-| `ts_oxygen_saturation` | Integer | ** | - | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | `ts_oxygenSaturation` |
+| `ts_oxygen_saturation` | Integer | ** | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | `ts_oxygenSaturation` |
 | `ts_resting_heart_rate` | Integer | * | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | `ts_restingHeartRate` |
 | `ts_sleep_REM` | Float? | * | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ts_sleep_awake` | Float? | * | - | Duration of the participant being awake in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
@@ -105,7 +105,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ws_location_floor` | Integer? | ** | - |  | not available |
 | `ws_location_`<br/>`source_device` | String | ** | - |  | not available |
 | `ws_longitude` | Float | ** | - | Longitude in ° provided by GPS | `longitude` |
-| `ws_oxygen_saturation` | Integer | ** | 15min | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | not available |
+| `ws_oxygen_saturation` | Integer | ** | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | not available |
 | `ws_resting_heart_rate` | Float? | ** | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | not available |
 | `ws_sleep_REM` | Float? | ** | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ws_sleep_awake` | Float? | ** | - | Duration of the participant being awake in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
@@ -148,7 +148,7 @@ For some of the field names there are two more accompanying fields for the times
 
 | Field name | Type | Sampling rate | Description/Question | Field name in Cozie v2|
 |--------------|------|---------------|----------------------|-------------------------|
-| `ts_HRV` | Integer | * |  | not available |
+| `ts_HRV` | Integer | * | 15min | not available |
 | `ts_HRV_lambda` | String | * | Timestamp of when the value of `ts_HRV` was logged in UTC, Format: "%Y-%m-%dT%H:%M:%S.%fZ" | not available |
 | `ts_HRV_trigger` | String | * | String of what triggered the logging action of `ts_HRV` | not available |
 
