@@ -59,7 +59,7 @@ If you want to focus on the analysis of the watch-based survey data use the code
 ```
 # Get only question flow responses
 df_questions = df[~df["ws_survey_count"].isna()]
-df_questions.style
+df_questions.head()
 ```
 
 ### Physiological data
@@ -78,7 +78,7 @@ ax[0].set_xlabel("Time", fontsize=14)
 # Noise
 df["ts_audio_exposure_environment"].plot(ax=ax[1], style='.')
 ax[1].set_title("Sound Pressure", fontsize=18)
-ax[1].set_ylabel("Sound Pressure [dB?]", fontsize=14)
+ax[1].set_ylabel("Sound Pressure [dBA]", fontsize=14)
 ax[1].set_xlabel("Time", fontsize=14)
 ```
 
