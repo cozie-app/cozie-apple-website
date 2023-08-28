@@ -21,13 +21,15 @@ In Cozie v3, it is possible to create a custom watch survey. The entire watch su
       "response_options": [{
           "text": "Cooler",
           "icon": "snowflake",
+          "icon_background_color": "#F1A62E",
           "use_sf_symbols": false,
           "sf_symbols_color": "#000000",
           "next_question_id": "q_location"
         },
         {
           "text": "No Change",
-          "icon": "smile",
+          "icon": "emoticon_happy",
+          "icon_background_color": "#F1A62E",
           "use_sf_symbols": false,
           "sf_symbols_color": "#000000",
           "next_question_id": "q_location"
@@ -35,6 +37,7 @@ In Cozie v3, it is possible to create a custom watch survey. The entire watch su
         {
           "text": "Warmer",
           "icon": "flame.fill",
+          "icon_background_color": "#F1A62E",
           "use_sf_symbols": true,
           "sf_symbols_color": "#FF0000",
           "next_question_id": "q_location"
@@ -46,7 +49,8 @@ In Cozie v3, it is possible to create a custom watch survey. The entire watch su
       "question_id": "q_location",
       "response_options": [{
           "text": "Outdoor",
-          "icon": "outdoor",
+          "icon": "person_walking",
+          "icon_background_color": "#F1A62E",
           "use_sf_symbols": false,
           "sf_symbols_color": "#000000",
           "next_question_id": "q_clothing"
@@ -54,6 +58,7 @@ In Cozie v3, it is possible to create a custom watch survey. The entire watch su
         {
           "text": "Indoor",
           "icon": "indoor",
+          "icon_background_color": "#F1A62E",
           "use_sf_symbols": false,
           "sf_symbols_color": "#000000",
           "next_question_id": "q_clothing"
@@ -66,6 +71,7 @@ In Cozie v3, it is possible to create a custom watch survey. The entire watch su
       "response_options": [{
           "text": "Very light",
           "icon": "clothes_shirt_sleeveless",
+          "icon_background_color": "#F1A62E",
           "use_sf_symbols": false,
           "sf_symbols_color": "#000000",
           "next_question_id": ""
@@ -73,20 +79,23 @@ In Cozie v3, it is possible to create a custom watch survey. The entire watch su
         {
           "text": "Light",
           "icon": "clothes_shirt_short",
+          "icon_background_color": "#F1A62E",
           "use_sf_symbols": false,
           "sf_symbols_color": "#000000",
           "next_question_id": ""
         },
         {
           "text": "Medium",
-          "icon": " clothes_shirt_pants",
+          "icon": "clothes_shirt_pants",
+          "icon_background_color": "#F1A62E",
           "use_sf_symbols": false,
           "sf_symbols_color": "#000000",
           "next_question_id": ""
         },
         {
           "text": "Heavy",
-          "icon": " clothes_pullover",
+          "icon": "clothes_pullover",
+          "icon_background_color": "#F1A62E",
           "use_sf_symbols": false,
           "sf_symbols_color": "#000000",
           "next_question_id": ""
