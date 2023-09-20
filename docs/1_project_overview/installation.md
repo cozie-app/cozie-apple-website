@@ -11,7 +11,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 This short guide will explain how to set up and install Cozie on your iPhone and Apple Watch.
 
-1. Install [Cozie from the Apple App Store](https://apps.apple.com/sg/app/cozie/id1625029501). Please make sure that your iPhone is running at least iOS 14 and your Apple Watch is at least Series 3 or newer.
+1. Install [Cozie from the Apple App Store](https://apps.apple.com/sg/app/cozie/id1625029501). Please make sure that your iPhone is running at least iOS 16, watchOS 9, and your Apple Watch is at least Series 3 or newer.
 
 2. Open Cozie, allow notifications and health data on Cozie 
 
