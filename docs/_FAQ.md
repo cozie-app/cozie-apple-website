@@ -55,4 +55,9 @@ Cozie Apple is only available for iOS devices.
 * I added a new data field to be stored in the InfluxDB. However, when I submit data it is not stored
  - The first time 
  
-
+* JSON error
+  - Make sure you have internet access.
+  - Make sure you have a good network connection. Flakey wifi can cause this error.
+  - Make sure the JSON file for the watch survey is reachable.
+  - Make sure the JSON file for the watch survey is valid JSON and correctly formatted.
+  - Firewalls can also cause this error, e.g., in mainland China.
