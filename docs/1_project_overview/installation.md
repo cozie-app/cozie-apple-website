@@ -21,9 +21,9 @@ This short guide will explain how to set up and install Cozie on your iPhone and
 
 3. In the Cozie app, you will see three tabs. The home page , my data and settings tab. 
 
-    <img alt="Home page" src={useBaseUrl('img/cozie_tab_home.png')}width="30%" /> &nbsp;
-    <img alt="My data page" src={useBaseUrl('img/cozie_tab_data.png')}width="30%" /> &nbsp;
-    <img alt="Settings page" src={useBaseUrl('img/cozie_settings_tab_reminders_disabled.png')}width="30%" />
+    <img alt="Data tab" src={useBaseUrl('img/cozie_tab_data.png')}width="30%" /> &nbsp;
+    <img alt="Settings tab" src={useBaseUrl('img/cozie_tab_settings.png')}width="30%" /> &nbsp;
+    <img alt="Backend tab" src={useBaseUrl('img/cozie_tab_backend.png')}width="30%" />
     <br/> 
 
 
