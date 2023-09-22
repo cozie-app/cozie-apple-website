@@ -8,8 +8,8 @@ sidebar_position: 4
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
-There is two ways to add icons to the watch survey response options: 
-1. Specify the filename of our built in icons without the file extension.
+There are two ways to add icons to the watch survey response options: 
+1. Specify the filename of our built-in icons without the file extension.
 2. Specify the name of an SF symbol.
 
 [SF symbols](https://developer.apple.com/sf-symbols/) are built into Apple platforms (macOS, iOS, and watchOS). You can download [SF symbols](https://developer.apple.com/sf-symbols/)  on macOS. Alternatively,  you can browse them online on [https://github.com/andrewtavis/sf-symbols-online](https://github.com/andrewtavis/sf-symbols-online)
