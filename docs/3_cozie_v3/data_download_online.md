@@ -58,7 +58,7 @@ If you want to focus on the analysis of the watch-based survey data use the code
 
 ```
 # Get only question flow responses
-df_questions = df[~df["ws_survey_count"].isna()]
+df_questions = df[df["ws_survey_count"].notna()]
 df_questions.head()
 ```
 
