@@ -89,7 +89,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ts_sleep_in_bed` | Float? | * | - | Duration of the participant being in bed in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ts_stand_time` | Integer | * | - | Stand time in min?, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3174858-applestandtime) | `ts_standTime` |
 | `ts_step_count` | Integer | * | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount) | `ts_stepCount` |
-| `ts_timestamp_location`| String | * | ? | Timestamp (UTC) of when the GPS was retrieved | not available | 
+| `ts_timestamp_location`| String | * | ? | Timestamp (UTC) of when the GPS was retrieved | `timestamp_location` | 
 | `ts_walking_distance` | Float | * | ? | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning) | `ts_walkingDistance` |
 | `ts_wrist_temperature` | Integer | * | 1d | Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
 |  |  |  |  |  |
