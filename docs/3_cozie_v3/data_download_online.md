@@ -26,7 +26,7 @@ import shutil
 YOUR_TIMEZONE = 'Asia/Singapore'
 ID_PARTICIPANT = 'ExternalUser'
 ID_EXPERIMENT = 'AppleStore'
-WEEKS = "2"  # Number of weeks from which the data is retrieved, starting from now
+WEEKS = "2"  # Number of weeks from which the data is retrieved, ending now, i.e., start date look up: now - WEEKS, end date look up: now
 API_KEY = '' # reach out to cozie.app@gmail.com for an API_KEY
 
 # Query data
