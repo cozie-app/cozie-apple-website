@@ -8,7 +8,7 @@ slug: /gettingStarted
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-This guide will explain you how to edit the source code of Cozie Apple. Please not that the following documentation applies to the [Cozie Release v1.0.0](https://github.com/cozie-app/cozie-apple/releases/tag/v1.0.0). In the meantime, we've released [Cozie Release v2.0.0](https://github.com/cozie-app/cozie-apple/releases/tag/v2.0.0) which is also availble on the [Apple App Store](https://apps.apple.com/sg/app/cozie/id1625029501).
+This guide will explain you how to edit the source code of Cozie Apple. Please not that the following documentation applies to the [Cozie Release v1.0.0](https://github.com/cozie-app/cozie-apple/releases/tag/v1.0.0). In the meantime, we've released [Cozie Release v2.0.0](https://github.com/cozie-app/cozie-apple/releases/tag/v2.0.0) which is also available on the [Apple App Store](https://apps.apple.com/sg/app/cozie/id1625029501).
 
 What do you need?
 

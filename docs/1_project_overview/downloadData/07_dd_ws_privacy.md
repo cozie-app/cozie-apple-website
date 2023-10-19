@@ -28,5 +28,5 @@ The image above shows the flow of the survey questions. The questions and respon
 | `kind_distraction` | What kind of distraction | String | "Visual", "Audio", "Others" |
 | `why_more_privacy` | Why is more privacy needed? | String |  "See me", "Hear me", "Both" |
 | `what_privacy` | What is it? | String | "Thermal", "Scent", "Glare" |
-| `people_see` | What do people see? | String | "Appearance", "Work", "Behaviour" |
+| `people_see` | What do people see? | String | "Appearance", "Work", "Behavior" |
 | `activity` | "Category of activity? | String | "Socialize", "Collaborate", "Learn" |

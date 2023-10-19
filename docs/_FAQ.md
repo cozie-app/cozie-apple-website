@@ -61,3 +61,11 @@ Cozie Apple is only available for iOS devices.
   - Make sure the JSON file for the watch survey is reachable.
   - Make sure the JSON file for the watch survey is valid JSON and correctly formatted.
   - Firewalls can also cause this error, e.g., in mainland China.
+
+* Is it possible to call the function that pulls the GPS location, heart rate data,etc in a set interval without the participant interacting with the survey?
+ - Well, having a live stream of all data is the dream. We've been working on that for a while. Here is the result:
+All HealthKit data is submitted twice: When the watch survey is submitted. In that case, the prefix is ws_, e.g., ws_heart_rate.
+And then the HealthKit data is submitted a second time with the prefix ts_, e.g., ts_heart_rate. ts_ data has various triggers, e.g., when you open the app, when press the sync buttons in the app, sometimes it is sent in the background.
+You can check what triggered the transmission of the data and when it arrived in the database with the fields with the postfix _trigger and _lambda, e.g., ts_heart_rate_trigger and ts_heart_rate_lambda or ws_heart_rate_trigger and ws_heart_rate_lambda or.
+You can increase the chances of the data being sent by using the iPhone. Because Cozie can only access HealthKit data when the phone is unlocked. But in my experience, the ws_ data has the highest update frequency provided participants are reminded every hour.
+For location, you already know about ws_latitude and ws_longitude.  There is also ts_latitude, and ts_longitude. These are location data that are sent when you are changing your location. The minimum location change is 10m. It works good enough to send a push notification while people are commuting. I don't exactly know how little location change it takes for the location data to be sent. (edited) 

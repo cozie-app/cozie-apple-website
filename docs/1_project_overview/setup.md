@@ -34,7 +34,7 @@ Make sure that you have completed the [installation guide](installation) before 
    <img alt="reminders" src={useBaseUrl('img/cozie_settings_tab_reminders_enabled_scrolled_down_framed_communications.png')}width="24%" /> &nbsp;
    <img alt="reminder frequency" src={useBaseUrl('img/cozie_settings_tab_reminder_frequency.png')}width="24%" />&nbsp;
    <img alt="Daily participation hours" src={useBaseUrl('img/cozie_settings_tab_participation_hours.png')}width="24%" />&nbsp;
-   <img alt="Participation days" src={useBaseUrl('img/cozie_settings_tab_participations_days.png')}width="24%" /> 
+   <img alt="Participation days" src={useBaseUrl('img/cozie_settings_tab_participation_days.png')}width="24%" /> 
    <br/>
 
 4. While keeping the Cozie application open on your Apple Watch, open the Cozie application on your IPhone. Under `Experiment Settings`, tap on "Sync settings with watch". If sync is successful, the watch should vibrate and/or you should hear a notification sound. You will see the survey appearing on the watch. 
