@@ -10,7 +10,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## What is Cozie?
 
-Cozie is an iOS App for for human comfort data collection. Users can provide feedback to surveys on the Apple Watch. It is extremely useful for conducting right-here-right-now surveys in buildings. It can, however, be used to ask questions in other settings, allowing people to provide feedback in real-time.
+Cozie is an iOS App for human comfort data collection. Users can provide feedback to surveys on the Apple Watch. It is extremely useful for conducting right-here-right-now surveys in buildings. It can, however, be used to ask questions in other settings, allowing people to provide feedback in real-time.
 
 Cozie for iOS builds on the knowledge that the [BUDS Lab](https://www.budslab.org/) and [SinBerBEST](https://sinberbest.berkeley.edu) gained in developing [Cozie for Fitbit](https://cozie-fitbit.app).
 
@@ -43,11 +43,9 @@ We have used Cozie successfully in the field for research which lead to several 
     - [Longitudinal personal thermal comfort preference data in the wild](https://www.researchgate.net/publication/356218901_Longitudinal_personal_thermal_comfort_preference_data_in_the_wild)
 
 ## Compatibility
-
 While Cozie Apple was developed using iPhone 11 and Apple Watch 6, it is compatible with iOS 14 or newer and with the Apple Watch Series 3 or newer.
 
 ## License
-
-The Cozie is released under at LGPL-3.0 license
+The Cozie is released under at [LGPL-3.0 license](https://github.com/cozie-app/cozie-apple/blob/master/LICENSE)
 
 

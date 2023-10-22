@@ -1,8 +1,9 @@
 ---
-id: c3_download_online
-title: Data Download (online)
-sidebar_label: Data Download (online)
-sidebar_position: 7
+id: data_download_online
+title: Download Data (online)
+sidebar_label: Download Data (online)
+sidebar_position: 1
+slug: download
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -23,30 +24,38 @@ import matplotlib.pyplot as plt
 import shutil
 
 # Settings
-YOUR_TIMEZONE = 'Asia/Singapore'
-ID_PARTICIPANT = 'ExternalUser'
-ID_EXPERIMENT = 'AppleStore'
+YOUR_TIMEZONE = "Asia/Singapore"
+ID_PARTICIPANT = "ExternalUser"
+ID_EXPERIMENT = "AppleStore"
 WEEKS = "2"  # Number of weeks from which the data is retrieved, ending now, i.e., start date look up: now - WEEKS, end date look up: now
-API_KEY = '' # reach out to cozie.app@gmail.com for an API_KEY
+API_KEY = ""  # reach out to cozie.app@gmail.com for an API_KEY
 
 # Query data
-payload = {'id_participant': ID_PARTICIPANT,'id_experiment': ID_EXPERIMENT, 'weeks': WEEKS}
-headers = {"Accept": "application/json", 'x-api-key': API_KEY}
-response = requests.get('https://m7cy76lxmi.execute-api.ap-southeast-1.amazonaws.com/default/cozie-apple-researcher-read-influx', params=payload, headers=headers)
+payload = {
+    "id_participant": ID_PARTICIPANT,
+    "id_experiment": ID_EXPERIMENT,
+    "weeks": WEEKS,
+}
+headers = {"Accept": "application/json", "x-api-key": API_KEY}
+response = requests.get(
+    "https://m7cy76lxmi.execute-api.ap-southeast-1.amazonaws.com/default/cozie-apple-researcher-read-influx",
+    params=payload,
+    headers=headers,
+)
 url = response.content
 
 # Download zipped CSV file with Cozie data
 with requests.get(url, stream=True) as r:
-    with open('cozie.zip', 'wb') as f:
+    with open("cozie.zip", "wb") as f:
         shutil.copyfileobj(r.raw, f)
 
 # Convert zipped CSV file with Cozie to dataframe
-with open('cozie.zip', 'rb') as f:
-      df = pd.read_csv(f, compression={'method': 'zip', 'archive_name': 'sample.csv'})
+with open("cozie.zip", "rb") as f:
+    df = pd.read_csv(f, compression={"method": "zip", "archive_name": "sample.csv"})
 
-df = df.drop(columns=['Unnamed: 0'])
-df['index'] = pd.to_datetime(df['index'])
-df = df.set_index('index')
+df = df.drop(columns=["Unnamed: 0"])
+df["index"] = pd.to_datetime(df["index"])
+df = df.set_index("index")
 df.index = df.index.tz_convert(YOUR_TIMEZONE)
 
 # Display dataframe
@@ -83,12 +92,12 @@ ax[1].set_xlabel("Time", fontsize=14)
 ```
 
 ## Column names & watch surveys
-
-The description for all column names and the watch survey questions are available on separate pages:
-* [Column names](c3_data_overview)
-* [Thermal (short)] <!--(dd_ws_thermal_short)-->
-* [Thermal (long)]<!--(dd_ws_thermal_long)-->
-* [Noise and Privacy]<!--(dd_ws_noise_and_privacy)-->
-* [Infection Risk]<!--dd_ws_infection_risk)-->
-* [Movement]<!--(dd_ws_movement)-->
-* [Privacy]<!--(dd_ws_privacy)-->
+The description for all features and the watch survey questions are available on separate pages:
+* [Column names](data_overview)
+* [Thermal (short)](ws_thermal_short)
+* [Thermal (long)](ws_thermal_long)
+* [Noise and Privacy](ws_noise_and_privacy)
+* [Infection Risk](ws_infection_risk)
+* [Movement](ws_movement)
+* [Privacy](ws_privacy)
+* [Interaction](ws_interaction)

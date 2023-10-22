@@ -8,8 +8,8 @@ author_image_url: ../img/mario.jpeg
 tags: [cozie-apple, cozie, app store, web API]
 ---
 
-We have updated the web APi for [Cozie data retrieval](/docs/downloadData). The change became necessary as the requests from some users exceeded the current payload limit of 6 MB. 
-[The example script](/docs/downloadData) was changed in to places:
+We have updated the web APi for [Cozie data retrieval](/docs/download_data/data_download_offline). The change became necessary as the requests from some users exceeded the current payload limit of 6 MB. 
+[The example script](/docs/download_data/data_download_offline) was changed in to places:
 1. The 'shutil' module needs to be imported at the beginning
 
 ```

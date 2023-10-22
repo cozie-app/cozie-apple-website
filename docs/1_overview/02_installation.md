@@ -13,13 +13,14 @@ This short guide will explain how to set up and install Cozie on your iPhone and
 
 1. Install [Cozie from the Apple App Store](https://apps.apple.com/sg/app/cozie/id1625029501). Please make sure that your iPhone is running at least iOS 16, watchOS 9, and your Apple Watch is at least Series 3 or newer.
 
-2. Open Cozie, allow notifications and health data on Cozie 
+2. Open Cozie and grant permission for push notifications, health data, and location data. You may grant permission selectiveley according to your interest. Not granting permission will disable some of the functionality of Cozie. 
 
     <img alt="Notification accept" src={useBaseUrl('img/installation_notification_accept.png')}width="30%" /> &nbsp;
-    <img alt="Health data accept" src={useBaseUrl('img/installation_health_data_accept.png')}width="30%" /> 
+    <img alt="Health data accept" src={useBaseUrl('img/installation_health_data_accept.png')}width="30%" />  &nbsp;
+    <img alt="Health data accept" src={useBaseUrl('img/installation_location_data_accept.png')}width="30%" /> 
     <br/>  
 
-3. In the Cozie app, you will see three tabs. The home page , my data and settings tab. 
+3. In the Cozie app, you will see three tabs: the *Data* tab, *Settings* tab and *Backend* tab. 
 
     <img alt="Data tab" src={useBaseUrl('img/cozie_tab_data.png')}width="30%" /> &nbsp;
     <img alt="Settings tab" src={useBaseUrl('img/cozie_tab_settings.png')}width="30%" /> &nbsp;
@@ -41,8 +42,4 @@ This short guide will explain how to set up and install Cozie on your iPhone and
    <img alt="Cozie - allow health" src={useBaseUrl('img/installation_watch_app_allow_health.png')} width="20%" />
    <br/> 
 
-6. At this point Cozie is not yet operational. Please proceed to [Setup](setup).  
-
-
-
-Please [contact us](mailto:cozie.app@gmail.com) if you have any feedback, suggestions or if you experience any bugs with the application. Any suggestions would be highly appreciated.
+6. At this point Cozie is not yet operational but ready to be configured. Please proceed to [setup guide](setup).

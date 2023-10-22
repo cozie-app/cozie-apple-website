@@ -1,8 +1,8 @@
 ---
-id: c3_download_offline
-title: Data Download (offline)
-sidebar_label: Data Download (offline)
-sidebar_position: 8
+id: data_download_offline
+title: Download data (offline)
+sidebar_label: Download Data (offline)
+sidebar_position: 2
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -21,7 +21,7 @@ Once, the data from the Cozie watch app is transferred to the Cozie iPhone app, 
 * Press the 'Download' button
 * Save the file in a convenient location or send it to a recipient of your choice.
 
-The log file is contains all Cozie data in a JSON format. The log file can easily be parsed with the CoziePy Python package. The same package can also be used for plotting. 
+The log file contains all Cozie data in a JSON format. The log file can easily be parsed with the CoziePy Python package. The same package can also be used for plotting. 
 
 Below is a basic code snippet that parses the log file and plots the heart rate data.
 
@@ -31,7 +31,10 @@ from coziepy import Cozie, CoziePlot
 
 # Parse log file
 cozie = Cozie()
-df = cozie.load(log_file="/content/cozie_example_participant_01_example_experiment_logs.txt", clean_up=False)
+df = cozie.load(
+    log_file="/content/cozie_example_participant_01_example_experiment_logs.txt",
+    clean_up=False,
+)
 df.head()
 
 # Prepare plotting
@@ -40,24 +43,26 @@ df = df.sort_index(ascending=True)
 cp = CoziePlot(df)
 
 # Plot ws_survey_count
-fig, ax = cp.ts_inspection(id_participant='example_participant_01', column_name='ts_heart_rate')
+fig, ax = cp.ts_inspection(
+    id_participant="example_participant_01", column_name="ts_heart_rate"
+)
 
 # Plotting without CoziePy
 # Remove empty rows
-ts_heart_rate = df[df['ts_heart_rate'].notna()]['ts_heart_rate']
+ts_heart_rate = df[df["ts_heart_rate"].notna()]["ts_heart_rate"]
 
 # Plot ts_heart_rate
 ts_heart_rate.plot()
-
 ```
 
 ## Column names & watch surveys
 
 The description for all column names and the watch survey questions are available on separate pages:
-* [Column names](c3_data_overview)
-* [Thermal (short)] <!--(dd_ws_thermal_short)-->
-* [Thermal (long)]<!--(dd_ws_thermal_long)-->
-* [Noise and Privacy]<!--(dd_ws_noise_and_privacy)-->
-* [Infection Risk]<!--dd_ws_infection_risk)-->
-* [Movement]<!--(dd_ws_movement)-->
-* [Privacy]<!--(dd_ws_privacy)-->
+* [Column names](data_overview)
+* [Thermal (short)](ws_thermal_short)
+* [Thermal (long)](ws_thermal_long)
+* [Noise and Privacy](ws_noise_and_privacy)
+* [Infection Risk](ws_infection_risk)
+* [Movement](ws_movement)
+* [Privacy](ws_privacy)
+* [Interaction](ws_interaction)

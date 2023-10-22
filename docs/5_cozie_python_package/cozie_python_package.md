@@ -1,8 +1,9 @@
 ---
-id: c3_coziepy
+id: coziepy
+title: CoziePy
 sidebar_label: Cozie Python Package
-sidebar_position: 9
 ---
+
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
@@ -16,6 +17,10 @@ The packages helps with download in Cozie data from the backend, parsing the log
 Please note the CoziePy is still in early development. Hence, frequent changes are to be expected.
 </b>
 
+<br/>
+<br/>
+
+
 # Load data
 There are several ways to load Cozie data. We have listed a few examples below.
 
@@ -26,28 +31,34 @@ cozie = Cozie()
 ```
 
 ### Parse from Cozie app log file
-`log_file` is the path to the file [downloaded from within the Cozie app](c3_download_offline).
+`log_file` is the path to the file [downloaded from within the Cozie app](docs/download_data/data_download_offline).
+
 
 `output_file` is an optional input parameter to save the Cozie dataframe as zipped parquet file. Alternatively, .csv is also a valid file extension but results in approximately ten times larger files.
 
 `clean_up` currently needs to set to 'False' when parsing offline log files.
 ```python
-df = cozie.load(log_file="/content/cozie_example_participant_01_example_experiment_logs.txt",
-                clean_up=False,
-                output_file="example.parquet.gzip")
+df = cozie.load(
+    log_file="/content/cozie_example_participant_01_example_experiment_logs.txt",
+    clean_up=False,
+    output_file="example.parquet.gzip",
+)
 df.head()
 ```
 
 ### Download data using the web API
 `api_key` is provided by us. Please contact us at cozie.app@gmail.com if you need one.
 ```python
-df = cozie.load(id_experiment = "example_experiment",
-                participant_list = ["example_participant_01", "example_participant_02"],
-                timezone = "Asia/Singapore",
-                api_url="https://m7cy76lxmi.execute-api.ap-southeast-1.amazonaws.com/default/cozie-apple-researcher-read-influx", 
-                api_key="XXX",
-                output_file="example.parquet.gzip")
+df = cozie.load(
+    id_experiment="example_experiment",
+    participant_list=["example_participant_01", "example_participant_02"],
+    timezone="Asia/Singapore",
+    api_url="https://m7cy76lxmi.execute-api.ap-southeast-1.amazonaws.com/default/cozie-apple-researcher-read-influx",
+    api_key="XXX",
+    output_file="example.parquet.gzip",
+)
 df.head()
+
 ```
 
 ### Load data from previously processed data
@@ -61,5 +72,7 @@ CoziePy has some plotting functionality which is mainly focused on experiment mo
 
 ### Plot time-series data for one participant
 ```python
-fig, ax = cp.ts_inspection(id_participant='example_participant_01', column_name='ts_heart_rate')
+fig, ax = cp.ts_inspection(
+    id_participant="example_participant_01", column_name="ts_heart_rate"
+)
 ```
