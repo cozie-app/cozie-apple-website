@@ -8,7 +8,7 @@ sidebar_position: 7
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
-# Issues
+# Troubleshooting
  
 * **When I press the sync button in the *Data* or *Backend* tab I get an 
 "JSON error"**
