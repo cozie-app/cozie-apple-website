@@ -23,7 +23,7 @@ const features = [
     imageUrl: "img/undraw_dev_productivity_umsq.svg",
     description: (
       <>
-        Cozie is an Open Source project and together with{" "}
+        Cozie is an open-source project and together with{" "}
         <a href={"https://cozie-fitbit.app"}>Cozie Fitbit</a>, allows researchers to
         focus on the data collection. We have taken care of all the programming
         for you!
@@ -39,7 +39,7 @@ const features = [
         <a href={"https://developer.apple.com/documentation/healthkit"}>
           Apple's HealthKit
         </a>
-        . A software framework for Apple apps that lets researchers physological data, e.g., heart rate.
+        . A software framework for Apple apps that lets researchers physiological data, e.g., heart rate.
       </>
     ),
   },
