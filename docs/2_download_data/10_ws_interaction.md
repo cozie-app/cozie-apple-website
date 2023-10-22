@@ -1,8 +1,8 @@
 ---
-id: dd_ws_interaction
+id: ws_interaction
 title: Watch Survey - Interaction
 sidebar_label: Watch Survey - Interaction
-slug: /dd_ws_interaction
+sidebar_position: 10
 ---
 
 
@@ -32,3 +32,4 @@ This watch survey was used for the work published in [Utilizing wearable technol
 | `ws_initiation` | Did you initiate the interaction? | String | "Yes", "No"|
 | `ws_focus` | Did this interaction impact your focus? | String | "Yes", "Partially", "No" |
 
+[The JSON file for this watch survey is available on Github.](https://github.com/cozie-app/cozie-apple/blob/master/Watch%20Surveys/watch_survey_interaction.json)

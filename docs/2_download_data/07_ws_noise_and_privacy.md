@@ -1,8 +1,8 @@
 ---
-id: dd_ws_noise_and_privacy
+id: ws_noise_and_privacy
 title: Watch Survey - Noise and Privacy
 sidebar_label: Watch Survey - Noise and Privacy
-slug: /dd_ws_noise_and_privacy
+sidebar_position: 7
 ---
 
 
@@ -29,3 +29,5 @@ The image above shows the flow of the survey questions. The questions and respon
 | `alone-group` | Alone or in a group? | String | "Alone", "Group", "Online group"|
 | `activity-category` | Category of activity? | String | "Focus", "Leisure", "Other"|
 | `activity-category` | Category of activity? | String | "Socialize", "Collaborate", "Learn", "Other"|
+
+[The JSON file for this watch survey is available on Github.](https://github.com/cozie-app/cozie-apple/blob/master/Watch%20Surveys/watch_survey_noise_and_privacy.json)

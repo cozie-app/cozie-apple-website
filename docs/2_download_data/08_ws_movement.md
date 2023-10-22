@@ -1,8 +1,8 @@
 ---
-id: dd_ws_movement
+id: ws_movement
 title: Watch Survey - Movement
 sidebar_label: Watch Survey - Movement
-slug: /dd_ws_movement 
+sidebar_position: 8
 ---
 
 
@@ -27,3 +27,5 @@ Click on the image to enlarge it.
 | `workstation` | What kind of workstation? | String |  "Adjustable", "Standing", "Sitting" |
 | `adj_height` | Adjusted height today? | String |   "Up & down", "Down", "Up", "Never" |
 | `current` | Are you | String | "Standing", "Sitting" |
+
+[The JSON file for this watch survey is available on Github.](https://github.com/cozie-app/cozie-apple/blob/master/Watch%20Surveys/watch_survey_movement.json)

@@ -1,8 +1,8 @@
 ---
-id: dd_ws_infection_risk
+id: ws_infection_risk
 title: Watch Survey - Infection Risk
 sidebar_label: Watch Survey - Infection Risk
-slug: /dd_ws_infection_risk
+sidebar_position: 6
 ---
 
 
@@ -22,3 +22,5 @@ The image above shows the flow of the survey questions. The questions and respon
 | `cause_risk` | What causes more risk? | String | "Ventilation", "People", "Surface" |
 | `concerns` | Specifically, what concerns you? | String |  "Density", "Proximity", "Both" |
 | `within_5m` | Currently, how many people within 5m? | String | "0 pax", "1-4 pax", "5+ pax" |
+
+[The JSON file for this watch survey is available on Github.](https://github.com/cozie-app/cozie-apple/blob/master/Watch%20Surveys/watch_survey_infection_risk.json)

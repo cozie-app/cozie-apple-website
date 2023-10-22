@@ -1,8 +1,8 @@
 ---
-id: dd_ws_privacy
+id: ws_privacy
 title: Watch Survey - Privacy
 sidebar_label: Watch Survey - Privacy
-slug: /dd_ws_privacy
+sidebar_position: 9
 ---
 
 
@@ -30,3 +30,5 @@ The image above shows the flow of the survey questions. The questions and respon
 | `what_privacy` | What is it? | String | "Thermal", "Scent", "Glare" |
 | `people_see` | What do people see? | String | "Appearance", "Work", "Behavior" |
 | `activity` | "Category of activity? | String | "Socialize", "Collaborate", "Learn" |
+
+[The JSON file for this watch survey is available on Github.](https://github.com/cozie-app/cozie-apple/blob/master/Watch%20Surveys/watch_survey_privacy.json)
