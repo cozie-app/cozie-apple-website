@@ -1,4 +1,7 @@
 {
   "position": 3,
-  "label": "Custom Surveys"
+  "label": "Custom Surveys",
+  "link": {
+    "type": "doc",
+    "id": "custom_watch_survey_intro"}
 }
