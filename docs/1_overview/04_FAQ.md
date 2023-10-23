@@ -92,7 +92,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     Cozie Apple was developed for the use of one iPhone and one Apple Watch per user. It is also our recommendation to use Cozie-Apple in this way.
 
 * #### What is the cost of using Cozie?
-    The Cozie application is free to use. We currently provide free access to our logging infrastructure until further notice.
+    To use Cozie you need the app, an iPhone, and an Apple Watch. The Cozie application is free to use. We currently provide free access to our logging infrastructure until further notice.
 
     The [Apple Watch SE](https://www.apple.com/shop/buy-watch/apple-watch-se) is the most inexpensive watch option and is available for approximately 250 USD. The Apple Watch SE has a reduced feature set compared to the most recent Apple Watch models. 
 
