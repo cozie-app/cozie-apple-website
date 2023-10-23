@@ -37,19 +37,21 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   <!--Watch survey is sent later but location data might be off-->
 
 * #### Where is Cozie data stored?
-    Cozie offers three ways to store data:
+    Cozie offers two ways to store data:
     1. **Default** <br/>
     By default, Cozie-Apple data is stored on password-protected servers in Singapore and logged on the iPhone. The data can be downloaded from our [online API](/docs/download_data/download). Data data can also be retrieved from the [local backup file](/docs/download_data/data_download_offline).
 
-    3. **Custom Database** <br/>
+    2. **Custom Database** <br/>
     Instead of using our database to store your data, you can also set up your own backend. Just replace the necessary information about the API and OneSignal in the *Backend* tab and you can operate the Cozie app independent of us. No changes to the source code are required.
-    <img alt="Screenshot backend tab default API and OneSignal configuration" src={useBaseUrl('img/cozie_backend_tab_offline_1.png')}width="30%" />  &nbsp;
-    <img alt="Screenshot backend tab offline API and OneSignal configuration" src={useBaseUrl('img/cozie_backend_tab_offline_2.png')}width="30%" />  &nbsp;
+      <img alt="Screenshot backend tab default API and OneSignal configuration" src={useBaseUrl('img/cozie_backend_tab_offline_1.png')}width="30%" />  &nbsp;
 
-    2. **Offline** <br/>
+<!-- A trial has shown that syncing the watch will hang without API information in the backend tab. This needs to be fixed before the paragraph below can be published.
+    3. **Offline only** <br/>
     Online logging can be turned off. Just go to the *Backend* tab and remove all API and OneSignal information. The Cozie app will then only store data locally on the Apple Watch and the iPhone.<br/>
     Please note that this configuration brings more risk, as any issues, e.g., with the data logging, become only apparent after the log file is retrieved from the iPhone. Hence, retrieval of the log file on the iPhone and data analysis of the data in regular intervals is recommended.
       <img alt="Screenshot backend tab default API and OneSignal configuration" src={useBaseUrl('img/cozie_backend_tab_offline_1.png')}width="30%" />  &nbsp;
+      <img alt="Screenshot backend tab offline API and OneSignal configuration" src={useBaseUrl('img/cozie_backend_tab_offline_2.png')}width="30%" />  &nbsp;
+-->
 
 ### Performance
 
