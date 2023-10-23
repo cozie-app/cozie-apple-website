@@ -91,5 +91,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 * **The location data is shows 0.0 for longitude and latitude. What is wrong?**
   * Longitude=0 and latitude=0 is a point in the Atlantic west of Africa. We generally we don't expect Cozie users to be there. Usually, (0, 0) coordinates are invalid. This can be the case when there is no location data available, e.g., when location services are turned off on the iPhone, the iPhone is in flight mode, or if there is another issue with acquiring location data.
 
-* **Can Cozie be used with only one iPhone and multiple Apple Watches?**
-  * Cozie Apple was developed for the use of one iPhone and one Apple Watch per user. It is also our recommendation to use Cozie-Apple in this way.
+* #### What is the cost of using Cozie?
+    The Cozie application is free to use. We currently provide free access to our logging infrastructure until further notice.
+
+    The [Apple Watch SE](https://www.apple.com/shop/buy-watch/apple-watch-se) is the most inexpensive watch option and is available for approximately 250 USD. The Apple Watch SE has a reduced feature set compared to the most recent Apple Watch models. 
+
+    The [iPhone SE](https://www.apple.com/shop/buy-iphone/iphone-se) is the most inexpensive iPhone option and is available for approximately 430 USD.
+
+    Modifying the source code of the app requires a [membership in the Apple Developer Program](https://developer.apple.com/support/compare-memberships/). There is a free tier available. The free tier includes access to XCode (IDE) and TestFlight (testing service). TestFlight allows you to create test versions of the app that are valid for 90 days. A paid membership is required to have your app on the App Store. The cost for the membership is approximately 100 USD per year.
