@@ -10,7 +10,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 This section is about the practical part of deploying Cozie in the field. 
 
 ## Expectations and assumptions
-Cozie Apple is [open-source](https://github.com/cozie-app/cozie-apple). Feel free to take the source code and adopt Cozie Apple to your needs in accordance with the [GNU GPLv3 license](https://github.com/cozie-app/cozie-apple/blob/master/LICENSE) under which Cozie Apple is published.
+Cozie Apple is [open-source](https://github.com/cozie-app/cozie-apple). Feel free to take the source code and adapt Cozie Apple to your needs in accordance with the [GNU GPLv3 license](https://github.com/cozie-app/cozie-apple/blob/master/LICENSE) under which Cozie Apple is published.
 
 The app is provided as is. We currently allow free access to our backend infrastructure for data logging. However, we do not guarantee the availability, uptime, or service quality of the app or the database. Database downtimes for maintenance, technical issues, and changes to APIs are to be expected. For a better experience, we recommend two things:
 1. Set up your own backend infrastructure that operates independently from ours. 
@@ -24,7 +24,7 @@ We developed the app with the following conditions in mind:
 * Permissions for HealthKit data, push notifications, and location services are granted.
 * One participant uses Cozie for several days to up to 4 months.
 * Onboarding and offboarding are supervised.
-* Cozie is used to collect that for research.
+* Cozie is used to collect data for research.
 
 The conditions above are in line with our testing and experience in the field. We recommend strongly that you test Cozie thoroughly if you choose to deviate from these conditions.
 
@@ -35,7 +35,7 @@ The conditions above are in line with our testing and experience in the field. W
 | Developing a custom watch survey                    | >1 months       | 
 | Testing Cozie before development                    | >1 months       | 
 | Monitoring during the deployment                    | >1 hour per day |
-| Onboarding of one participant                       | ~30 minutes     |
+| Onboarding of one participant                       | ~40 minutes     |
 | Offboarding of one participant                      | ~20 minutes     |
 
 
@@ -95,13 +95,14 @@ Onboarding is the process of enrolling a participant into your experiment. This 
 * Taking consent
 * Providing an iPhone and/or an Apple Watch
 * Setting up the Cozie app
+
 We usually provide a *participant information sheet* where we provide a concise summary of the experiment.
 
 Once the participant has a clear understanding of all aspects of the experiment, they can sign the consent form.
 
 The participant is now part of the experiment. We usually start the experiment with an *onboarding survey*. This survey includes questions that only need to be asked once during the experiment, e.g., age, height, weight, personality, etc.
 
-After the onboarding survey, Cozie can be installed. If the participant doesn't have an iPhone and/or an Apple Watch we provide the devices to them. We have the participant sign an equipment receipt where we note the devices and their serial numbers.
+After the onboarding survey, Cozie can be installed. If the participant doesn't have an iPhone and/or an Apple Watch, we provide the devices to them. We have the participant sign an equipment receipt where we note the devices and their serial numbers.
 For a quick installation process, we prepare a QR code that leads to Cozie on the app store.
 Once, Cozie is installed, the settings can be changed for the participant. This can also be accelerated with a [QR code](qr_code). 
 
