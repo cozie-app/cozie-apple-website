@@ -10,13 +10,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 This section is about the practical part of deploying Cozie in the field. 
 
 ## Expectations and assumptions
-Cozie Apple is [open-source](https://github.com/cozie-app/cozie-apple). Feel 
-free to take the source code and adopt Cozie Apple to your needs in accordance
-with the [GNU GPLv3 license](https://github.com/cozie-app/cozie-apple/blob/master/LICENSE) 
-under which Cozie Apple is published.
+Cozie Apple is [open-source](https://github.com/cozie-app/cozie-apple). Feel free to take the source code and adopt Cozie Apple to your needs in accordance with the [GNU GPLv3 license](https://github.com/cozie-app/cozie-apple/blob/master/LICENSE) under which Cozie Apple is published.
 
-The app is provided as is. We currently allow access to our backend 
-infrastructure for data logging. However, we do not guarantee the availability, uptime, or service quality of the app or the database. Database downtimes for maintenance, technical issues, and changes to APIs are to be expected. For a better experience, we recommend two things:
+The app is provided as is. We currently allow free access to our backend infrastructure for data logging. However, we do not guarantee the availability, uptime, or service quality of the app or the database. Database downtimes for maintenance, technical issues, and changes to APIs are to be expected. For a better experience, we recommend two things:
 1. Set up your own backend infrastructure that operates independently from ours. 
 This does not require any changes to the app as all backend settings can be changed in the app.
 2. [Contact us](mailto:cozie.app@gmail.com) so that we can negotiate schedules and conditions.
