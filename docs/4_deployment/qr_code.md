@@ -55,7 +55,7 @@ payload = (
 payload_bytes = payload.encode("ascii")
 base64_bytes = base64.b64encode(payload_bytes)
 base64_payload = base64_bytes.decode("ascii")
-deep_link_url = "coziedev://param?data=" + base64_payload
+deep_link_url = "cozie://param?data=" + base64_payload
 
 # Print deep link
 print(deep_link_url)
