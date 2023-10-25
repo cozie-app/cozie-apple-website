@@ -77,7 +77,7 @@ Image("qrcode001.png", width=700, height=700)
 ```
 
 ## Example QR Code
-The above code snippet will return the deep link and QR code shown below. The QR code can be scanned with the default iPhone camera app and it will open the Cozie app with settings applied.
+The above code snippet will return the deep link and QR code shown below. The QR code can be scanned with the default iPhone camera app and it will open the Cozie app with settings applied. You still need to [sync the settings with the Cozie app on the Apple Watch](/docs/setup#synchronization).
 <img src={useBaseUrl('img/qr_code_example.png')} width="700px" />
 
 
