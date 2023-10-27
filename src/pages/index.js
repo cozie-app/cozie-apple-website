@@ -95,7 +95,7 @@ const contributors = [
     link: "https://sg.linkedin.com/in/mario-frei",
   },
   {
-    name: <>Yun Xuan</>,
+    name: <>Chua Yun Xuan</>,
     imageUrl: "img/yun_xuan.jpeg",
     role: <>Project manager</>,
     profession: <>Research Assistant at NUS</>,
