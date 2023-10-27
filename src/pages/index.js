@@ -70,7 +70,7 @@ const contributors = [
     name: <>Federico Tartarini</>,
     imageUrl: "img/federico.jpg",
     role: <>Lead developer</>,
-    profession: <>Postdoctoral scholar at SinBerBEST</>,
+    profession: <>Postdoctoral Scholar at SinBerBEST</>,
     link: "https://federicotartarini.github.io",
   },
   {
@@ -94,6 +94,13 @@ const contributors = [
     profession: <>Research Fellow at NUS</>,
     link: "https://sg.linkedin.com/in/mario-frei",
   },
+  {
+    name: <>Yun Xuan</>,
+    imageUrl: "img/yun_xuan.jpeg",
+    role: <>Project manager</>,
+    profession: <>Research Assistant at NUS</>,
+    link: "https://sg.linkedin.com/in/mario-frei",
+  },
 ];
 
 function Contributor({ imageUrl, name, profession, role, link }) {
@@ -101,7 +108,7 @@ function Contributor({ imageUrl, name, profession, role, link }) {
   return (
     <div
       className={clsx(
-        "avatar avatar--vertical col col--3 text--center",
+        "avatar avatar--vertical col col--4 text--center",
         styles.features
       )}
     >
