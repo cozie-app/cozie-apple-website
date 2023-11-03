@@ -1,6 +1,6 @@
 module.exports = {
-  title: "Cozie - An iOS application for IEQ and physiological data collection",
-  tagline: "Allows building occupants to provide feedback in real-time",
+  title: "Cozie - An iOS application for EMA and physiological data collection",
+  tagline: "Non-intrusive feedback in real-time",
   url: "https://cozie-apple.app",
   baseUrl: "/",
   favicon: "img/favicon.ico",
