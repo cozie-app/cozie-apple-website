@@ -14,7 +14,7 @@ The Cozie app does not explicitly collect any personal data. It is designed to c
 
 All data that the Cozie app collects is listed below. 
 
-- Physiological Data
+- Physiological and Environmental Data
   - Heart rate
   - Heart rate variability
   - Resting heart rate
@@ -26,6 +26,10 @@ All data that the Cozie app collects is listed below.
   - Walking distance
   - Wrist temperature
   - Sleep analysis
+- Location (background)
+   - Longitude
+   - Latitude
+   - Altitude
 - Watch survey
   - Time at the start of the micro-survey
   - Time at the end of the micro-survey
