@@ -39,10 +39,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 * ### Push notifications from OneSignal don't show up on my device.
-  - Check the correctness of the Player ID (on [OneSignal.com](https://onesignal.com/)
- and in the Cozie data)
-  - Check the correctness of the API key
-  - Check the correctness of the information in the *Backend* tab and in your Python notebook
-  - Make sure you created the .p12 certificate for the main identifier.
-  - Try to send a test push notification from the dashboard on [OneSignal.com](https://onesignal.com/)
+  - Check the correctness of the Player ID in the Cozie data tab.
+  - Check the correctness of the API key.
+  - Check the correctness of the information in the *Backend* tab and in your Python notebook.
+
+  
+  - If you have created your own Cozie app:
+    - Check the correctness of the Player ID on [OneSignal.com](https://onesignal.com/).
+    - Make sure you created the .p12 certificate for the main identifier.
+    - Try to send a test push notification from the dashboard on [OneSignal.com](https://onesignal.com/).
 
