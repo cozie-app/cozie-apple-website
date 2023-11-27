@@ -42,8 +42,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   - Check the correctness of the Player ID in the Cozie data tab.
   - Check the correctness of the API key.
   - Check the correctness of the information in the *Backend* tab and in your Python notebook.
-
-  
   - If you have created your own Cozie app:
     - Check the correctness of the Player ID on [OneSignal.com](https://onesignal.com/).
     - Make sure you created the .p12 certificate for the main identifier.
