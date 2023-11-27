@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Cozie - An iOS application for EMA and physiological data collection",
+  title: "Cozie - An iOS application for watch surveys and physiological data collection",
   tagline: "Non-intrusive feedback in real-time",
   url: "https://cozie-apple.app",
   baseUrl: "/",
