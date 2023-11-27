@@ -21,53 +21,24 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | ws_ | Watch survey |
 | wss_ | watch survey settings |
 
-## Field descriptions
-
+## Settings and index
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
 |------------|------|-------------------|------------------|-------------|-----------------------|
-| `api_phone_survey_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the phone survey, e.g., Qualtrics, Google Form or similar| not available |
-| `api_read_key` | String  | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': Access key for the `api_read_url` | not available |
-| `api_read_url` | String  | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the database read API | not available |
-| `api_watch_survey_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the JSON file with a custom watch survey | not available |
-| `api_write_key` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': Access key for the `api_write_url` | not available |
-| `api_write_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the database write API | not available |
-| `app_bundle_build_`<br/>`number` | String | Logged when any sync button in the Cozie iPhone app | - | Build number of iOS application | not available |
-| `app_bundle_build_`<br/>`version` | String | Logged when any sync button in the Cozie iPhone app | - | Build version of iOS application | not available |
-| `app_bundle_name` | String | Logged when any sync button in the Cozie iPhone app | - | iOS application name | not available |
-| `app_one_signal_app_id` | String | Logged when any sync button in the Cozie iPhone app | - | OneSignal app ID (provided by OneSignal) | not available |
 | `id_experiment` | String | Logged with any other data point | - | Unique identifier for each experiment | `id_experiment` | 
 | `id_onesignal` | String | Logged with any other data point | - |Unique OneSignal player id provided by OneSignal | `id_one_signal` |
 | `id_participant` | String | Logged with any other data point | - | Unique identifier for each participant | `id_participant` |
 | `id_password` | String | Logged with any other data point | - | 'Backend tab': Password for participant. It should be unique for each participant. It prevents data corruption by participants changing their `id_participant` or `id_experiment` | not available |
 | `location_change` | Boolean | *** | - | Indicates location change of more than 50m | not available |
-|  |  |  |  |  |
 | `pss_reminder_days` | String | Logged when any sync button in the Cozie iPhone app  | -| Days on which the phone survey reminder is shown. | not available |
 | `pss_reminder_enabled` | Boolean | Logged when any sync button in the Cozie iPhone app | - | Indicates whether the a phone survey reminder is enabled. (enabled: `True`) | not available |
 | `pss_reminder_time` | String | Logged when any sync button in the Cozie iPhone app | - | Time at which the phone survey reminder is shown. | not available |
-|  |  |  |  |  |
-| `q_...` | String | Logged when the submit button at the end of the watch survey is pressed. | - |For field names of watch survey responses see on the page for each watch survey example |  |
-|  |  |  |  |  |
-| `si_ios_version` | String | Logged when any sync button in the Cozie iPhone app | - | iOS version | not available |
-| `si_iphone_battery_`<br/>`charge_state` | Float | Not yet implemented | - | iPhone battery charge state | not available |
-| `si_iphone_cellular_`<br/>`signal_strength` | Float | Not yet implemented | - | Cellular signal strength on the iPhone | not available |
-| `si_iphone_device_id` | String | Not yet implemented | - |  Unique iPhone hardware identifier | not available |
-| `si_iphone_location_`<br/>`service_enabled` | Boolean | Not yet implemented | - | iPhone location services state | not available |
-| `si_iphone_low_battery_`<br/>`mode_enabled` | Boolean | Not yet implemented | - | iPhone low power battery mode state | not available |
-| `si_iphone_model` | String | Not yet implemented | - |iPhone hardware model identifier | not available |
-| `si_iphone_wifi_`<br/>`signal_strength` | Float | Not yet implemented | - | Wifi signal strength on the iPhone | not available |
-| `si_watch_battery_`<br/>`charge_state` | Float | Not yet implemented | - | Apple watch battery charge state | not available |
-| `si_watch_cellular_`<br/>`signal_strength` | Float | Not yet implemented | - | Cellular signal strength on the Apple Watch | not available |
-| `si_watch_connected_`<br/>`to_phone` | Boolean | Not yet implemented | - | State of connection between iPhone and Apple Watch | not available |
-| `si_watch_device_id` | String | Not yet implemented | - | Unique identifier for Apple Watch hardware | not available |
-| `si_watch_location_`<br/>`service_enabled` | Boolean | Not yet implemented | - | Apple Watch location services state | not available |
-| `si_watch_model` | String | Not yet implemented | - | Apple Watch hardware model identifier | not available |
-| `si_watch_wifi_`<br/>`signal_strength` | Float | Not yet implemented | - | Wifi signal strength on the Apple Watch | not available |
-| `si_watchos_version` | String | Not yet implemented | - | WatchOS version | not available |
-|  |  |  |  |  |
 | `timestamp_lambda` | String | Logged with any other data point | - | Timestamp (UTC) of when the AWS Lambda function was invoked to insert the row into the database | `timestamp_lambda` |
 | `transmit_trigger` | String | Logged with any other data point | - | Action that triggered the logging of the data corresponding to the same row | not available |
-| `time`/`index` | String | Logged with any other data point | - | Timestamp (UTC) of when micro survey was submitted, also serves as index | `timestamp_end` |
-|  |  |  |  |  |
+| `time`/`index` | String | Logged with any other data point | - | Timestamp (UTC) of when watch survey was submitted, also serves as index | `timestamp_end` |
+
+## HealthKit data logged on the iPhone
+| Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
+|------------|------|-------------------|------------------|-------------|-----------------------|
 | `ts_HRV` | Integer | * | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
 | `ts_altitude` | Integer | *** | - | Altitude in m | not available |
 | `ts_audio_exposure_`<br/>`environment` | Integer | * | 30min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | `ts_hearingEnvironmental`<br/>`Exposure`, `sound_pressure` | 
@@ -92,7 +63,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ts_timestamp_location`| String | * | ? | Timestamp (UTC) of when the GPS was retrieved | `timestamp_location` | 
 | `ts_walking_distance` | Float | * | ? | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning) | `ts_walkingDistance` |
 | `ts_wrist_temperature` | Integer | * | 1d | Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
-|  |  |  |  |  |
+
+## Watch survey data
+| Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
+|------------|------|-------------------|------------------|-------------|-----------------------|
+| `q_...` | String | Logged when the submit button at the end of the watch survey is pressed. | - |For field names of watch survey responses, see on the page for each watch survey example |  |
 | `ws_HRV` | Float? | ** | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
 | `ws_altitude` | Integer | ** | - | Altitude in m  | not available |
 | `ws_audio_exposure_`<br/>`environment` | Float? | ** | 15min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | not available |
@@ -105,6 +80,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ws_location_floor` | Integer? | ** | - |  | not available |
 | `ws_location_`<br/>`source_device` | String | ** | - |  | not available |
 | `ws_longitude` | Float | ** | - | Longitude in ° provided by GPS | `longitude` |
+
+## HealthKit data logged on the Apple Watch
+| Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
+|------------|------|-------------------|------------------|-------------|-----------------------|
 | `ws_oxygen_saturation` | Integer | ** | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | not available |
 | `ws_resting_heart_rate` | Float? | ** | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | not available |
 | `ws_sleep_REM` | Float? | ** | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
@@ -119,7 +98,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ws_timestamp_start` | String | ** | - | Timestamp (UTC) of when micro survey was started |`timestamp_start` |
 | `ws_walking_distance` | Float | ** | - | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning) | not available |
 | `ws_wrist_temperature` | Float | ** | 1d |  Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
-|  |  |  |  |  |
 | `wss_goal` | Integer? | Logged when any sync button in the Cozie iPhone app | - |Watch survey response goal in the 'Settings' tab | not available |
 | `wss_participation_days`| String | Logged when any sync button in the Cozie iPhone app | - | Participation days set in the Cozie app by the participant | `settings_participation_days` |
 | `wss_participation_`<br/>`time_end` | String | Logged when any sync button in the Cozie iPhone app | - | Daily reminder end time set in the Cozie app by the participant | `settings_participation_`<br/>`time_end` |
@@ -129,22 +107,64 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `wss_time_out` | Integer | Not yet implemented | - | Minimal allowed duration between two watch survey responses | not available |
 | `wss_title` | String | Logged when any sync button in the Cozie iPhone app | - | Title of watch survey selected in the 'Settings' tab | not available |
 
+## Settings and metadata
+| Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
+|------------|------|-------------------|------------------|-------------|-----------------------|
+| `api_phone_survey_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the phone survey, e.g., Qualtrics, Google Form or similar| not available |
+| `api_read_key` | String  | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': Access key for the `api_read_url` | not available |
+| `api_read_url` | String  | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the database read API | not available |
+| `api_watch_survey_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the JSON file with a custom watch survey | not available |
+| `api_write_key` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': Access key for the `api_write_url` | not available |
+| `api_write_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the database write API | not available |
+| `app_bundle_build_`<br/>`number` | String | Logged when any sync button in the Cozie iPhone app | - | Build number of iOS application | not available |
+| `app_bundle_build_`<br/>`version` | String | Logged when any sync button in the Cozie iPhone app | - | Build version of iOS application | not available |
+| `app_bundle_name` | String | Logged when any sync button in the Cozie iPhone app | - | iOS application name | not available |
+| `app_one_signal_app_id` | String | Logged when any sync button in the Cozie iPhone app | - | OneSignal app ID (provided by OneSignal) | not available |
+| `si_ios_version` | String | Logged when any sync button in the Cozie iPhone app | - | iOS version | not available |
+| `si_iphone_battery_`<br/>`charge_state` | Float | Not yet implemented | - | iPhone battery charge state | not available |
+| `si_iphone_cellular_`<br/>`signal_strength` | Float | Not yet implemented | - | Cellular signal strength on the iPhone | not available |
+| `si_iphone_device_id` | String | Not yet implemented | - |  Unique iPhone hardware identifier | not available |
+| `si_iphone_location_`<br/>`service_enabled` | Boolean | Not yet implemented | - | iPhone location services state | not available |
+| `si_iphone_low_battery_`<br/>`mode_enabled` | Boolean | Not yet implemented | - | iPhone low power battery mode state | not available |
+| `si_iphone_model` | String | Not yet implemented | - |iPhone hardware model identifier | not available |
+| `si_iphone_wifi_`<br/>`signal_strength` | Float | Not yet implemented | - | Wifi signal strength on the iPhone | not available |
+| `si_watch_battery_`<br/>`charge_state` | Float | Not yet implemented | - | Apple watch battery charge state | not available |
+| `si_watch_cellular_`<br/>`signal_strength` | Float | Not yet implemented | - | Cellular signal strength on the Apple Watch | not available |
+| `si_watch_connected_`<br/>`to_phone` | Boolean | Not yet implemented | - | State of connection between iPhone and Apple Watch | not available |
+| `si_watch_device_id` | String | Not yet implemented | - | Unique identifier for Apple Watch hardware | not available |
+| `si_watch_location_`<br/>`service_enabled` | Boolean | Not yet implemented | - | Apple Watch location services state | not available |
+| `si_watch_model` | String | Not yet implemented | - | Apple Watch hardware model identifier | not available |
+| `si_watch_wifi_`<br/>`signal_strength` | Float | Not yet implemented | - | Wifi signal strength on the Apple Watch | not available |
+| `si_watchos_version` | String | Not yet implemented | - | WatchOS version | not available |
+
 ## Difference between `ts_` and `ws_`
-\* The logging of time series data with the `ts_` prefix is triggered by several actions:
+The logging of time series data with the `ts_` prefix is triggered by several actions:
 * Opening of the Cozie iPhone app
-* Pressing of any sync button in the Cozie iPhone app
+* Pressing any sync button in the Cozie iPhone app
 * Background task
 
-\** The logging of time series data with the `ws_` prefix is triggered by the submit button at the end of the watch survey.
+Logging time series data with the `ws_` prefix is triggered by the submit button at the end of the watch survey.
 
-By the end of the experiment the `ts_` data and `ws_` data should me nearly identical, e.g., the values and timestamps for  `ts_heart_rate` and `ws_heart_rate` should be the same. The difference is that the device that submits the data and the time the data is submitted. Because it is very difficult to sync the Cozie app on the Apple Watch with its counter part on the Apple Watch in the background, we decided to log the data twice and then merge the two columns while processing the data. This approach maximized the data upload frequency, maintainability, and ability to debug the app.
+By the end of the experiment, the `ts_` data and `ws_` data should be nearly identical, e.g., the values for given timestamps for  `ts_heart_rate` and `ws_heart_rate` should be the same. The difference is the device that submits the data and the time the data is submitted. Because it is very difficult to sync the Cozie app on the Apple Watch with its counterpart on the Apple Watch in the background, we decided to log the data twice and then merge the two columns while processing the data. This approach maximizes the data upload frequency, maintainability, and ability to debug the app. 
+
+It is very likely that the `ts_` data and `ws_` data will not be identical. Here are some reasons why:
+ - More `ts_` data was collected after the last watch survey was submitted.
+ - `ts_` data wasn't updated after the last watch survey was sent. 
+ - Some data might have been lost somewhere between the app and the database.
+
+ You can merge two corresponding `ts_` data and `ws_` data columns, as shown in the following code snippet:
+ ```python
+ df["ts_heart_rate_combined"] = df.groupby("id_participant")["ts_heart_rate"].fillna(df["ws_heart_rate"])
+ ```
 
 ## Location data
-\*\** Location data, e.g., `ts_latitude`, `ts_longitude`, with the `ts_` prefix is only sent every time the participant changes their location more than 50 meters, i.e., when and while the participant changes the location. Location data with the `ws_` prefix is sent when the submit button at the end of the watch survey is pressed, exactly the same as all other data with the `ws_` prefix (see **).
+Location data, e.g., `ts_latitude`, `ts_longitude`, with the `ts_` prefix is only sent every time the participant changes their location more than 50 meters, i.e., when and while the participant changes the location. Location data with the `ws_` prefix is sent when the submit button at the end of the watch survey is pressed, exactly the same as all other data with the `ws_` prefix (see **).
+
+Unlike the HealthKit data, e.g., `ts_heart_rate`/`ws_heart_rate`, the `ws_` and `ts_` location data are not to be expected to be the same. Nevertheless, you might consider combining the corresponding columns, depending on your application.
 
 
 ## Lambda Timestamp and Trigger
-For some of the field names there are two more accompanying fields for the timestamp of when the data was inserted into the database and what trigger the logging action. The field `lambda_timestamp` serves the same purpose. However this field value might over written in instances where values with identical `id_participant`, `id_experiment`, and `timestamp` are logged.The table below shows an example for `ts_HRV`. The columns `ts_HRV_lambda` and `ts_HRV_trigger` are used for debugging and development purposes.
+For some of the field names there are two more accompanying fields for the timestamp of when the data was inserted into the database and what trigger the logging action. The field `lambda_timestamp` serves the same purpose. However this field value might over written in instances where values with identical `id_participant`, `id_experiment`, and `timestamp` are logged. The table below shows an example for `ts_HRV`. The columns `ts_HRV_lambda` and `ts_HRV_trigger` are used for debugging and development purposes.
 
 | Field name | Type | Sampling rate | Description/Question | Field name in Cozie v2|
 |--------------|------|---------------|----------------------|-------------------------|
@@ -152,7 +172,7 @@ For some of the field names there are two more accompanying fields for the times
 | `ts_HRV_lambda` | String | * | Timestamp of when the value of `ts_HRV` was logged in UTC, Format: "%Y-%m-%dT%H:%M:%S.%fZ" | not available |
 | `ts_HRV_trigger` | String | * | String of what triggered the logging action of `ts_HRV` | not available |
 
-These meta data columns shown in the example above are available for the following field names:
+These metadata columns shown in the example above are available for the following field names:
 
 <table>
 <tr><td>
