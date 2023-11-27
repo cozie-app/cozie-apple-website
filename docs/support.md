@@ -8,5 +8,13 @@ sidebar_label: Support
 
 There are several ways to get help for Cozie:
 - Open an issue on Github: https://github.com/cozie-app/cozie-apple/issues
+    - Bugs in the app
+    - Bugs in the API
+    - Bugs in CoziePy
+    - Any kind of technical issue
 - Post something on GitHub Discussions: https://github.com/cozie-app/cozie-apple/discussions
+    - Request watch survey icon upload
+    - Show your Cozie depoloyment
+    - Feature requests
 - Contact us at [cozie.app@gmail.com](mailto:cozie.app@gmail.com)
+    - Request an API key
