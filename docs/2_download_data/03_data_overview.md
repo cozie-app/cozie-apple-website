@@ -214,8 +214,8 @@ These metadata columns shown in the example above are available for the followin
 </table>
 
 ## Difference between logging interval and sampling interval
-The logging interval describes at what points in time the data is sent to the database. The sampling interval describes the time between two samples of the same data. For some data these two are the same, e.g., for `ws_survey_count`, one data point sent to the database when the submit button in the watch survey is pressed.
-For `ws_heart_rate`, the Apple Watch records one data point every 3-6 minutes. This is the sampling interval. However, the data points are not sent to the database at the same times. The `ws_heart_rate` data points are only sent to the database, when the submit button in the watch survey is pressed. When the submit button is pressed, all `ws_heart_rate` data points since the last time the submit button was pressed are sent to the database.  Hence, the log interval can be much longer than the sampling interval.
+The logging interval describes at what points in time the data is sent to the database. The sampling interval describes the time between two samples of the same data. For some data, these two are the same, e.g., for `ws_survey_count`, one data point is sent to the database when the submit button in the watch survey is pressed.
+For `ws_heart_rate`, the Apple Watch records one data point every 3-6 minutes. This is the sampling interval. However, the data points are not sent to the database at the same time. The `ws_heart_rate` data points are only sent to the database when the submit button in the watch survey is pressed. When the submit button is pressed, all `ws_heart_rate` data points since the last time the submit button was pressed are sent to the database.  Hence, the log interval can be much longer than the sampling interval.
 
 <!--
 # To Do
