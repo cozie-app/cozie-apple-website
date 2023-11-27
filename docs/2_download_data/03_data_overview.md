@@ -163,8 +163,8 @@ Location data, e.g., `ts_latitude`, `ts_longitude`, with the `ts_` prefix is onl
 Unlike the HealthKit data, e.g., `ts_heart_rate`/`ws_heart_rate`, the `ws_` and `ts_` location data are not to be expected to be the same. Nevertheless, you might consider combining the corresponding columns, depending on your application.
 
 
-## Lambda Timestamp and Trigger
-For some of the field names there are two more accompanying fields for the timestamp of when the data was inserted into the database and what trigger the logging action. The field `lambda_timestamp` serves the same purpose. However this field value might over written in instances where values with identical `id_participant`, `id_experiment`, and `timestamp` are logged. The table below shows an example for `ts_HRV`. The columns `ts_HRV_lambda` and `ts_HRV_trigger` are used for debugging and development purposes.
+## Lambda timestamp and trigger
+For some of the field names there are two more accompanying fields for the timestamp of when the data was inserted into the database and what trigger the logging action. The field `lambda_timestamp` serves the same purpose. However this field value might over written in instances where values with identical `id_participant`, `id_experiment`, and `timestamp` are logged. The table below shows an example for `ts_HRV`. The columns `ts_HRV_lambda` and `ts_HRV_trigger` are used for debugging and development purposes. Unless you are investigating data anomalies or are working on app development, you can ignore these fields.
 
 | Field name | Type | Sampling rate | Description/Question | Field name in Cozie v2|
 |--------------|------|---------------|----------------------|-------------------------|
