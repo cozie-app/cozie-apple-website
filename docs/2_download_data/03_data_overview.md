@@ -59,9 +59,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ts_sleep_deep` | Float? | * | - | Duration of deep sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ts_sleep_in_bed` | Float? | * | - | Duration of the participant being in bed in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ts_stand_time` | Integer | * | - | Stand time in min?, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3174858-applestandtime) | `ts_standTime` |
-| `ts_step_count` | Integer | * | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount) | `ts_stepCount` |
+| `ts_step_count` | Integer | * | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount). The timestamp `time` marks the first step in the sample. | `ts_stepCount` |
 | `ts_timestamp_location`| String | * | ? | Timestamp (UTC) of when the GPS was retrieved | `timestamp_location` | 
-| `ts_walking_distance` | Float | * | ? | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning) | `ts_walkingDistance` |
+| `ts_walking_distance` | Float | * | ? | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning), The timestamp `time` marks the first meter in the sample. | `ts_walkingDistance` |
 | `ts_wrist_temperature` | Integer | * | 1d | Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
 
 ## Watch survey data
@@ -92,11 +92,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ws_sleep_deep` | Float? | ** | - | Duration of deep sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ws_sleep_in_bed` | Float? | ** | - | Duration of the participant being in bed in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
 | `ws_stand_time` | Float? | ** | ? | Stand time in min?, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3174858-applestandtime) | not available |
-| `ws_step_count` | Integer? | ** | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount) | not available |
+| `ws_step_count` | Integer? | ** | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount). The timestamp `time` marks the first step in the sample. | not available |
 | `ws_survey_count` | Integer | ** | - | Increasing key for each micro-survey response. Resets when Cozie app is (re-)installed. | `vote_count` |
 | `ws_timestamp_location` | String | ** | - | Timestamp of the location measurement in UTC, Format: "%Y-%m-%dT%H:%M:%S.%fZ" | `timestamp_location` |
 | `ws_timestamp_start` | String | ** | - | Timestamp (UTC) of when micro survey was started |`timestamp_start` |
-| `ws_walking_distance` | Float | ** | - | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning) | not available |
+| `ws_walking_distance` | Float | ** | - | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning). The timestamp `time` marks the first meter in the sample. | not available |
 | `ws_wrist_temperature` | Float | ** | 1d |  Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
 | `wss_goal` | Integer? | Logged when any sync button in the Cozie iPhone app | - |Watch survey response goal in the 'Settings' tab | not available |
 | `wss_participation_days`| String | Logged when any sync button in the Cozie iPhone app | - | Participation days set in the Cozie app by the participant | `settings_participation_days` |
