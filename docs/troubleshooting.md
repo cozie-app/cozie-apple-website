@@ -12,9 +12,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   
 * ### The Cozie setting cannot be synced between the iPhone and the Apple Watch.
   * Don't worry. This can happen sometimes. Ensure the Cozie app is open simultaneously on the iPhone and the Apple Watch. Here are a few tricks on how to fix it:
+  * Make sure that on the Cozie Watch app, you either see the message 'Please press the sync button in the Settings tab of the Cozie phone app.' or the first question of a watch survey. If the watch survey is in progress, either complete the watch survey or press the 'Reset' button.
   * Turn Bluetooth off and on again on the iPhone. Then try again to sync.
   * Force close the Cozie app [on the iPhone](https://support.apple.com/en-sg/HT201330) and the [Apple Watch (remove the app from app switcher](https://support.apple.com/en-gb/guide/watch/apda1bf1a95b/watchos)). Then, open both apps again and try to sync the settings again.
   * Make sure you have a good and stable internet connection.
+  * Wait a few minutes and try again. We've noticed that when the app is installed freshly, it might take 2-3 minutes until syncing is possible.
   * Uninstall the Cozie app from the iPhone and the Apple Watch. Then, install the app again on both devices.
 
 
@@ -35,7 +37,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 * ### I added a new data field to be stored in the InfluxDB. However, when I submit data, it is not stored
   The first time data with a new field name is saved in the database, the database sets the data type, e.g., if you were to implement the extraction of stride length information, you could save it as `ts_stride_length`. If you submit the value `1.04`, the value will be stored as a floating point number (float). The stride length might vary. If you happen to submit the value `1`, the database would attempt to store it as an integer. It would then see that there is already a floating point number stored under `ts_stride_length` and reject the new value of `ts_stride_length`, which is then lost. 
 
-  To avoid this issue, we force-cast the type for each field name in the backend. If you let us know what type and field name you would like to add to Cozie, we can help you with this issue.
+  To avoid this issue, we force-cast the type for each field name in the backend. Let us know what type and field name you would like to add to Cozie, we can help you with this issue.
 
 
 * ### Push notifications from OneSignal don't show up on my device.
@@ -45,5 +47,4 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   - If you have created your own Cozie app:
     - Check the correctness of the Player ID on [OneSignal.com](https://onesignal.com/).
     - Make sure you created the .p12 certificate for the main identifier.
-    - Try to send a test push notification from the dashboard on [OneSignal.com](https://onesignal.com/).
-
+    - Send a test push notification from the dashboard on [OneSignal.com](https://onesignal.com/).
