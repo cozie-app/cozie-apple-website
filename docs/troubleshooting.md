@@ -9,7 +9,18 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 # Troubleshooting
-  
+
+* ### I cannot install the Cozie app on the Apple Watch.
+  * Make sure that the Apple Watch is currently connected to the iPhone.
+  * Turn the airplane mode on the Apple Watch on and off.
+  * Turn on 'Automatic downloads' and 'Automatic Updates' in the Settings of the App Store app on the Apple Watch.
+  * On the Apple Watch, in the Settings app, turn off and on Wifi, Mobile data, and Bluetooth.
+  * On the iPhone, in the Settings app, turn off and on Wifi, Mobile data, and Bluetooth.
+  * Restart the iPhone and the Apple Watch.
+  * [Force restart the iPhone.](https://support.apple.com/en-sg/guide/iphone/iph8903c3ee6/ios#:~:text=If%20iPhone%20isn't%20responding,and%20hold%20the%20side%20button.)
+  * [Force restart the Apple Watch.](https://support.apple.com/en-sg/guide/watch/apd521a8a902/watchos)
+
+
 * ### The Cozie setting cannot be synced between the iPhone and the Apple Watch.
   * Don't worry. This can happen sometimes. Ensure the Cozie app is open simultaneously on the iPhone and the Apple Watch. Here are a few tricks on how to fix it:
   * Make sure that on the Cozie Watch app, you either see the message 'Please press the sync button in the Settings tab of the Cozie phone app.' or the first question of a watch survey. If the watch survey is in progress, either complete the watch survey or press the 'Reset' button.
@@ -27,7 +38,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   - Make sure the watch survey's JSON file is valid and has all fields required by the Cozie specification. There are online tools available to check the JSON validity, e.g., we use [JSON Formatter & Validator](https://jsonformatter.curiousconcept.com/#)
   - Firewalls can cause this error.
 
-  
+
 * ### Watch survey data is not logged (e.g., `ws_heart_rate`)
   - Make sure that the Apple Watch is connected to the iPhone.
   - Make sure that the iPhone has access to the internet.
@@ -35,7 +46,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 * ### I added a new data field to be stored in the InfluxDB. However, when I submit data, it is not stored
-  The first time data with a new field name is saved in the database, the database sets the data type, e.g., if you were to implement the extraction of stride length information, you could save it as `ts_stride_length`. If you submit the value `1.04`, the value will be stored as a floating point number (float). The stride length might vary. If you happen to submit the value `1`, the database would attempt to store it as an integer. It would then see that there is already a floating point number stored under `ts_stride_length` and reject the new value of `ts_stride_length`, which is then lost. 
+  The first time data with a new field name is saved in the database, the database sets the data type, e.g., if you were to implement the extraction of stride length information, you could save it as `ts_stride_length`. If you submit the value `1.04`, the value will be stored as a floating point number (float). The stride length might vary. If you happen to submit the value `1`, the database will attempt to store it as an integer. It would then see that there is already a floating point number stored under `ts_stride_length` and reject the new value of `ts_stride_length`, which is then lost. 
 
   To avoid this issue, we force-cast the type for each field name in the backend. Let us know what type and field name you would like to add to Cozie, we can help you with this issue.
 
