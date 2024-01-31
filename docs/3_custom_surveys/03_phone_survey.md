@@ -42,7 +42,7 @@ button labelled *Get link*.
 /d/e/1FAIpQLScEuqlYHOQyM0duWX96auVxqEwSYlRmx3ymAN_leyGcz6idlQ/viewform?usp=pp_url
 &entry.1137805192=alpha&entry.1075788715=alpha01`.
 
-## How to create a pre-filled link for all participants
+### How to create a pre-filled link for all participants
 From the example link above, the important part is at the end: 
 `&entry.1137805192=alpha&entry.1075788715=alpha01`.
 You can see that the URL parameter `entry.1137805192` is for the experiment ID 
@@ -52,6 +52,26 @@ So, you can manually create a phone survey link for all other participants. For
 example the phone survey link for participant ID `alpha02` would be `https://
 docs.google.com/forms/d/e/1FAIpQLScEuqlYHOQyM0duWX96auVxqEwSYlRmx3ymAN_leyGcz6idlQ/
 viewform?usp=pp_url&entry.1137805192=alpha&entry.1075788715=`**`alpha02`**
+
+## How to create a pre-filled Qualtrics survey
+1. Create a new survey using Qualtrics. We recommend asking for the
+experiment ID and participant ID in the first two questions. Once, your survey 
+is complete, click into the text field of the the experiment ID question, followed by a click on 'Default choices' in the left hand side menu.
+
+  ![Image](/img/phone_survey/qualtrics_example.png)
+
+  
+2. In the pop-up menu, press on the drop down menu, select 'Embedded Data Field' and enter 'id_experiment'. Press 'Insert'. Then press 'Save'. 
+You should now see that the text '${e://Field/id_experiment}' was entered into the text field of the experiment ID question.
+Repeat this step for the participant ID.
+  ![Image](/img/phone_survey/qualtrics_embedded_data_field.png)
+
+3. You can now publish the survey.
+
+  ![Image](/img/phone_survey/qualtrics_publish.png)
+
+4. You should now have a link similar to this one `https://nus.syd1.qualtrics.com/jfe/form/SV_3vG17UqIi70Why6`.
+You can now add the participant ID and experiment ID as URL parameters to the URL by adding `?id_experiment=alpha&id_participant=alpha01` to the URL: https://nus.syd1.qualtrics.com/jfe/form/SV_3vG17UqIi70Why6?id_experiment=alpha&id_participant=alpha03. This example will prefill the experiment ID field with `alpha` and the participant ID with `alpha01`.
 
 ## How to load the phone survey into the Cozie app
 1. Open to the Cozie app and go to the *Backend* tab. Then, a
@@ -63,3 +83,5 @@ phone survey works as expected.
 <img alt="Screenshot backend phone survey configuration" src={useBaseUrl('img/cozie_tab_data_phone_survey.png')}width="30%" />  &nbsp;
 <img alt="Screenshot phone survey example" src={useBaseUrl('img/cozie_phone_survey_example.png')}width="30%" />  &nbsp;
 
+## Remarks
+We recommend to automate the above process by taking advantage of the [onboarding with a QR code](/docs/deployment/qr_code). This allows you to automatically adapt the participant ID and experiment ID in the URL of the phone survey.
