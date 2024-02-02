@@ -136,7 +136,8 @@ We assembled a short offboarding checklist for your convenience.
 **Checklist**
 * Uninstall Cozie
 * Unpair Apple Watch
-* Remove Apple Watch from *Find My* app
+* Remove Apple Watch from *Find My* app  
+  This step only applies to cases where you provided an Apple Watch to the participant for the experiment. It is very important to do this step; otherwise, the Apple Watch will be locked and cannot be used anymore.
 * Sign equipment receipt
 * Exit interview
 * Sign receipt for participant incentive 
