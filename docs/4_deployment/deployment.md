@@ -76,7 +76,7 @@ The phone survey needs to be created with a third-party service such as Google F
 ### Test deployment
 As a final testing step before the actual deployment, we strongly recommend that you do a dry run of your deployment, i.e., deploy Cozie exactly as you would later, with at least five people who were not involved in any of the preparations. This will help to identify issues that need an outside perspective. e.g., phrasing, terms, or icons in the watch survey might not be known by people outside of your team or domain. People not intimately familiar with your project will not pay attention to details that are important for your research and might generally behave unexpectedly.
 
-Having a small cohort with participants that are somewhat outside of your inner circle is very valuable to finding unexpected issues and generating a small dataset that allows you to refine your data monitoring setup and also allows you to prepare the data analysis.
+Having a small cohort with participants that are somewhat outside of your inner circle is very valuable to finding unexpected issues and generating a small dataset that allows you to refine your data monitoring setup and also allows you to prepare the data analysis. In case of any issues with the Cozie app, make sure to check out our [troubleshooting guide](../troubleshooting).
 
 ### IRB
 If you are doing research at a University, you will likely need to get approval from an Institutional review board (IRB) that reviews the ethics and safety aspects of your Cozie deployment. Please check with the regulations of your country and institution about the details. 
