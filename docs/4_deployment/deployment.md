@@ -88,6 +88,8 @@ It is almost showtime. It is now time to recruit participants for your Cozie dep
 ### Participant scheduling
 Scheduling and coordination with participants can be surprisingly time-intensive. Reasons are no-shows, no responses, postponed appointments, and similar issues. There is not much that can be done about that aside from being mentally prepared for some delays.
 
+To accommodate any unforeseen eventualities, we recommend a soft start of the deployment and slowly increasing the number of simultaneously enrolled participants over time. 
+
 ## Onboarding
 Onboarding is the process of enrolling a participant into your experiment. This can include the following:
 * Explaining the purpose of your experiment
