@@ -123,3 +123,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     The [iPhone SE](https://www.apple.com/shop/buy-iphone/iphone-se) is the most inexpensive iPhone option and is available for approximately 430 USD.
 
     Modifying the source code of the app requires a [membership in the Apple Developer Program](https://developer.apple.com/support/compare-memberships/). There is a free tier available. The free tier includes access to XCode (IDE) and TestFlight (testing service). TestFlight allows you to create test versions of the app that are valid for 90 days. A paid membership is required to have your app on the App Store. The cost for the membership is approximately 100 USD per year.
+
+* #### What is accuracy of the physiological data measured with the Apple Watch?
+    Please refer to the publications below:
+    * [**Accuracy of Apple Watch Measurements for heart rate and energy expenditure in patients with cardiovascular disease: Cross-Sectional Study.**, Falter, Maarten, et al., JMIR mHealth and uHealth 7.3 (2019): e11889.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6444219/)
+    * [**Assessment of accuracy of overall energy expenditure measurements for the Fitbit Charge HR 2 and Apple Watch.**, Nuss, Kayla J., et al., American journal of health behavior 43.3 (2019): 498-505.](https://www.ingentaconnect.com/content/png/ajhb/2019/00000043/00000003/art00005)
+    * [**Tracking steps on apple watch at different walking speeds.**, Veerabhadrappa, Praveen, et al., Journal of general internal medicine 33 (2018): 795-796.](https://link.springer.com/article/10.1007/s11606-018-4332-y)
+    * [**Validity and reliability of the Apple Watch for measuring heart rate during exercise.**, Khushhal, Alaa, et al., Sports medicine international open 1.6 (2017): E206.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6226089/)
