@@ -105,15 +105,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ### Other questions
 
+* #### What is the minimal requirement for the Apple Watch and iPhone to run Cozie?
+    Please ensure that your iPhone and Apple Watch are running at least iOS 16 and watchOS 9.
+    Cozie will *not* run on Apple Watch Series 1, 2, 3 and iPhone 5, 5C, 5S, 6, 6S, SE (1st gen), 7. ([Source](https://en.wikipedia.org/wiki/WatchOS))
+
 * #### The location data is 0.0 for longitude and latitude. What is wrong?
-    Longitude=0 and latitude=0 is a point in the Atlantic west of Africa. We generally don't expect Cozie users to be there. Usually, (0, 0) coordinates are invalid. This can be the case when there is no location data available, e.g., when location services are turned off on the iPhone, the iPhone is in flight mode, or if there is another issue with acquiring location data.
+    Longitude=0 and latitude=0 is a point in the Atlantic west of Africa. We generally don't expect Cozie users to be there. Usually, (0, 0) coordinates are invalid. This can be the case when there is no location data available, e.g., 
+    when location services are turned off on the iPhone, the iPhone is in flight mode, or if there is another issue with acquiring location data.
 
 * #### Is Cozie available on Android devices?
     Cozie Apple is only available for iPhones and Apple Watches. However, there is a sister project called [Cozie Fitbit](https://cozie-fitbit.app/) that we used to work on. Cozie Fitbit is available for select Fitbit wearables and works on iPhones and Android smartphones. The development on Cozie Fitbit is paused for now and we will focus on the development of Cozie Apple.
 
 * #### Can Cozie be used with only one iPhone and multiple Apple Watches?
     Cozie Apple was developed for the use of one iPhone and one Apple Watch per user. It is also our recommendation to use Cozie-Apple in this way.
-
 
 * #### What is the cost of using Cozie?
     To use Cozie you need the app, an iPhone, and an Apple Watch. The Cozie application is free to use. We currently provide free access to our logging infrastructure until further notice.
