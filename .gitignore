@@ -21,3 +21,6 @@ yarn-error.log*
 
 # VScode
 .vscode/
+
+# Dependencies
+/node_modules
