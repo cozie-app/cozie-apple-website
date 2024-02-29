@@ -158,7 +158,16 @@ The example below shows the payload from a watch survey response. The fields wit
 ```
 
 ### Settings
-- Memory
-- Ephemoral storage
-- Time out
-- Environment variables
+- General configuration  
+   - Timeout: 4 min 0 sec
+   - Memory: 2047 MB
+   - Ephemeral storage: 512 MB
+- Function URL:
+   - Auth type: None
+   - Invoice mode: Buffered
+   - CORS: Not enabled
+- Environment variables:
+   - DB_HOST: XXX.influxcloud.net
+   - DB_NAME: cozie-apple
+   - DB_PASSWORD: XXX
+   - DB_USER: Cozie-Apple-Lambda-Writer

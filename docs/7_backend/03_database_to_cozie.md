@@ -22,7 +22,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ```
 
 ### Settings
-- Memory
-- Ephemoral storage
-- Time out
-- Environment variables
+- General configuration  
+    - Timeout: 0 min 30 sec
+    - Memory: 512 MB
+    - Ephemeral storage: 512 MB
+- Function URL:
+    - Auth type: None
+    - Invoice mode: Buffered
+    - CORS: Not enabled
+- Environment variables:
+    - DB_HOST: XXX.influxcloud.net
+    - DB_NAME: cozie-apple
+    - DB_PASSWORD: XXX
+    - DB_USER: Cozie-Apple-Lambda-Reader

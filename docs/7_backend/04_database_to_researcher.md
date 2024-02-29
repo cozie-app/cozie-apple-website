@@ -19,11 +19,24 @@ How to retrieve data from a user/researcher perspective is shown under [Data and
 ```
 
 
+
 ### Settings
-- Memory
-- Ephemoral storage
-- Time out
-- Environment variables
+- General configuration  
+    - Timeout: 4 min 0 sec
+    - Memory: 4096 MB
+    - Ephemeral storage: 512 MB
+- Function URL:
+    - Auth type: None
+    - Invoice mode: Buffered
+    - CORS: Not enabled
+- Triggers:
+    - API Gateway: cozie-apple-researcher-api
+- Environment variables:
+    - DB_HOST: XXX.influxcloud.net
+    - DB_NAME: cozie-apple
+    - DB_PASSWORD: XXX
+    - DB_USER: Cozie-Apple-Lambda-Reader
+    - S3_BUCKET_NAME: cozie-apple-web-api
 
 ## Conclusion
 This way of retrieving the Cozie data is very simple and straight forward. It comes at the disadvantage that it can be slow and it can peak the memory usage of InfluxDB. In the worst case, the memory usage exceeds the maximum limit and crashed the InfluxDB, which causes a restart of the instance. This can be avoided by only querying data of one participant at a time and even limiting the retrieved for one participant.
