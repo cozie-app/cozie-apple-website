@@ -211,7 +211,7 @@ function Home() {
         <section className={styles.features}>
           <div className="container">
             Please cite us as:<br/>
-            <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2600/14/142003" > Tartarini, F., Frei M., Schiavon, S., Chua Y. X., and Miller, C. (2023). Cozie Apple: An iOS mobile and smartwatch application for environmental quality satisfaction and physiological data collection</a>
+            <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2600/14/142003" > Tartarini F, Frei M, Schiavon S, Chua YX, Miller C. Cozie Apple: An iOS mobile and smartwatch application for environmental quality satisfaction and physiological data collection. J Phys Conf Ser. 2023;2600: 142003. doi:10.1088/1742-6596/2600/14/142003</a>
           </div>
         </section>
       </main>
