@@ -58,8 +58,8 @@ module.exports = {
               href: "https://www.budslab.org",
             },
             {
-              label: "SinBerBEST",
-              href: "https://sinberbest.berkeley.edu",
+              label: "Berkeley CBE",
+              href: "https://cbe.berkeley.edu/",
             },
             {
               label: "Contact us",
