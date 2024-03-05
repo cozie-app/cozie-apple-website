@@ -69,41 +69,36 @@ const contributors = [
   {
     name: <>Federico Tartarini</>,
     imageUrl: "img/federico.jpg",
-    role: <>Lead developer</>,
-    profession: <>Postdoctoral Scholar at SinBerBEST</>,
+    profession: <>Postdoctoral Scholar at University of Sydney</>,
     link: "https://federicotartarini.github.io",
   },
   {
     name: <>Clayton Miller</>,
     imageUrl: "img/clayton.png",
-    role: <>Project coordinator and supervisor</>,
-    profession: <>Assistant Professor at NUS</>,
+    profession: <>Associate Professor at NUS</>,
     link: "https://www.linkedin.com/in/claytonmiller/",
   },
   {
     name: <>Stefano Schiavon</>,
     imageUrl: "img/stefano.jpeg",
-    role: <>Project coordinator and supervisor</>,
     profession: <>Associate Professor at UC Berkeley</>,
     link: "https://www.linkedin.com/in/stefanoschiavon/",
   },
   {
     name: <>Mario Frei</>,
     imageUrl: "img/mario.jpeg",
-    role: <>Developer</>,
     profession: <>Research Fellow at NUS</>,
     link: "https://sg.linkedin.com/in/mario-frei",
   },
   {
     name: <>Chua Yun Xuan</>,
     imageUrl: "img/yun_xuan.jpeg",
-    role: <>Project manager</>,
     profession: <>Research Assistant at NUS</>,
     link: "https://sg.linkedin.com/in/mario-frei",
   },
 ];
 
-function Contributor({ imageUrl, name, profession, role, link }) {
+function Contributor({ imageUrl, name, profession, link }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div
@@ -120,7 +115,6 @@ function Contributor({ imageUrl, name, profession, role, link }) {
       <a className="avatar__intro" href={link}>
         <h4 className="avatar__name">{name}</h4>
         <small className="avatar__subtitle">{profession}</small>
-        <small className="avatar__subtitle">{role}</small>
       </a>
     </div>
   );
