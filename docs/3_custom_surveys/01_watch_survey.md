@@ -44,16 +44,18 @@ The table below explains the field names from the example above.
 | `question`              | Question that is shown in the watch survey on the Apple Watch                                    | `How would you prefer to be?` |
 | `question_id`           | The question ID is used as a column name in the database. It has to have the prefix `q_`           | `q_preference_thermal` |
 | `response_options`      | Array of response options objects                                                                | - |
-| `text`                  | Response text that is shown in the watch survey on the Apple Watch and text that is stored in the database. | `Cooler`  |
+| `text`                  | Response text that is shown in the watch survey on the Apple Watch and string that is stored in the database. | `Cooler`  |
 | `icon`                  | [Filename or SF symbol name](watch_survey_icons) of icon that is shown on the left-hand side of the response option text | `snow_flake` |
-| `icon_background_color` | Background color that is shown for image-based icons and SF Symbol based icons                   | `#F1A62E` |
+| `icon_background_color` | Background color that is shown for image-based icons and SF-Symbol-based icons                   | `#F1A62E` |
 | `use_sf_symbols`        | Boolean that indicates whether the value specified in `icon` is a filename or an SF symbol name  | `false` |
 | `sf_symbols_color`      | Foreground color that is shown for SF symbols                                                    | `#000000` |
 | `next_question_id`      | Question ID of the next question that is shown if this response option is selected. If the watch survey should end after selecting this response option, then the `next question_id` is an empty string. | `q_location` |
 
 
 ## How to create a watch survey link
-The watch survey JSON file needs to be made available online. It cannot be uploaded into the app as a file. The most convenient way of hosting the watch survey JSON file is on GitHub.
+The watch survey JSON file needs to be made available online. It cannot be uploaded into the app as a file. Here, we show two easy ways to host a file online, but you can also use other services.
+
+### Host watch survey on Github
 1. Create the *public* repository on Github
 2. Add the watch survey JSON file to the repository.<br/>
 3. Go to the raw version of the file.<br/>
@@ -62,18 +64,43 @@ The watch survey JSON file needs to be made available online. It cannot be uploa
 4. Copy the URL from the raw file.<br/>
   <img alt="Screenshot of raw watch survey file on Github" src={useBaseUrl('img/custom_surveys/github_ws_file_raw.png')}width="100%" />  &nbsp;
 
-5. Use this URL as a link to the watch survey JSON file in the next section.
+5. Use this URL in the app settings as shown in the next section.
+
+### Host watch survey on Google Drive
+1. Add the JSON file to a Google Drive
+2. Open the 'Share' options for the JSON file of the watch survey.
+   <img alt="Screenshot of watch survey file on Google Drive" src={useBaseUrl('img/custom_surveys/google_ws_drive_share_1.png')}width="100%" />
+
+    Make 'Anyone with link' a 'Viewer' for the JSON file.
+    <img alt="Screenshot of watch survey file on Google Drive" src={useBaseUrl('img/custom_surveys/google_ws_drive_share_2.png')}width="60%" />
+
+3. Copy the link of the JSON file.
+    <img alt="Screenshot of watch survey file on Google Drive" src={useBaseUrl('img/custom_surveys/google_ws_drive_share_link.png')}width="100%"/>
+
+4. The link to the JSON file should look similar to this example:
+   `https://drive.google.com/file/d/1ECfttYiSX7e5vQwoVAldOrJerMwH-EBt/view?usp=drive_link`
+
+   The important part is the file ID `1ECfttYiSX7e5vQwoVAldOrJerMwH-EBt`.
+   
+   Add the file ID to the following URL: <br/>
+   `https://drive.google.com/uc?export=download&id=`
+
+   For the above example, the resulting URL is `https://drive.google.com/uc?export=download&id=1ECfttYiSX7e5vQwoVAldOrJerMwH-EBt`
+
+   If you put this URL into your web browser, it should either display the watch survey file or download it directly.
+
+5. Use this URL in the app settings as shown in the next section.
 
 
 ## How to load the watch survey into the Cozie app
-1. Open to the Cozie app and go to the *Backend* tab.
+1. Open the Cozie app and go to the *Backend* tab.
 2. Add the URL to the watch survey file in the input field labeled *Watch 
 Survey Link* [Link to example survey](https://raw.githubusercontent.com/cozie-app/cozie-apple-website/master/static/watch_surveys/watch_survey_example.json))
 <img alt="Screenshot backend watch survey configuration" src={useBaseUrl('img/backend_watch_survey.png')}width="30%" />  &nbsp;
 
 3. Press the sync button in the *Backend* tab. The watch survey should now be available to select in the *Settings* tab.
 
-4. Go to the *Settings* tab and select your watch survey. The watch survey defined in the JSON file provided with the link above should be listed in the pop-up list. Select it.
+4. Go to the *Settings* tab and select your watch survey. The watch survey defined in the JSON file provided with the link above should be in the pop-up list. Select it.
 
 5. Sync the settings with the Apple Watch while the Cozie app is open on the Apple Watch, just like described in the [Setup guide](/docs/setup).
 
