@@ -24,7 +24,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 * ### The Cozie setting cannot be synced between the iPhone and the Apple Watch.
-  * Don't worry. This can happen sometimes. Ensure the Cozie app is open simultaneously on the iPhone and the Apple Watch. Here are a few tricks on how to fix it:
+  Don't worry. This can happen sometimes. Ensure the Cozie app is open simultaneously on the iPhone and the Apple Watch. Here are a few tricks on how to fix it:
   * Make sure that on the Cozie Watch app, you either see the message 'Please press the sync button in the Settings tab of the Cozie phone app.' or the first question of a watch survey. If the watch survey is in progress, either complete the watch survey or press the 'Reset' button.
   * Turn Bluetooth off and on again on the iPhone. Then try again to sync.
   * Force close the Cozie app [on the iPhone](https://support.apple.com/en-sg/HT201330) and the [Apple Watch (remove the app from app switcher](https://support.apple.com/en-gb/guide/watch/apda1bf1a95b/watchos)). Then, open both apps again and try to sync the settings again.
