@@ -23,6 +23,10 @@ On this page, we list some of the decisions we made during the development of Co
 - Python
     - Python is popular in research. For the sake of simplicity, all code that could be written was written in Python. The Cozie Apple app is written in Swift, as there is no alternative.
 
+- Watch survey
+    - The submit button at the end of the watch survey is required to allow the user to go back and revise the answer to the last watch survey question.
+    - The Cozie watch app cannot automatically close after pressing the watch survey. The [Apple iOS Human Interface Guidelines](https://stackoverflow.com/questions/8739178/does-apple-disallow-the-use-of-a-close-button-on-ios-ipad) require that all watch apps be closed by pressing the watch crown.
+
 - Phone survey
     - The phone survey allows for longer questions and answers but is more intrusive. Many online survey services, e.g., Qualtrix, Google Forms, and Survey Monkey, are available. These services work well on phones and offer a plethora of answer options, e.g., single choice, multiple choice, sliders, point scales, free text, etc... 
     Various collaborators also requested some of these various answer options.
@@ -35,10 +39,10 @@ On this page, we list some of the decisions we made during the development of Co
     - Version 2 of the Cozie app had a data page with some data visualization. For the sake of simplicity, the data insight was reduced to three text fields on the data page.
 
 - User management
-    - TBD
+    - Cozie v1 used [Firebase Authentication](https://firebase.google.com/docs/auth) for user management. This was removed to reduce dependencies and reduce friction from the onboarding process. 
 
 - ResearchKit
-    - TBD
+    - Cozie v1 used [ResearchKit](https://developer.apple.com/researchkit/). ResearchKit would allow us to roll out experiments using Cozie globally. However, ResearchKit caused problems during development before we were ready to benefit from it. Hence, it was removed to reduce dependencies and remove friction from the onboarding process. ResearchKit could/should be integrated again once Cozie is more refined, i.e., ready to be used in a country-level experiment.
 
 - Limitations and design issues
     - Currently, the data type of fields needs to be enforced on the backend to avoid issues. Ideally, the field type should be included in the payload.
