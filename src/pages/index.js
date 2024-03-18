@@ -81,7 +81,7 @@ const contributors = [
   {
     name: <>Stefano Schiavon</>,
     imageUrl: "img/stefano.jpeg",
-    profession: <>Associate Professor at UC Berkeley</>,
+    profession: <>Professor at UC Berkeley</>,
     link: "https://www.linkedin.com/in/stefanoschiavon/",
   },
   {
