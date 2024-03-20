@@ -6,7 +6,7 @@ sidebar_label: Retrieveing data
 
 import useBaseUrl from '@docusaurus/useBaseUrl'; 
 
-<img alt="Data flow from database to researcher" src={useBaseUrl('img/backend/backend_retrieve_data.jpg')}width="100%" />
+<img alt="Data flow from database to researcher" src={useBaseUrl('img/backend/backend_retrieve_data.jpg')}width="30%" />
 
 ## Overview
 

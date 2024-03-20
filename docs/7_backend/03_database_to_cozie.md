@@ -7,10 +7,9 @@ sidebar_label: Reading Cozie data
 import useBaseUrl from '@docusaurus/useBaseUrl'; 
 
 
-<img alt="Data flow from database to Cozie" src={useBaseUrl('img/backend/backend_read_influx.jpg')}width="100%" />
+<img alt="Data flow from database to Cozie" src={useBaseUrl('img/backend/backend_read_influx.jpg')}width="30%" />
 
 ## Overview
-
 
 ## Changes in the Cozie app
 

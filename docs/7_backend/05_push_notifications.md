@@ -7,7 +7,7 @@ sidebar_label: Push Notifications
 import useBaseUrl from '@docusaurus/useBaseUrl'; 
 
 
-<img alt="Data flow for push notifications" src={useBaseUrl('img/backend/backend_push_notification.jpg')}width="100%" />
+<img alt="Data flow for push notifications" src={useBaseUrl('img/backend/backend_push_notification.jpg')}width="60%" />
 
 
 ## Overview
