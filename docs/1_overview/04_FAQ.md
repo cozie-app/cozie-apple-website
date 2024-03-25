@@ -107,7 +107,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 * #### What is the minimal requirement for the Apple Watch and iPhone to run Cozie?
     Please ensure that your iPhone and Apple Watch are running at least iOS 16 and watchOS 9.
-    Cozie will *not* run on Apple Watch Series 1, 2, 3 and iPhone 5, 5C, 5S, 6, 6S, SE (1st gen), 7. ([Source](https://en.wikipedia.org/wiki/WatchOS))
+    Further, make sure to have an Apple Watch Series 4 or newer and iPhone 11 or newer. ([Source](https://en.wikipedia.org/wiki/WatchOS))
 
 * #### The location data is 0.0 for longitude and latitude. What is wrong?
     Longitude=0 and latitude=0 is a point in the Atlantic west of Africa. We generally don't expect Cozie users to be there. Usually, (0, 0) coordinates are invalid. This can be the case when there is no location data available, e.g., 
