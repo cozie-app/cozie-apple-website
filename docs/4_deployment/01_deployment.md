@@ -90,6 +90,19 @@ Scheduling and coordination with participants can be surprisingly time-intensive
 
 To accommodate any unforeseen eventualities, we recommend a soft start of the deployment and slowly increasing the number of simultaneously enrolled participants over time. 
 
+### Device readiness
+All devices needed during the onboarding should be ready to be used at least one day before onboarding. All software should be up to date and already setup as needed. Ideally, the devices are still connected to the charger before the onboarding session starts
+- iPhone
+  - Charged
+  - iOS up to date
+  - Cozie installed
+  - Cozie setup (experiment ID, participant ID, watch survey, permissions granted, etc.)
+- Apple Watch
+  - Paired with iPhone
+  - WatchOS updated
+  - Cozie installed
+  - Cozie setup (watch survey showing, permissions granted)
+
 ## Onboarding
 Onboarding is the process of enrolling a participant into your experiment. This can include the following:
 * Explaining the purpose of your experiment
@@ -127,7 +140,7 @@ We assembled a short onboarding checklist for your convenience.
 ## Offboarding
 Offboarding is the process at the end of the enrollment of a participant into an experiment. This can include returning of devices, uninstalling Cozie, offboarding interview, and disbursement of incentives.
 
-We ask participants to uninstall Cozie to ensure that they are no longer sharing their data with us. If an Apple Watch was provided, it needs to be unpaired with the participant's iPhone. Most importantly, the Apple Watch needs to be removed from the *Find My* app of the participant's iPhone. If this step is skipped, the Apple Watch will be locked and unusable until it is unlocked. If an iPhone was provided, we ask the participant to remove their Apple ID and reset the device. Then the equipment receipt is signed again indicating that the iPhone and/or Apple Watch were returned in good condition. 
+We ask participants to uninstall Cozie to ensure that they are no longer sharing their data with us. If an iPhone and/or Apple Watch was provided, make sure to properly remove accounts and properly unpair the devices. Then the equipment receipt is signed again indicating that the iPhone and/or Apple Watch were returned in good condition. 
 
 Now is a good time, to do an exit interview if needed. We often ask for the participant's feedback, issues, suggestions for improvement, etc.
 
