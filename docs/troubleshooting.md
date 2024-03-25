@@ -13,7 +13,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 * ### I cannot install the Cozie app on the Apple Watch.
   * Make sure that the Apple Watch and iPhone are still fully supported by Apple (see [here](https://cozie-apple.app/docs/overview/faq/#what-is-the-minimal-requirement-for-the-apple-watch-and-iphone-to-run-cozie) for more information).
   * Make sure that the Apple Watch is currently connected to the iPhone.
-  * Make sure that the iPhone is connected to Wifi.
+  * Make sure that the iPhone is connected to the internet.
   * Make sure there is no update for WatchOS or iOS pending. If there are updates available, install the iOS and watchOS first. Then, proceed to install the Cozie watch app.
   * Turn the airplane mode on the Apple Watch on and off.
   * Turn on 'Automatic downloads' and 'Automatic Updates' in the Settings of the App Store app on the Apple Watch.
