@@ -29,9 +29,9 @@ To find out more about Cozie please watch the following video.
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/5e4FwVydYRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ## Research
-Please cite us as [Tartarini F, Frei M, Schiavon S, Chua YX, Miller C. Cozie Apple: An iOS mobile and smartwatch application for environmental quality satisfaction and physiological data collection. J Phys Conf Ser. 2023;2600: 142003. doi:10.1088/1742-6596/2600/14/142003]([ttps://arxiv.org/abs/2210.13977](https://iopscience.iop.org/article/10.1088/1742-6596/2600/14/142003)).
+Please cite us as [Tartarini F, Frei M, Schiavon S, Chua YX, Miller C. Cozie Apple: An iOS mobile and smartwatch application for environmental quality satisfaction and physiological data collection. J Phys Conf Ser. 2023;2600: 142003. doi:10.1088/1742-6596/2600/14/142003](https://iopscience.iop.org/article/10.1088/1742-6596/2600/14/142003).
 
-We have used Cozie (Fitbit & Apple) successfully in the field for research which lead to several peer-reviewed publications. A list of publications involving Cozie is available on [cozie.app](https://cozie.app/docs/research/publications-cozie)
+We have used Cozie (Fitbit & Apple) successfully in the field for research which lead to several peer-reviewed publications. A list of publications involving Cozie is available on [cozie.app](https://cozie.app/docs/research/publications-cozie).
 
 ## License
 The Cozie is released under at [LGPL-3.0 license](https://github.com/cozie-app/cozie-apple/blob/master/LICENSE)
