@@ -1,7 +1,7 @@
 ---
 id: backend_retrieving_cozie_data
 title: Retrieving Cozie data
-sidebar_label: Retrieveing data
+sidebar_label: Retrieving data
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'; 
