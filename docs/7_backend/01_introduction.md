@@ -39,13 +39,13 @@ The **AWS Cost Explorer** allows you to monitor the cost of the AWS services. Ho
 
 With **AWS CloudWatch**, we monitor the Lambda function and detect errors. Normally, there are no errors, but we like stay on top of things.
 
-**AWS API Gateway** allows you to route request and do authentification, e.g., with API keys. Instead of using AWS API Gateway, it is also possible to send requests directly to the URL of and AWS Lambda function.
+**AWS API Gateway** allows you to route request and do authentication, e.g., with API keys. Instead of using AWS API Gateway, it is also possible to send requests directly to the URL of and AWS Lambda function.
 
-**AWS API EventBridge** offers scheduling. This comes in handy if you want to exectue a Lambda function at a certain interval or time of day. This could be the case if you want to monitor Cozie data and send push notification if certain conditions are met. See [Just-in-Time-Adaptive Interventions (JITAI)](https://cozie.app/docs/research/publications-jitai) for more information.
+**AWS API EventBridge** offers scheduling. This comes in handy if you want to execute a Lambda function at a certain interval or time of day. This could be the case if you want to monitor Cozie data and send push notification if certain conditions are met. See [Just-in-Time-Adaptive Interventions (JITAI)](https://cozie.app/docs/research/publications-jitai) for more information.
 
 **AWS Simple Queue Sevice (SQS)** can help to speed up the process of the Cozie app sending data to backend. The Cozie app can accumulate data over several hours, e.g., overnight. If the participant then submits a watch survey in the morning, a fair bit of data is sent to the backend. The respective Lambda function can take several seconds to complete and respond to the Cozie app, which feels like an eternity for the participant. 
 
-To remidy the situation, the data can be sent to the SQS first instead to a Lambda function. The SQS buffers the data and responds to the app quickly. Then SQS can call the Lambda function that ingests the Cozie data and inserts it into InfluxDB.
+To remedy the situation, the data can be sent to the SQS first instead to a Lambda function. The SQS buffers the data and responds to the app quickly. Then SQS can call the Lambda function that ingests the Cozie data and inserts it into InfluxDB.
 
 Similarly, retrieving Cozie data for research, can take a few minutes if the dataset includes dozens of participants who provided data for several weeks. This can lead to memory issues in InfluxDB and/or wait times for the researcher requesting the data. 
 
@@ -56,15 +56,13 @@ InfluxDB is the database engine that we use in the backend of Cozie. It is a dat
 
 There are a few key differences on the surface. Being aware of these conventions makes it much easier to understand this documentation.
 What is called a `table` in MySQL is a `measurement` in InfluxDB.
-There are two different kindes of `column` types in InfluxDB. They are called `tags` and `fields`. The `column name` is either a `field key` or `tag key`. The value in a column is either a `tag value` or `key value`.
+There are two different kinds of `column` types in InfluxDB. They are called `tags` and `fields`. The `column name` is either a `field key` or `tag key`. The value in a column is either a `tag value` or `key value`.
 In an SQL query, you can only `GROUP BY` `time` interval and tag `values`. 
 InfluxDB identifies unique data points by their measurement, tag set, and timestamp (See [here](https://docs.influxdata.com/influxdb/v2/write-data/best-practices/duplicate-points/) for more information.).
-If you insert data with the same `measurment`, `timestamp`, and `tag` values that already exist in the database, then the row is overwritten without warning.
+If you insert data with the same `measurement`, `timestamp`, and `tag` values that already exist in the database, then the row is overwritten without warning.
 
-See Influx' documetnation for the [InfluxDB Key concepts](https://docs.influxdata.com/influxdb/v1/concepts/key_concepts/).
+See Influx' documentation for the [InfluxDB Key concepts](https://docs.influxdata.com/influxdb/v1/concepts/key_concepts/).
 
 ## Costs
-We have experience with approxiamtely 50-100 participants enrolled in an exerpiement using the Cozie app. 
-
-
+We have experience with approximately 50-100 participants enrolled in an experiment using the Cozie app. 
 
