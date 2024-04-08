@@ -41,6 +41,10 @@ To avoid reaching the memory limit of the InfluxDB data of only one participant 
 | DB_PORT     | 8086 |  |
 | DB_USER     | Cozie-Apple-Lambda-Writer-App-API |  |
 | S3_BUCKET_NAME | cozie-apple-web-api |  |
+|  |  |  |
+| **Layers** | | |
+| AWSSDKPandas-Python311 |  | AWS Layer for Pandas |
+| Influx |  | Custom layer for InfluxDB client |
 
 ### S3 bucket configuration
 | Configuration | Value | Comment |

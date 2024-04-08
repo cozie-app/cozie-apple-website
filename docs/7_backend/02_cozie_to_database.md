@@ -172,9 +172,12 @@ The example below shows the payload from a watch survey response. The fields wit
 |  |  |  |
 | **Triggers** | | |
 | API Gateway | cozie-apple-v3-researcher-api |  
-|  |  |  ||
+|  |  |  |
 | **Environment variables** | | |
 | SQS_URL       | https:&#8203;//sqs.ap-southeast-1.amazonaws.com/XXX/cozie-apple-app-write-influx-queue | (replace 'XXX') |
+|  |  |  |
+| **Layers** | | |
+| No layers required |  |  |
 
 #### cozie-apple-v3-app-write-influx-queue
 | Configuration | Value | Comment |
@@ -193,6 +196,10 @@ The example below shows the payload from a watch survey response. The fields wit
 | DB_PASSWORD | XXX | (replace 'XXX') |
 | DB_PORT     | 8086 |  |
 | DB_USER     | Cozie-Apple-Lambda-Writer-App-API |  |
+|  |  |  |
+| **Layers** | | |
+| AWSSDKPandas-Python311 |  | AWS Layer for Pandas |
+| Influx |  | Custom layer for InfluxDB client |
 
 
 ### SQS configuration

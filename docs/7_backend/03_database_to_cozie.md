@@ -46,6 +46,10 @@ In order to have Cozie app read the data from your own backend, you need to upda
 | DB_PASSWORD | XXX | (replace 'XXX') |
 | DB_PORT     | 8086 |  |
 | DB_USER     | Cozie-Apple-Lambda-Reader-App-API |  |
+|  |  |  |
+| **Layers** | | |
+| AWSSDKPandas-Python311 |  | AWS Layer for Pandas |
+| Influx |  | Custom layer for InfluxDB client |
 
 ### API Gateway configuration
 | Configuration | Value | Comment |
@@ -68,7 +72,7 @@ In order to have Cozie app read the data from your own backend, you need to upda
 | API key required | enabled |  |
 |  |  |  |
 | **URL query string parameters** |  |  |
-| leave emptu |  | default |
+| leave empty |  | default |
 |  |  |  |
 | **HTTP request headers** |  |  |
 |  leave empty | | default | 
