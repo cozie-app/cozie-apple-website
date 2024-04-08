@@ -6,38 +6,77 @@ sidebar_label: Retrieveing data
 
 import useBaseUrl from '@docusaurus/useBaseUrl'; 
 
-<img alt="Data flow from database to researcher" src={useBaseUrl('img/backend/backend_retrieve_data.jpg')}width="30%" />
+<img alt="Data flow from database to researcher" src={useBaseUrl('img/backend/backend_retrieve_data.jpg')}width="60%" />
 
 ## Overview
 
 How to retrieve data from a user/researcher perspective is shown under [Data and Download](../download_data/download)
 
+There are a few technical constraints that are governing the design of the web API for Cozie dat retrieval:
+ - Payload limit of Python Lambda function: 6MB
+ - Timeout limit of AWS API Gateway: 30 seconds
+ - InfluxDB Cloud cluster memory: 4GB
+
+If any of these limits are reached, the web API returns an error. If the memory of InfluxDB is exceeded, the cluster crashes and restarts. This process takes a few minutes during which no data can be written to or read from the InfluxDB.
+To avoid reaching the memory limit of the InfluxDB data of only one participant is queried at a time.
+
 ## Lambda function code
+- [cozie-apple-v3-researcher-read-influx](https://github.com/cozie-app/cozie-apple-backend/tree/main/lambda_cozie-apple-v3-researcher-read-influx)
 
-```python title="Lambda function"
+### Lambda configuration
+| Configuration | Value | Comment |
+|:--------------|:------|:--------|
+| **General configuration** | | |
+| Memory | 4096 MB |  |
+| Ephemeral storage | 512 MB | default value |
+| Timeout | 4 min 0 sec |  |
+|  |  |  |
+| **Triggers** | | |
+| API Gateway | cozie-apple-v3-researcher-api |  |
+|  |  |  |
+| **Environment variables** | | |
+| DB_HOST     | XXX.influxcloud.net | (replace 'XXX') |
+| DB_NAME     | cozie-apple |  |
+| DB_PASSWORD | XXX | (replace 'XXX') |
+| DB_PORT     | 8086 |  |
+| DB_USER     | Cozie-Apple-Lambda-Writer-App-API |  |
+| S3_BUCKET_NAME | cozie-apple-web-api |  |
 
-```
+### S3 bucket configuration
+| Configuration | Value | Comment |
+|:--------------|:------|:--------|
+| **General configuration** | | |
+| Bucket name | cozie-apple-web-api |  |
 
-
-
-### Settings
-- General configuration  
-    - Timeout: 4 min 0 sec
-    - Memory: 4096 MB
-    - Ephemeral storage: 512 MB
-- Function URL:
-    - Auth type: None
-    - Invoice mode: Buffered
-    - CORS: Not enabled
-- Triggers:
-    - API Gateway: cozie-apple-researcher-api
-- Environment variables:
-    - DB_HOST: XXX.influxcloud.net
-    - DB_NAME: cozie-apple
-    - DB_PASSWORD: XXX
-    - DB_USER: Cozie-Apple-Lambda-Reader
-    - S3_BUCKET_NAME: cozie-apple-web-api
+### API Gateway configuration
+| Configuration | Value | Comment |
+|:--------------|:------|:--------|
+| Proxy resource | disabled | default |
+| Resource path | / | |
+| Resource name | retrieve | |
+| CORS (Cross Origin Resource Sharing) | enabled |
+|  |  |  |
+| **Method details** |  |  |
+| Method type | ANY | |
+| Integration type | Lambda function | |
+| Lambda proxy integration | enabled | |
+| Lambda function | arn:aws:lambda:[region]:[Accound ID]:function:cozie-apple-v3-researcher-read-influx | check dropdown menu |
+| Default timeout| enabled | 29 seconds (default) |
+|  |  |  |
+| **Method request settings** |  |  |
+| Authorization | None | default |
+| Request validator | None | default |
+| API key required | enabled |  |
+|  |  |  |
+| **URL query string parameters** |  |  |
+|  |  | leave default |
+|  |  |  |
+| **HTTP request headers** |  |  |
+|  |  | leave default |
+|  |  |  |
+| **Request body** |  |  |
+|  |  | leave default |
+|  |  |  |
 
 ## Conclusion
-This way of retrieving the Cozie data is very simple and straight forward. It comes at the disadvantage that it can be slow and it can peak the memory usage of InfluxDB. In the worst case, the memory usage exceeds the maximum limit and crashed the InfluxDB, which causes a restart of the instance. This can be avoided by only querying data of one participant at a time and even limiting the retrieved for one participant.
-An alternative is to use a cache that is frequently updated. This allow to only request data that has not yet been cached and even most of the pre-processing can be done ahead of time. For more information see [how to write to a cache](backend_cache_write) and [how to read from a cache](backend_cache_read)
+If you don't need to offer a web API then it might be easier to retrieve the data from your database directly and omitting this part of the web API.
