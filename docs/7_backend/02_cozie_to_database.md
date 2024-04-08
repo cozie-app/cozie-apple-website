@@ -243,7 +243,8 @@ The example below shows the payload from a watch survey response. The fields wit
 |  |  |  |
 | **URL query string parameters** |  |  |
 |  |  | leave default |
-| ***HTTP request headers** |  |  |
+|  |  |  |
+| **HTTP request headers** |  |  |
 |  |  | leave default |
 |  |  |  |
 | **Request body** |  |  |
