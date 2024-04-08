@@ -17,7 +17,10 @@ There is only 4 backend functions in the Cozie backend:
  - [Write data sent by the Cozie app to the Influx DB](backend_cozie_to_database)
  - [Read data from the InfluxDB and send it to the Cozie app](backend_database_to_cozie)
  - [Retrieve data from the InfluxDB and sent it to the researcher](backend_retrieving_cozie_data)
+ - Send push notification to the Cozie app (not yet documented)
+ <!--
  - [Send push notification to the Cozie app](backend_push_notifcations)
+-->
 
 ## AWS
 Amazon Web Services (AWS) offers countless services. It is quite difficult to keep an overview. Fortunately, the Cozie backend only uses one such service at its core, which is AWS Lambda. AWS Lambda allows you to execute code in the cloud and send requests and data to the lambda function The service is available for many programming languages. For Cozie, we focus on Python.
