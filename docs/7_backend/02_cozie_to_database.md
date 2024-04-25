@@ -166,9 +166,9 @@ The example below shows the payload from a watch survey response. The fields wit
 | Configuration | Value | Comment |
 |:--------------|:------|:--------|
 | **General configuration** | | |
-| Memory | 1024 MB |  |
+| Memory | 2048 MB |  |
 | Ephemeral storage | 512 MB | default value |
-| Timeout | 0 min 20 sec |  |
+| Timeout | 0 min 29 sec | Timeout limit for API Gateway is 30 seconds |
 |  |  |  |
 | **Triggers** | | |
 | API Gateway | cozie-apple-v3-researcher-api |  
