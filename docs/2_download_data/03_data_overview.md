@@ -44,7 +44,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `ts_audio_exposure_`<br/>`environment` | Integer | * | 30min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | `ts_hearingEnvironmental`<br/>`Exposure`, `sound_pressure` | 
 | `ts_audio_exposure_`<br/>`headphones` | Float? | * | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
 | `ts_heart_rate` | Integer? | * | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate)| `ts_heartRate`, `heart_rate` |
-| `ts_altitude` | Float | *** | - | Latitude in ° | not available |
+| `ts_latitude` | Float | *** | - | Latitude in ° | not available |
 | `ts_location_`<br/>`accuracy_horizontal` | Float? | *** | - | Horizontal positioning accuracy in m (see `ts_latitude`, `ts_longitude`) | not available |
 | `ts_location_`<br/>`accuracy_vertical` | Float? | *** | - | Vertical positioning accuracy in m (see `ts_altitude`) | not available |
 | `ts_location_`<br/>`acquisition_method` | String? | *** | - |  | not available |
