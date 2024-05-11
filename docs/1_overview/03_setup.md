@@ -80,12 +80,13 @@ You can either choose keep the default settings and sync them with the Apple Wat
 
    <img alt="Screenshot of first screen on watch app" src={useBaseUrl('img/cozie_watch_app_first_screen.png')}width="24%" /> &nbsp;
    <img alt="Screenshot of sync icon in settings tab" src={useBaseUrl('img/cozie_settings_tab_sync.png')}width="37%" /> &nbsp;
-   <img alt="Screenshot of first watch survey question" src={useBaseUrl('img/cozie_watch_thermal_first_question.png')}width="24%" /> &nbsp;
+   <img alt="Screenshot of first watch survey question" src={useBaseUrl('img/cozie_watch_app_thermal_first_question.png')}width="24%" /> &nbsp;
 
    You can proceed to complete the watch survey on the Apple Watch. Submit the watch survey by pressing 'Submit survey' after the last question.
 
-   <img alt="Watch survey, first question" src={useBaseUrl('img/cozie_watch_thermal_first_question.png')}width="24%" />&nbsp;
-   <img alt="Watch survey, submit screen" src={useBaseUrl('img/cozie_watch_thermal_submit_screen.png')}width="24%" />
+   <img alt="Watch survey, first question" src={useBaseUrl('img/cozie_watch_app_thermal_first_question.png')}width="24%" />&nbsp;
+   <img alt="Watch survey, submit screen" src={useBaseUrl('img/cozie_watch_app_submit_screen.png')}width="24%" />&nbsp;
+   <img alt="Watch survey, after submission screen" src={useBaseUrl('img/cozie_watch_app_after_submission_screen.png')}width="24%" />
 
    If the Watch icons in the *Settings* tab remain grey, close and open again the Cozie app on the Apple Watch and try step 4 again. 
    
