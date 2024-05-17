@@ -28,7 +28,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 | `id_onesignal` | String | Logged with any other data point | - |Unique OneSignal player id provided by OneSignal | `id_one_signal` |
 | `id_participant` | String | Logged with any other data point | - | Unique identifier for each participant | `id_participant` |
 | `id_password` | String | Logged with any other data point | - | 'Backend tab': Password for participant. It should be unique for each participant. It prevents data corruption by participants changing their `id_participant` or `id_experiment` | not available |
-| `location_change` | Boolean | *** | - | Indicates location change of more than 50m | not available |
+| `location_change` | Boolean | [***](#logging-rate) | - | Indicates location change of more than 50m | not available |
 | `pss_reminder_days` | String | Logged when any sync button in the Cozie iPhone app  | -| Days on which the phone survey reminder is shown. | not available |
 | `pss_reminder_enabled` | Boolean | Logged when any sync button in the Cozie iPhone app | - | Indicates whether the a phone survey reminder is enabled. (enabled: `True`) | not available |
 | `pss_reminder_time` | String | Logged when any sync button in the Cozie iPhone app | - | Time at which the phone survey reminder is shown. | not available |
@@ -39,65 +39,83 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ## HealthKit data logged on the iPhone
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
 |------------|------|-------------------|------------------|-------------|-----------------------|
-| `ts_HRV` | Integer | * | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
-| `ts_altitude` | Integer | *** | - | Altitude in m | not available |
-| `ts_audio_exposure_`<br/>`environment` | Integer | * | 30min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | `ts_hearingEnvironmental`<br/>`Exposure`, `sound_pressure` | 
-| `ts_audio_exposure_`<br/>`headphones` | Float? | * | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
-| `ts_heart_rate` | Integer? | * | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate)| `ts_heartRate`, `heart_rate` |
-| `ts_latitude` | Float | *** | - | Latitude in ° | not available |
-| `ts_location_`<br/>`accuracy_horizontal` | Float? | *** | - | Horizontal positioning accuracy in m (see `ts_latitude`, `ts_longitude`) | not available |
-| `ts_location_`<br/>`accuracy_vertical` | Float? | *** | - | Vertical positioning accuracy in m (see `ts_altitude`) | not available |
-| `ts_location_`<br/>`acquisition_method` | String? | *** | - |  | not available |
-| `ts_location_floor` | Float? | *** | - |  | not available |
-| `ts_location_`<br/>`source_device` | String? | *** | - |  | not available |
-| `ts_longitude` | Float | *** | - | Longitude in ° | not available |
-| `ts_oxygen_saturation` | Integer | ** | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | `ts_oxygenSaturation` |
-| `ts_resting_heart_rate` | Integer | * | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | `ts_restingHeartRate` |
-| `ts_sleep_REM` | Float? | * | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ts_sleep_awake` | Float? | * | - | Duration of the participant being awake in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ts_sleep_core` | Float? | * | - | Duration of light or intermediate sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ts_sleep_deep` | Float? | * | - | Duration of deep sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ts_sleep_in_bed` | Float? | * | - | Duration of the participant being in bed in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ts_stand_time` | Integer | * | - | Stand time in min?, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3174858-applestandtime) | `ts_standTime` |
-| `ts_step_count` | Integer | * | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount). The timestamp `time` marks the first step in the sample. | `ts_stepCount` |
-| `ts_timestamp_location`| String | * | ? | Timestamp (UTC) of when the GPS was retrieved | `timestamp_location` | 
-| `ts_walking_distance` | Float | * | ? | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning), The timestamp `time` marks the first meter in the sample. | `ts_walkingDistance` |
-| `ts_wrist_temperature` | Integer | * | 1d | Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
+| `ts_HRV` | Integer | [*](#logging-rate) | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
+| `ts_altitude` | Integer | [***](#logging-rate) | - | Altitude in m | not available |
+| `ts_audio_exposure_`<br/>`environment` | Integer | [*](#logging-rate) | 30min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | `ts_hearingEnvironmental`<br/>`Exposure`, `sound_pressure` | 
+| `ts_audio_exposure_`<br/>`headphones` | Float? | [*](#logging-rate) | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
+| `ts_heart_rate` | Integer? | [*](#logging-rate) | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate)| `ts_heartRate`, `heart_rate` |
+| `ts_latitude` | Float | [***](#logging-rate) | - | Latitude in ° | not available |
+| `ts_location_`<br/>`accuracy_horizontal` | Float? | [***](#logging-rate) | - | Horizontal positioning accuracy in m (see `ts_latitude`, `ts_longitude`) | not available |
+| `ts_location_`<br/>`accuracy_vertical` | Float? | [***](#logging-rate) | - | Vertical positioning accuracy in m (see `ts_altitude`) | not available |
+| `ts_location_`<br/>`acquisition_method` | String? | [***](#logging-rate) | - |  | not available |
+| `ts_location_floor` | Float? | [***](#logging-rate) | - |  | not available |
+| `ts_location_`<br/>`source_device` | String? | [***](#logging-rate) | - |  | not available |
+| `ts_longitude` | Float | [***](#logging-rate) | - | Longitude in ° | not available |
+| `ts_oxygen_saturation` | Integer | [**](#logging-rate) | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | `ts_oxygenSaturation` |
+| `ts_resting_heart_rate` | Integer | [*](#logging-rate) | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | `ts_restingHeartRate` |
+| `ts_sleep_REM` | Float? | [*](#logging-rate) | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ts_sleep_awake` | Float? | [*](#logging-rate) | - | Duration of the participant being awake in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ts_sleep_core` | Float? | [*](#logging-rate) | - | Duration of light or intermediate sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ts_sleep_deep` | Float? | [*](#logging-rate) | - | Duration of deep sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ts_sleep_in_bed` | Float? | [*](#logging-rate) | - | Duration of the participant being in bed in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ts_stand_time` | Integer | [*](#logging-rate) | - | Stand time in min?, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3174858-applestandtime) | `ts_standTime` |
+| `ts_step_count` | Integer | [*](#logging-rate) | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount). The timestamp `time` marks the first step in the sample. | `ts_stepCount` |
+| `ts_step_count_start_time` | String | ? | - | Start timestamp of the `ts_step_count` sample, coincides with`time` |  in development, will be added with Cozie 3.0.2 |
+| `ts_step_count_end_time` | String | ? | - | End timestamp of the `ts_step_count` sample | in development, will be added with Cozie 3.0.2 |
+| `ts_timestamp_location`| String | [*](#logging-rate) | ? | Timestamp (UTC) of when the GPS was retrieved | `timestamp_location` | 
+| `ts_walking_distance` | Float | [*](#logging-rate) | ? | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning). The timestamp `time` marks the first meter in the sample. | `ts_walkingDistance` |
+| `ts_walking_distance_start_time` | String | ? | - | Start timestamp of the `ts_walking_distance` sample, coincides with`time` |  in development, will be added with Cozie 3.0.2 |
+| `ts_walking_distance_end_time` | String | ? | - | End timestamp of the `ts_walking_distance` sample |  in development, will be added with Cozie 3.0.2 |
+| `ts_wrist_temperature` | Integer | [*](#logging-rate) | 1d | Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
+| `ts_workout_type` | String | [*](#logging-rate) | - | Workout type recorded by the Apple Workout app, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkworkoutactivitytype) | - | Description |  in development, will be added with Cozie 3.0.2 |
+| `ts_workout_duration` | Float | [*](#logging-rate) | - | Duration of workout in seconds, recorded by the Apple Workout app |  in development, will be added with Cozie 3.0.2 |
+| `ts_exercise_time` | Integer | [*](#logging-rate) | - | Every full minute of movement that equals or exceeds the intensity of a brisk walk, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkactivitysummary/1615266-appleexercisetime) | - | ? | in development, will be added with Cozie 3.0.2 |
+| `ts_active_energy_burned` | Float | [*](#logging-rate) | - | Amount of active energy the user burned during the specified day, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkactivitysummary/1615772-activeenergyburned) | - | ? | in development, will be added with Cozie 3.0.2 |
+
+
 
 ## Watch survey data
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
 |------------|------|-------------------|------------------|-------------|-----------------------|
 | `q_...` | String | Logged when the submit button at the end of the watch survey is pressed. | - |For field names of watch survey responses, see on the page for each watch survey example |  |
-| `ws_HRV` | Float? | ** | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
-| `ws_altitude` | Integer | ** | - | Altitude in m  | not available |
-| `ws_audio_exposure_`<br/>`environment` | Float? | ** | 15min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | not available |
-| `ws_audio_exposure_`<br/>`headphones` | Float? | ** | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
-| `ws_heart_rate`| Float? | ** | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate), submitted when iPhone Cozie app is opened. | not available |
-| `ws_latitude` | Float | ** | - | Latitude in ° provided by GPS | `latitude` |
-| `ws_location_`<br/>`accuracy_horizontal` | Float? | ** | - | Horizontal positioning accuracy in m (see `ws_latitude`, `ws_longitude`) | not available |
-| `ws_location_`<br/>`accuracy_vertical` | Float? | ** | - | Vertical positioning accuracy in m (see `ws_altitude`) | not available |
-| `ws_location_`<br/>`acquisition_method` | String? | ** | - |  | not available |
-| `ws_location_floor` | Integer? | ** | - |  | not available |
-| `ws_location_`<br/>`source_device` | String | ** | - |  | not available |
-| `ws_longitude` | Float | ** | - | Longitude in ° provided by GPS | `longitude` |
+| `ws_HRV` | Float? | [**](#logging-rate) | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
+| `ws_altitude` | Integer | [**](#logging-rate) | - | Altitude in m  | not available |
+| `ws_audio_exposure_`<br/>`environment` | Float? | [**](#logging-rate) | 15min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | not available |
+| `ws_audio_exposure_`<br/>`headphones` | Float? | [**](#logging-rate) | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
+| `ws_heart_rate`| Float? | [**](#logging-rate) | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate), submitted when iPhone Cozie app is opened. | not available |
+| `ws_latitude` | Float | [**](#logging-rate) | - | Latitude in ° provided by GPS | `latitude` |
+| `ws_location_`<br/>`accuracy_horizontal` | Float? | [**](#logging-rate) | - | Horizontal positioning accuracy in m (see `ws_latitude`, `ws_longitude`) | not available |
+| `ws_location_`<br/>`accuracy_vertical` | Float? | [**](#logging-rate) | - | Vertical positioning accuracy in m (see `ws_altitude`) | not available |
+| `ws_location_`<br/>`acquisition_method` | String? | [**](#logging-rate) | - |  | not available |
+| `ws_location_floor` | Integer? | [**](#logging-rate) | - |  | not available |
+| `ws_location_`<br/>`source_device` | String | [**](#logging-rate) | - |  | not available |
+| `ws_longitude` | Float | [**](#logging-rate) | - | Longitude in ° provided by GPS | `longitude` |
 
 ## HealthKit data logged on the Apple Watch
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
 |------------|------|-------------------|------------------|-------------|-----------------------|
-| `ws_oxygen_saturation` | Integer | ** | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | not available |
-| `ws_resting_heart_rate` | Float? | ** | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | not available |
-| `ws_sleep_REM` | Float? | ** | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ws_sleep_awake` | Float? | ** | - | Duration of the participant being awake in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ws_sleep_core` | Float? | ** | - | Duration of light or intermediate sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ws_sleep_deep` | Float? | ** | - | Duration of deep sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ws_sleep_in_bed` | Float? | ** | - | Duration of the participant being in bed in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
-| `ws_stand_time` | Float? | ** | ? | Stand time in min?, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3174858-applestandtime) | not available |
-| `ws_step_count` | Integer? | ** | ? | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount). The timestamp `time` marks the first step in the sample. | not available |
-| `ws_survey_count` | Integer | ** | - | Increasing key for each micro-survey response. Resets when Cozie app is (re-)installed. | `vote_count` |
-| `ws_timestamp_location` | String | ** | - | Timestamp of the location measurement in UTC, Format: "%Y-%m-%dT%H:%M:%S.%fZ" | `timestamp_location` |
-| `ws_timestamp_start` | String | ** | - | Timestamp (UTC) of when micro survey was started |`timestamp_start` |
-| `ws_walking_distance` | Float | ** | - | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning). The timestamp `time` marks the first meter in the sample. | not available |
-| `ws_wrist_temperature` | Float | ** | 1d |  Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
+| `ws_oxygen_saturation` | Integer | [**](#logging-rate) | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | not available |
+| `ws_resting_heart_rate` | Float? | [**](#logging-rate) | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | not available |
+| `ws_sleep_REM` | Float? | [**](#logging-rate) | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ws_sleep_awake` | Float? | [**](#logging-rate) | - | Duration of the participant being awake in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ws_sleep_core` | Float? | [**](#logging-rate) | - | Duration of light or intermediate sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ws_sleep_deep` | Float? | [**](#logging-rate) | - | Duration of deep sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ws_sleep_in_bed` | Float? | [**](#logging-rate) | - | Duration of the participant being in bed in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
+| `ws_stand_time` | Float? | [**](#logging-rate) | - | Stand time in min?, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3174858-applestandtime) | not available |
+| `ws_step_count` | Integer? | [**](#logging-rate) | - | Number of steps walked, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615548-stepcount). The timestamp `time` marks the first step in the sample. | not available |
+| `ws_step_count_start_time` | String | ? | - | Start timestamp of the `ws_step_count` sample, coincides with`time` |  in development, will be added with Cozie 3.0.2 |
+| `ws_step_count_end_time` | String | ? | - | End timestamp of the `ws_step_count` sample | in development, will be added with Cozie 3.0.2 |
+| `ws_survey_count` | Integer | [**](#logging-rate) | - | Increasing key for each micro-survey response. Resets when Cozie app is (re-)installed. | `vote_count` |
+| `ws_timestamp_location` | String | [**](#logging-rate) | - | Timestamp of the location measurement in UTC, Format: "%Y-%m-%dT%H:%M:%S.%fZ" | `timestamp_location` |
+| `ws_timestamp_start` | String | [**](#logging-rate) | - | Timestamp (UTC) of when micro survey was started |`timestamp_start` |
+| `ws_walking_distance` | Float | [**](#logging-rate) | - | Distance walked in m, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615230-distancewalkingrunning). The timestamp `time` marks the first meter in the sample. | not available |
+| `ws_walking_distance_start_time` | String | ? | - | Start timestamp of the `ws_walking_distance` sample, coincides with`time` |  in development, will be added with Cozie 3.0.2 |
+| `ws_walking_distance_end_time` | String | ? | - | End timestamp of the `ws_walking_distance` sample |  in development, will be added with Cozie 3.0.2 |
+| `ws_wrist_temperature` | Float | [**](#logging-rate) | 1d |  Wrist temperature during sleep, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3951065-applesleepingwristtemperature) | not available |
+| `ws_workout_type` | String | [**](#logging-rate) | - | Workout type recorded by the Apple Workout app, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkworkoutactivitytype) | - | Description |  in development, will be added with Cozie 3.0.2 |
+| `ws_workout_duration` | Float | [**](#logging-rate) | - | Duration of workout in seconds, recorded by the Apple Workout app |  in development, will be added with Cozie 3.0.2 |
+| `ws_exercise_time` | Integer | [**](#logging-rate) | - | Every full minute of movement that equals or exceeds the intensity of a brisk walk, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkactivitysummary/1615266-appleexercisetime) | - | ? | in development, will be added with Cozie 3.0.2 |
+| `ws_active_energy_burned` | Float | [**](#logging-rate) | - | Amount of active energy the user burned during the specified day, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkactivitysummary/1615772-activeenergyburned) | - | ? | in development, will be added with Cozie 3.0.2 |
 | `wss_goal` | Integer? | Logged when any sync button in the Cozie iPhone app | - |Watch survey response goal in the 'Settings' tab | not available |
 | `wss_participation_days`| String | Logged when any sync button in the Cozie iPhone app | - | Participation days set in the Cozie app by the participant | `settings_participation_days` |
 | `wss_participation_`<br/>`time_end` | String | Logged when any sync button in the Cozie iPhone app | - | Daily reminder end time set in the Cozie app by the participant | `settings_participation_`<br/>`time_end` |
@@ -158,19 +176,30 @@ It is very likely that the `ts_` data and `ws_` data will not be identical. Here
  ```
 
 ## Location data
-Location data, e.g., `ts_latitude`, `ts_longitude`, with the `ts_` prefix is only sent every time the participant changes their location more than 50 meters, i.e., when and while the participant changes the location. Location data with the `ws_` prefix is sent when the submit button at the end of the watch survey is pressed, exactly the same as all other data with the `ws_` prefix (see **).
+Location data, e.g., `ts_latitude`, `ts_longitude`, with the `ts_` prefix is only sent every time the participant changes their location more than 50 meters, i.e., when and while the participant changes the location. Location data with the `ws_` prefix is sent when the submit button at the end of the watch survey is pressed, exactly the same as all other data with the `ws_` prefix ([see **](#logging-rate)).
 
 Unlike the HealthKit data, e.g., `ts_heart_rate`/`ws_heart_rate`, the `ws_` and `ts_` location data are not to be expected to be the same. Nevertheless, you might consider combining the corresponding columns, depending on your application.
 
 
+## Logging rate
+Within the context of Cozie 'logging' refers to data being sent to the backend to be stored in the database (see also [Lambda timestamp](#lambda-timestamp-and-trigger)).
+'Sampling' refers to the creation of measurement value. Sampling occurs more frequently. Several samples can be sent to the database in one action. For example, the heart rate is sampled at approximately 1 sample every three 3 minutes. All new heart rate samples are logged as `ws_heart_rate` when the watch survey is submitted. 
+We put a lot of effort into increasing the logging rate as much as possible. However, there are limiting factors. HealthKit information can only be accessed while the device unlocked and background tasks run irregularly if at all.
+Most frequent logging rate to  be expected is whenever a watch survey is submitted.
+
+There are three modes of logging:
+ - When the iPhone app is open / interacted with (*)
+ - When a watch survey is submitted (**)
+ - On location change (***)
+
 ## Lambda timestamp and trigger
 For some of the field names there are two more accompanying fields for the timestamp of when the data was inserted into the database and what trigger the logging action. The field `lambda_timestamp` serves the same purpose. However this field value might over written in instances where values with identical `id_participant`, `id_experiment`, and `timestamp` are logged. The table below shows an example for `ts_HRV`. The columns `ts_HRV_lambda` and `ts_HRV_trigger` are used for debugging and development purposes. Unless you are investigating data anomalies or are working on app development, you can ignore these fields.
 
-| Field name | Type | Sampling rate | Description/Question | Field name in Cozie v2|
+| Field name | Type | Logging rate | Description/Question | Field name in Cozie v2|
 |--------------|------|---------------|----------------------|-------------------------|
-| `ts_HRV` | Integer | * | 15min | not available |
-| `ts_HRV_lambda` | String | * | Timestamp of when the value of `ts_HRV` was logged in UTC, Format: "%Y-%m-%dT%H:%M:%S.%fZ" | not available |
-| `ts_HRV_trigger` | String | * | String of what triggered the logging action of `ts_HRV` | not available |
+| `ts_HRV` | Integer | [*](#logging-rate) | 15min | not available |
+| `ts_HRV_lambda` | String | [*](#logging-rate) | Timestamp of when the value of `ts_HRV` was logged in UTC, Format: "%Y-%m-%dT%H:%M:%S.%fZ" | not available |
+| `ts_HRV_trigger` | String | [*](#logging-rate) | String of what triggered the logging action of `ts_HRV` | not available |
 
 These metadata columns shown in the example above are available for the following field names:
 
