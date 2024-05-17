@@ -31,7 +31,7 @@ cozie = Cozie()
 ```
 
 ### Parse from Cozie app log file
-`log_file` is the path to the file [downloaded from within the Cozie app](docs/download_data/data_download_offline).
+`log_file` is the path to the file [downloaded from within the Cozie app](/docs/download_data/download).
 
 
 `output_file` is an optional input parameter to save the Cozie dataframe as zipped parquet file. Alternatively, .csv is also a valid file extension but results in approximately ten times larger files.

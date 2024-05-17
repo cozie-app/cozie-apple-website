@@ -66,7 +66,7 @@ is complete, click into the text field of the the experiment ID question, follow
 
   
 2. In the pop-up menu, press on the drop down menu, select 'Embedded Data Field' and enter 'id_experiment'. Press 'Insert'. Then press 'Save'. 
-You should now see that the text '${e://Field/id_experiment}' was entered into the text field of the experiment ID question.
+You should now see that the text '$\{e://Field/id_experiment\}' was entered into the text field of the experiment ID question.
 Repeat this step for the participant ID.
   ![Image](/img/phone_survey/qualtrics_embedded_data_field.png)
 

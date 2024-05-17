@@ -7,7 +7,7 @@ sidebar_label: Privacy Policy
 # Privacy Statement
 
 ## Purpose
-The mobile application “Cozie” aims to demonstrate the use of the Apple Watch and iPhone for micro Environmental Momentary Assessments (uEMA). The app is available on the App Store for demonstration purposes only. People interested in the uEMA can use the app to explore the technology, its usefulness, and the quality of the collected data. If Cozie is to be used beyond demonstration purposes, we suggest you fork the source code and deploy your own version of Cozie with your database and backend. All source code is available at <https://github.com/cozie-app/cozie-apple>. Documentation is available at <https://cozie-apple.app/>. 
+The mobile application “Cozie” aims to demonstrate the use of the Apple Watch and iPhone for micro Environmental Momentary Assessments (uEMA). The app is available on the App Store for demonstration purposes only. People interested in the uEMA can use the app to explore the technology, its usefulness, and the quality of the collected data. If Cozie is to be used beyond demonstration purposes, we suggest you fork the source code and deploy your own version of Cozie with your database and backend. All source code is available at [https://github.com/cozie-app/cozie-apple](https://github.com/cozie-app/cozie-apple). Documentation is available at [https://cozie-apple.app/](https://cozie-apple.app/). 
 
 ## Data Collection
 The Cozie app does not explicitly collect any personal data. It is designed to collect measurement data without any relation to individuals. However, in some circumstances, this data can bear a connection to personal data. For example, GPS data can exhibit a location.
