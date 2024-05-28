@@ -87,7 +87,7 @@ const contributors = [
   {
     name: <>Mario Frei</>,
     imageUrl: "img/mario.jpeg",
-    profession: <>Research Fellow at NUS</>,
+    profession: <>Postdoctoral Scholar at BEARS</>,
     link: "https://sg.linkedin.com/in/mario-frei",
   },
   {
