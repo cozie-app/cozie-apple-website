@@ -83,7 +83,7 @@ payload['buttons'] =[{'id': 'helpful',
 headers = {'x-api-key': API_KEY,
           'Content-Type': 'application/json'}
 
-req = requests.post(PUSH_API_URL, headers=headers, json=payload)
+req = requests.post(API_URL, headers=headers, json=payload)
 
 print(req.status_code)
 print(req.content)
