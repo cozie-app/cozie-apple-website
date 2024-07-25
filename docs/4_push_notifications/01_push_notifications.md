@@ -8,8 +8,6 @@ slug: push_notifications
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Send push notifications to the Cozie app
-
 You can send push notifications to the Cozie app using the following Python code. 
 
 Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`, `ID_PASSWORD` and `API_KEY`.
