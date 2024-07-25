@@ -8,7 +8,7 @@ slug: push_notifications
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-You can send push notifications to the Cozie app using the following Python code. 
+You can send push notifications to the Cozie app using a web API as shown in the Python code example below. 
 
 Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`, `ID_PASSWORD` and `API_KEY`.
 You can request an `API_KEY` by emailing us a request at cozie.app@gmail.com.
@@ -16,11 +16,16 @@ You can request an `API_KEY` by emailing us a request at cozie.app@gmail.com.
 `ID_PARTICIPANT` and `ID_EXPERIMENT` can be found in the 'Settings' tab of the Cozie iPhone app.
 `ID_PASSWORD` can be found in the 'Backend' tab of the Cozie iPhone app.
 
+<img alt="Screenshot of Cozie Settings tab" src={useBaseUrl('img/cozie_settings_tab_ids.png')}width="30%" /> &nbsp;
+<img alt="Screenshot of Cozie Backend tab" src={useBaseUrl('img/cozie_backend_tab_id_participant.png')}width="30%" /> &nbsp;
+
+
+
 ```python
 # Credentials
 ID_PARTICIPANT = 'ExternalUser'
 ID_EXPERIMENT = 'AppleStore'
-ID_PASSWORD = 'xxx'
+ID_PASSWORD = 'XXX'
 API_KEY = 'XXX'
 API_URL = 'https://69xmiejax4.execute-api.ap-southeast-1.amazonaws.com/prod/notification/'
 
@@ -60,7 +65,7 @@ Buttons in the push notifications below the push notification message are called
 ```python
 ID_PARTICIPANT = 'ExternalUser'
 ID_EXPERIMENT = 'AppleStore'
-ID_PASSWORD = 'xxx'
+ID_PASSWORD = 'XXX'
 API_KEY = 'XXX'
 API_URL = 'https://69xmiejax4.execute-api.ap-southeast-1.amazonaws.com/prod/notification/'
 
