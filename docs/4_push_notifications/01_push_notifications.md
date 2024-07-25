@@ -1,7 +1,7 @@
 ---
 id: push_notifications
-title: Push notifications
-sidebar_label: Push notifications
+title: Sending Push Notifications
+sidebar_label: Push Notifications
 sidebar_position: 1
 slug: push_notifications
 ---
