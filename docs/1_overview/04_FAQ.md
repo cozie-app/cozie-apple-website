@@ -138,12 +138,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ### Push notifications
 
 * #### What is the maximal length of a push notification?
-There are no hard limits on the length of a push notification. OneSignal states the following ([Source](https://documentation.onesignal.com/docs/mobile-push-notifications-guide)):
-- Title: About 25-50 character limit
-- Message: About 150 characters limit
+    There are no hard limits on the length of a push notification. OneSignal states the following ([Source](https://documentation.onesignal.com/docs/mobile-push-notifications-guide)):
+    - Title: About 25-50 character limit
+    - Message: About 150 characters limit
+
+    In any case, you must draft push notifications and test them on an Apple Watch to see whether it works as expected.
 
 * #### How many push notifications can be shown in a push notification?
-There are no hard limits on the number of action buttons. OneSignal states the following ([Source](https://documentation.onesignal.com/docs/action-buttons)):
-- iOS supports up to 4 buttons with Rich Notifications
+    There are no hard limits on the number of action buttons. OneSignal states the following ([Source](https://documentation.onesignal.com/docs/action-buttons)):
+    - iOS supports up to 4 buttons with Rich Notifications
 
-However, in our own testing, we have seen that the action button payload can be up to 255 bytes, and one action button requires at least 22 bytes (1 ID character, 1 text character). Hence, the maximum number of action buttons with only one text character is eleven. Longer texts or IDs will result in fewer number of action buttons.
+    However, in our own testing, we have seen that the action button payload can be up to 255 bytes, and one action button requires at least 22 bytes (1 ID character, 1 text character). Hence, the maximum number of action buttons with only one text character is eleven. Longer texts or IDs will result in fewer number of action buttons.
+
+    In any case, you must draft push notifications with action buttons and test them on an Apple Watch to see whether it works as expected.
