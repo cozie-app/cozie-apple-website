@@ -134,3 +134,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     * [**Assessment of accuracy of overall energy expenditure measurements for the Fitbit Charge HR 2 and Apple Watch.**, Nuss, Kayla J., et al., American journal of health behavior 43.3 (2019): 498-505.](https://www.ingentaconnect.com/content/png/ajhb/2019/00000043/00000003/art00005)
     * [**Tracking steps on apple watch at different walking speeds.**, Veerabhadrappa, Praveen, et al., Journal of general internal medicine 33 (2018): 795-796.](https://link.springer.com/article/10.1007/s11606-018-4332-y)
     * [**Validity and reliability of the Apple Watch for measuring heart rate during exercise.**, Khushhal, Alaa, et al., Sports medicine international open 1.6 (2017): E206.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6226089/)
+
+### Push notifications
+
+* #### What is the maximal length of a push notification?
+There are no hard limits on the length of a push notification. OneSignal states the following ([Source](https://documentation.onesignal.com/docs/mobile-push-notifications-guide)):
+- Title: About 25-50 character limit
+- Message: About 150 characters limit
+
+* #### How many push notifications can be shown in a push notification?
+There are no hard limits on the number of action buttons. OneSignal states the following ([Source](https://documentation.onesignal.com/docs/action-buttons)):
+- iOS supports up to 4 buttons with Rich Notifications
+
+However, in our own testing, we have seen that the action button payload can be up to 255 bytes, and one action button requires at least 22 bytes (1 ID character, 1 text character). Hence, the maximum number of action buttons with only one text character is eleven. Longer texts or IDs will result in fewer number of action buttons.
