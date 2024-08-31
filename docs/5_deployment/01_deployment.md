@@ -1,7 +1,7 @@
 ---
 id: deployment
-title: Deployment
-sidebar_label: Deployment
+title: Deployment Guide
+sidebar_label: Deployment Guide
 sidebar_position: 1
 ---
 
@@ -79,7 +79,7 @@ As a final testing step before the actual deployment, we strongly recommend that
 Having a small cohort with participants that are somewhat outside of your inner circle is very valuable to finding unexpected issues and generating a small dataset that allows you to refine your data monitoring setup and also allows you to prepare the data analysis. In case of any issues with the Cozie app, make sure to check out our [troubleshooting guide](../troubleshooting).
 
 ### IRB
-If you are doing research at a University, you will likely need to get approval from an Institutional review board (IRB) that reviews the ethics and safety aspects of your Cozie deployment. Please check with the regulations of your country and institution about the details. 
+If you are doing research at a University, you will likely need to get approval from an institutional review board (IRB) that reviews the ethics and safety aspects of your Cozie deployment. Please check with the regulations of your country and institution about the details. 
 At our institution, it takes about three months from the submission until final approval. Make sure to account for this process in your planning.
 
 ### Advertising and screening survey
