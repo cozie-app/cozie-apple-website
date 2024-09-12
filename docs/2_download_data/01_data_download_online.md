@@ -19,6 +19,12 @@ The `ID_PARTICIPANT`, `ID_EXPERIMENT` are available in the 'Settings' tab of the
 
 The `ID_PASSWORD` is available in the 'Backend' tab of the Cozie phone app.
 
+`DAYS` specifies the number of days included in the query starting from now looking back. If this parameter is omitted, all data will be retrieved.
+
+`COlUMNS` specifies the [columns](data_overview) that are retrieved. If this parameter is omitted, all columns will be retrieved.
+
+
+
 All the data saved inside the Pandas dataframe called `df`. The example below is tested with Pandas version 1.3.5
 
 ```python
@@ -30,12 +36,12 @@ import shutil
 
 # Settings
 YOUR_TIMEZONE = "Asia/Singapore"
+API_KEY = ""  # reach out to cozie.app@gmail.com for an API_KEY
 ID_PARTICIPANT = "ExternalUser"
 ID_EXPERIMENT = "AppleStore"
 ID_PASSWORD = ""
-COLUMNS = ['ws_survey_count', 'ws_heart_rate']
-DAYS = "2"  # Number of weeks from which the data is retrieved, ending now, i.e., start date look up: now - WEEKS, end date look up: now
-API_KEY = ""  # reach out to cozie.app@gmail.com for an API_KEY
+COLUMNS = ['ws_survey_count', 'ws_heart_rate'] # OPtional
+DAYS = "2"  # Optional, number of days from which the data is retrieved, ending now, i.e., start date look up: now - WEEKS, end date look up: now
 
 # Query data
 payload = {
