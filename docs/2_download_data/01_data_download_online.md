@@ -36,11 +36,11 @@ import shutil
 
 # Settings
 YOUR_TIMEZONE = "Asia/Singapore"
-API_KEY = ""  # reach out to cozie.app@gmail.com for an API_KEY
+API_KEY = ""  # Reach out to cozie.app@gmail.com for an API_KEY
 ID_PARTICIPANT = "ExternalUser"
 ID_EXPERIMENT = "AppleStore"
 ID_PASSWORD = ""
-COLUMNS = ['ws_survey_count', 'ws_heart_rate'] # OPtional
+COLUMNS = ['ws_survey_count', 'ws_heart_rate'] # Optional
 DAYS = "2"  # Optional, number of days from which the data is retrieved, ending now, i.e., start date look up: now - WEEKS, end date look up: now
 
 # Query data
