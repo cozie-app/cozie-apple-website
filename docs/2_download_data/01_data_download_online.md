@@ -11,8 +11,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ## Download the data collected using the Cozie Apple Watch survey
 
 You can download the data you have collected using the Cozie Apple Watch survey using the following Python code.
-Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT` and `API_KEY`.
+Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`, `ID_PASSWORD` and `API_KEY`.
+
 You can request an `API_KEY` by emailing us a request at cozie.app@gmail.com
+
+The `ID_PARTICIPANT`, `ID_EXPERIMENT` are available in the 'Settings' tab of the Cozie phone app. 
+
+The `ID_PASSWORD` is available in the 'Backend' tab of the Cozie phone app.
 
 All the data saved inside the Pandas dataframe called `df`. The example below is tested with Pandas version 1.3.5
 
@@ -27,18 +32,22 @@ import shutil
 YOUR_TIMEZONE = "Asia/Singapore"
 ID_PARTICIPANT = "ExternalUser"
 ID_EXPERIMENT = "AppleStore"
-WEEKS = "2"  # Number of weeks from which the data is retrieved, ending now, i.e., start date look up: now - WEEKS, end date look up: now
+ID_PASSWORD = ""
+COLUMNS = ['ws_survey_count', 'ws_heart_rate']
+DAYS = "2"  # Number of weeks from which the data is retrieved, ending now, i.e., start date look up: now - WEEKS, end date look up: now
 API_KEY = ""  # reach out to cozie.app@gmail.com for an API_KEY
 
 # Query data
 payload = {
     "id_participant": ID_PARTICIPANT,
     "id_experiment": ID_EXPERIMENT,
-    "weeks": WEEKS,
+    "id_password": ID_PASSWORD,
+    "days": DAYS,
+    "columns": COLUMNS
 }
 headers = {"Accept": "application/json", "x-api-key": API_KEY}
 response = requests.get(
-    "https://m7cy76lxmi.execute-api.ap-southeast-1.amazonaws.com/default/cozie-apple-researcher-read-influx",
+    "https://69xmiejax4.execute-api.ap-southeast-1.amazonaws.com/prod/retrieve",
     params=payload,
     headers=headers,
 )
@@ -65,7 +74,7 @@ df.head()
 ### Watch survey data
 If you want to focus on the analysis of the watch-based survey data use the code below to filter the dataframe retrieved above.
 
-```
+```python
 # Get only question flow responses
 df_questions = df[df["ws_survey_count"].notna()]
 df_questions.head()
@@ -74,7 +83,7 @@ df_questions.head()
 ### Physiological data
 Use the code below to plot noise and heart rate data contained in the dataframe retrieved above. 
 
-```
+```python
 # Plot time-series data
 fig, ax = plt.subplots(1,2, figsize =(15, 7))
 
