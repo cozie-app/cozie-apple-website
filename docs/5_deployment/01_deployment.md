@@ -99,7 +99,7 @@ All devices needed during the onboarding should be ready to be used at least one
   - Cozie setup (experiment ID, participant ID, watch survey, permissions granted, etc.)
 - Apple Watch
   - Paired with iPhone
-  - WatchOS updated
+  - WatchOS up to date
   - Cozie installed
   - Cozie setup (watch survey showing, permissions granted)
 
