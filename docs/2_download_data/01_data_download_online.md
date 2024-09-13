@@ -11,21 +11,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ## Download the data collected using the Cozie Apple Watch survey
 
 You can download the data you have collected using the Cozie Apple Watch survey using the following Python code.
-Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`, `ID_PASSWORD` and `API_KEY`.
 
-You can request an `API_KEY` by emailing us a request at cozie.app@gmail.com
+Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`, `ID_PASSWORD` and `API_KEY`. All request parameters are described in the table below.
 
-The `ID_PARTICIPANT`, `ID_EXPERIMENT` are available in the 'Settings' tab of the Cozie phone app. 
+| Parameter                        | Description |
+|:---------------------------------|:------------|
+| `x-api-key` <br/>(String)        | Data retrieval API key needed in the request header. You can request an `API_KEY` by emailing us a request at cozie.app@gmail.com. |
+| `id_participant` <br/>(String)   | Identifier for an individual participant. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Participant ID). |
+| `id_experiment` <br/>(String)    | Identifier for a group of participants. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Experiment ID). |
+| `id_password` <br/>(String)      | Password for participant data. <br/> Can be found in the 'Backend' tab of the Cozie phone app (Participant Password). |
+| `columns` <br/>(List of strings) | Specifies the [columns](data_overview) that are retrieved. If this parameter is omitted, all columns will be retrieved. |
+| `days` <br/>(Integer)            | Specifies the number of days included in the query starting from now looking back. If this parameter is omitted, all data will be retrieved. |
 
-The `ID_PASSWORD` is available in the 'Backend' tab of the Cozie phone app.
-
-`DAYS` specifies the number of days included in the query starting from now looking back. If this parameter is omitted, all data will be retrieved.
-
-`COlUMNS` specifies the [columns](data_overview) that are retrieved. If this parameter is omitted, all columns will be retrieved.
-
-
-
-All the data saved inside the Pandas dataframe called `df`. The example below is tested with Pandas version 1.3.5
+The example script below shows how to call the Cozie data retrieval API and convert the received data into a Pandas dataframe (`df`). The example below is tested with Pandas version 1.3.5.
 
 ```python
 import requests
@@ -41,15 +39,15 @@ ID_PARTICIPANT = "ExternalUser"
 ID_EXPERIMENT = "AppleStore"
 ID_PASSWORD = ""
 COLUMNS = ['ws_survey_count', 'ws_heart_rate'] # Optional
-DAYS = "2"  # Optional, number of days from which the data is retrieved, ending now, i.e., start date look up: now - WEEKS, end date look up: now
+DAYS = "2"  # Optional
 
 # Query data
 payload = {
     "id_participant": ID_PARTICIPANT,
     "id_experiment": ID_EXPERIMENT,
     "id_password": ID_PASSWORD,
-    "days": DAYS,
-    "columns": COLUMNS
+    "days": DAYS, # Optional
+    "columns": COLUMNS #Optional
 }
 headers = {"Accept": "application/json", "x-api-key": API_KEY}
 response = requests.get(
