@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img alt="Data flow from database to researcher" src={useBaseUrl('img/backend/backend_retrieve_data.jpg')}width="60%" />
 
 ## Overview
-How to retrieve data from a user/researcher perspective is shown under [Data and Download](../download_data/download)
+How to retrieve data from a user/researcher perspective is shown under [Data and Download](../../download_data/download)
 
 There are a few technical constraints that are governing the design of the web API for Cozie dat retrieval:
  - Payload limit of Python Lambda function: 6MB

@@ -26,7 +26,7 @@ In order to have Cozie app send the data to your own backend, you need to update
 ## Payload data structure
 The Cozie app sends data to the backend in the same payload format for all types of data. The payload format is inspired by the InfluxDB Python client and how it can use dictionaries as input.
 The example below shows a minimal payload that is sent from the Cozie app to the backend. It represents one row in a InfluxDB table or `measurement`. All data, i.e., watch survey, HealthKit data, and GPS data follows this structure.
-The field names listed under `fields` are listed in the [data overview](../download_data/data_overview), e.g., instead of `example_integer` you could use `ts_HRV`.
+The field names listed under `fields` are listed in the [data overview](../../download_data/data_overview), e.g., instead of `example_integer` you could use `ts_HRV`.
 
 
 ```js title="Watch survey payload example"
@@ -62,7 +62,7 @@ The field names listed under `fields` are listed in the [data overview](../downl
 
 
 ## Payload data structure for watch survey
-The example below shows the payload from a watch survey response. The fields with the prefix `q_` are defined in the [JSON file for the watch survey](../custom_surveys/custom_watch_survey).
+The example below shows the payload from a watch survey response. The fields with the prefix `q_` are defined in the [JSON file for the watch survey](../../custom_surveys/custom_watch_survey).
 ```js title="Watch survey payload example"
 [
    {
