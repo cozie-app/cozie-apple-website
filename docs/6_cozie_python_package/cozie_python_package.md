@@ -72,7 +72,8 @@ CoziePy has some plotting functionality which is mainly focused on experiment mo
 
 ### Plot time-series data for one participant
 ```python
-fig, ax = cp.ts_inspection(
+fig = cp.ts_inspection(
     id_participant="example_participant_01", column_name="ts_heart_rate"
 )
+fig.show()
 ```
