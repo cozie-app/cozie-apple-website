@@ -246,9 +246,9 @@ These metadata columns shown in the example above are available for the followin
 Cozie data submission is triggered by different events. The table below lists the various events that cause Cozie to send data to the backend.
 | Trigger label        | Cause for trigger |
 |:---------------------|:------------------|
-| application_appear   |Cozie phone app being opened |
-| location_change      | Location change reported by iOS |
-| background_task      | Cozie app being scheduled in the background|
+| application_appear   | Cozie phone app being opened |
+| location_change      | Location change reported by iOS to Cozie |
+| background_task      | Cozie app being scheduled by iOS in the background|
 | watch_survey         | Watch survey response is submitted |
 | app_change_settings  | Settings are changed in the Cozie phone app |
 | sync_button_data_tab | Sync button is pressed in the 'Data' tab of the Cozie phone app|
