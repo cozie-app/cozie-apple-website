@@ -242,6 +242,19 @@ These metadata columns shown in the example above are available for the followin
 </td></tr>
 </table>
 
+### Triggers
+Cozie data submission is triggered by different events. The table below lists the various events that cause Cozie to send data to the backend.
+| Trigger label        | Cause for trigger |
+|:---------------------|:------------------|
+| application_appear   |Cozie phone app being opened |
+| location_change      | Location change reported by iOS |
+| background_task      | Cozie app being scheduled in the background|
+| watch_survey         | Watch survey response is submitted |
+| app_change_settings  | Settings are changed in the Cozie phone app |
+| sync_button_data_tab | Sync button is pressed in the 'Data' tab of the Cozie phone app|
+| sync_button_settings_tab | Sync button in the Cozie 'Settings' tab is pressed |
+| push_notification_action_button | Action button in a Cozie push notification is pressed |
+
 ## Difference between logging interval and sampling interval
 The logging interval describes at what points in time the data is sent to the database. The sampling interval describes the time between two samples of the same data. For some data, these two are the same, e.g., for `ws_survey_count`, one data point is sent to the database when the submit button in the watch survey is pressed.
 For `ws_heart_rate`, the Apple Watch records one data point every 3-6 minutes. This is the sampling interval. However, the data points are not sent to the database at the same time. The `ws_heart_rate` data points are only sent to the database when the submit button in the watch survey is pressed. When the submit button is pressed, all `ws_heart_rate` data points since the last time the submit button was pressed are sent to the database.  Hence, the log interval can be much longer than the sampling interval.
