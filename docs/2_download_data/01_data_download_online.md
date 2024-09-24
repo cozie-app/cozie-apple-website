@@ -33,25 +33,25 @@ import matplotlib.pyplot as plt
 import shutil
 
 # Settings
-YOUR_TIMEZONE = "Asia/Singapore"
-API_KEY = ""  # Reach out to cozie.app@gmail.com for an API_KEY
-ID_PARTICIPANT = "ExternalUser"
-ID_EXPERIMENT = "AppleStore"
-ID_PASSWORD = ""
+YOUR_TIMEZONE = 'Asia/Singapore'
+API_KEY = ''  # Reach out to cozie.app@gmail.com for an API_KEY
+ID_PARTICIPANT = 'ExternalUser'
+ID_EXPERIMENT = 'AppleStore'
+ID_PASSWORD = ''
 COLUMNS = ['ws_survey_count', 'ws_heart_rate'] # Optional
-DAYS = "2"  # Optional
+DAYS = 2  # Optional
 
 # Query data
 payload = {
-    "id_participant": ID_PARTICIPANT,
-    "id_experiment": ID_EXPERIMENT,
-    "id_password": ID_PASSWORD,
-    "days": DAYS, # Optional
-    "columns": COLUMNS #Optional
+    'id_participant': ID_PARTICIPANT,
+    'id_experiment': ID_EXPERIMENT,
+    'id_password': ID_PASSWORD,
+    'days': DAYS, # Optional
+    'columns': COLUMNS #Optional
 }
-headers = {"Accept": "application/json", "x-api-key": API_KEY}
+headers = {'Accept': 'application/json', 'x-api-key': API_KEY}
 response = requests.get(
-    "https://69xmiejax4.execute-api.ap-southeast-1.amazonaws.com/prod/retrieve",
+    'https://69xmiejax4.execute-api.ap-southeast-1.amazonaws.com/prod/retrieve',
     params=payload,
     headers=headers,
 )
@@ -59,16 +59,16 @@ url = response.content
 
 # Download zipped CSV file with Cozie data
 with requests.get(url, stream=True) as r:
-    with open("cozie.zip", "wb") as f:
+    with open('cozie.zip', 'wb') as f:
         shutil.copyfileobj(r.raw, f)
 
 # Convert zipped CSV file with Cozie to dataframe
-with open("cozie.zip", "rb") as f:
-    df = pd.read_csv(f, compression={"method": "zip", "archive_name": "sample.csv"})
+with open('cozie.zip', 'rb') as f:
+    df = pd.read_csv(f, compression={'method': 'zip', 'archive_name': 'sample.csv'}, na_values=['', 'NaN'], keep_default_na=False)
 
-df = df.drop(columns=["Unnamed: 0"])
-df["index"] = pd.to_datetime(df["index"])
-df = df.set_index("index")
+df = df.drop(columns=['Unnamed: 0'])
+df['index'] = pd.to_datetime(df['index'])
+df = df.set_index('index')
 df.index = df.index.tz_convert(YOUR_TIMEZONE)
 
 # Display dataframe
