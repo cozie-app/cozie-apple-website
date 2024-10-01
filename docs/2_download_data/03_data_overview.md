@@ -49,9 +49,9 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `ts_latitude` | Float | [***](#logging-rate) | - | Latitude in ° | not available |
 | `ts_location_`<br/>`accuracy_horizontal` | Float? | [***](#logging-rate) | - | Horizontal positioning accuracy in m (see `ts_latitude`, `ts_longitude`) | not available |
 | `ts_location_`<br/>`accuracy_vertical` | Float? | [***](#logging-rate) | - | Vertical positioning accuracy in m (see `ts_altitude`) | not available |
-| `ts_location_`<br/>`acquisition_method` | String? | [***](#logging-rate) | - |  | not available |
-| `ts_location_floor` | Initeger? | not yet implemented | - |  | not available |
-| `ts_location_`<br/>`source_device` | String? | [***](#logging-rate) | - |  | not available |
+| `ts_location_`<br/>`acquisition_method` | String | not yet implemented | - | is always 'GPS' | not available |
+| `ts_location_floor` | Integer? | not yet implemented | - | is always 0.0 | not available |
+| `ts_location_`<br/>`source_device` | String | not yet implemented | - | is always 'iPhone' | not available |
 | `ts_longitude` | Float | [***](#logging-rate) | - | Longitude in ° | not available |
 | `ts_oxygen_saturation` | Integer | [**](#logging-rate) | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | `ts_oxygenSaturation` |
 | `ts_resting_heart_rate` | Integer | [*](#logging-rate) | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | `ts_restingHeartRate` |
@@ -88,9 +88,9 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `ws_latitude` | Float | [**](#logging-rate) | - | Latitude in ° provided by GPS | `latitude` |
 | `ws_location_`<br/>`accuracy_horizontal` | Float? | [**](#logging-rate) | - | Horizontal positioning accuracy in m (see `ws_latitude`, `ws_longitude`) | not available |
 | `ws_location_`<br/>`accuracy_vertical` | Float? | [**](#logging-rate) | - | Vertical positioning accuracy in m (see `ws_altitude`) | not available |
-| `ws_location_`<br/>`acquisition_method` | String? | [**](#logging-rate) | - |  | not available |
-| `ws_location_floor` | Integer | not yet implemented | - |  | not available |
-| `ws_location_`<br/>`source_device` | String | [**](#logging-rate) | - |  | not available |
+| `ws_location_`<br/>`acquisition_method` | String | not yet implemented | - | is always 'GPS' | not available |
+| `ws_location_floor` | Integer | not yet implemented | - | is always 0.0 | not available |
+| `ws_location_`<br/>`source_device` | String | not yet implemented | - | is always 'Apple Watch' | not available |
 | `ws_longitude` | Float | [**](#logging-rate) | - | Longitude in ° provided by GPS | `longitude` |
 
 ## HealthKit data logged on the Apple Watch
