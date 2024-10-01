@@ -38,7 +38,7 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `transmit_trigger` | String | Logged with any other data point | - | Action that triggered the logging of the data corresponding to the same row | not available |
 | `time`/`index` | String | Logged with any other data point | - | Timestamp (UTC) of when watch survey was submitted, also serves as index | `timestamp_end` |
 
-## HealthKit data logged on the iPhone
+## Data logged on the iPhone
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
 |------------|------|-------------------|------------------|-------------|-----------------------|
 | `ts_HRV` | Integer | [*](#logging-rate) | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
@@ -74,17 +74,11 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `ts_exercise_time` | Integer | [*](#logging-rate) | - | Every full minute of movement that equals or exceeds the intensity of a brisk walk, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkactivitysummary/1615266-appleexercisetime) | - | ? | in development, will be added with Cozie 3.0.2 |
 | `ts_active_energy_burned` | Float | [*](#logging-rate) | - | Amount of active energy the user burned during the specified day, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkactivitysummary/1615772-activeenergyburned) | - | ? | in development, will be added with Cozie 3.0.2 |
 
-
-
 ## Watch survey data
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
 |------------|------|-------------------|------------------|-------------|-----------------------|
 | `q_...` | String | Logged when the submit button at the end of the watch survey is pressed. | - |For field names of watch survey responses, see on the page for each watch survey example |  |
-| `ws_HRV` | Float? | [**](#logging-rate) | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
 | `ws_altitude` | Integer | [**](#logging-rate) | - | Altitude in m  | not available |
-| `ws_audio_exposure_`<br/>`environment` | Float? | [**](#logging-rate) | 15min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | not available |
-| `ws_audio_exposure_`<br/>`headphones` | Float? | [**](#logging-rate) | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
-| `ws_heart_rate`| Float? | [**](#logging-rate) | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate), submitted when iPhone Cozie app is opened. | not available |
 | `ws_latitude` | Float | [**](#logging-rate) | - | Latitude in ° provided by GPS | `latitude` |
 | `ws_location_`<br/>`accuracy_horizontal` | Float? | [**](#logging-rate) | - | Horizontal positioning accuracy in m (see `ws_latitude`, `ws_longitude`) | not available |
 | `ws_location_`<br/>`accuracy_vertical` | Float? | [**](#logging-rate) | - | Vertical positioning accuracy in m (see `ws_altitude`) | not available |
@@ -93,9 +87,13 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `ws_location_`<br/>`source_device` | String | not yet implemented | - | is always 'Apple Watch' | not available |
 | `ws_longitude` | Float | [**](#logging-rate) | - | Longitude in ° provided by GPS | `longitude` |
 
-## HealthKit data logged on the Apple Watch
+## Data logged on the Apple Watch
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
 |------------|------|-------------------|------------------|-------------|-----------------------|
+| `ws_heart_rate`| Float? | [**](#logging-rate) | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate), submitted when iPhone Cozie app is opened. | not available |
+| `ws_audio_exposure_`<br/>`environment` | Float? | [**](#logging-rate) | 15min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | not available |
+| `ws_audio_exposure_`<br/>`headphones` | Float? | [**](#logging-rate) | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
+| `ws_HRV` | Float? | [**](#logging-rate) | 15min | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn) | not available |
 | `ws_oxygen_saturation` | Integer | [**](#logging-rate) | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | not available |
 | `ws_resting_heart_rate` | Float? | [**](#logging-rate) | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | not available |
 | `ws_sleep_REM` | Float? | [**](#logging-rate) | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
