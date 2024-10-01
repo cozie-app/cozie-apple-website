@@ -50,7 +50,7 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `ts_location_`<br/>`accuracy_horizontal` | Float? | [***](#logging-rate) | - | Horizontal positioning accuracy in m (see `ts_latitude`, `ts_longitude`) | not available |
 | `ts_location_`<br/>`accuracy_vertical` | Float? | [***](#logging-rate) | - | Vertical positioning accuracy in m (see `ts_altitude`) | not available |
 | `ts_location_`<br/>`acquisition_method` | String? | [***](#logging-rate) | - |  | not available |
-| `ts_location_floor` | Float? | [***](#logging-rate) | - |  | not available |
+| `ts_location_floor` | Initeger? | not yet implemented | - |  | not available |
 | `ts_location_`<br/>`source_device` | String? | [***](#logging-rate) | - |  | not available |
 | `ts_longitude` | Float | [***](#logging-rate) | - | Longitude in ° | not available |
 | `ts_oxygen_saturation` | Integer | [**](#logging-rate) | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | `ts_oxygenSaturation` |
@@ -89,7 +89,7 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `ws_location_`<br/>`accuracy_horizontal` | Float? | [**](#logging-rate) | - | Horizontal positioning accuracy in m (see `ws_latitude`, `ws_longitude`) | not available |
 | `ws_location_`<br/>`accuracy_vertical` | Float? | [**](#logging-rate) | - | Vertical positioning accuracy in m (see `ws_altitude`) | not available |
 | `ws_location_`<br/>`acquisition_method` | String? | [**](#logging-rate) | - |  | not available |
-| `ws_location_floor` | Integer? | [**](#logging-rate) | - |  | not available |
+| `ws_location_floor` | Integer | not yet implemented | - |  | not available |
 | `ws_location_`<br/>`source_device` | String | [**](#logging-rate) | - |  | not available |
 | `ws_longitude` | Float | [**](#logging-rate) | - | Longitude in ° provided by GPS | `longitude` |
 
