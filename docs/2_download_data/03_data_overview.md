@@ -122,7 +122,7 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `wss_participation_days`| String | Logged when any sync button in the Cozie iPhone app | - | Participation days set in the Cozie app by the participant | `settings_participation_days` |
 | `wss_participation_`<br/>`time_end` | String | Logged when any sync button in the Cozie iPhone app | - | Daily reminder end time set in the Cozie app by the participant | `settings_participation_`<br/>`time_end` |
 | `wss_participation_`<br/>`time_start` | String | Logged when any sync button in the Cozie iPhone app | - | Daily reminder start time set in the Cozie app by the participant | `settings_participation_`<br/>`time_start` |
-| `wss_reminder_enabled` | Boolean? | Logged when any sync button in the Cozie iPhone app | - | Enable setting for the watch survey reminder in the 'Settings' tab | not available |
+| `wss_reminder_enabled`(Please note the raw data field name currently contains a typo. This field is currently named `wss_reminder_enabeled`.) | Boolean? | Logged when any sync button in the Cozie iPhone app | - | Enable setting for the watch survey reminder in the 'Settings' tab | not available |
 | `wss_reminder_interval` | String | Logged when any sync button in the Cozie iPhone app | - | Reminder frequency set in the Cozie app by the participant | `settings_notification_frequency` |
 | `wss_time_out` | Integer | Not yet implemented | - | Minimal allowed duration between two watch survey responses | not available |
 | `wss_title` | String | Logged when any sync button in the Cozie iPhone app | - | Title of watch survey selected in the 'Settings' tab | not available |
