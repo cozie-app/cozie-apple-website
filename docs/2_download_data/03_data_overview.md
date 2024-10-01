@@ -7,6 +7,8 @@ sidebar_position: 3
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+The content on this side refers to the current Cozie version is v3.x.x. 
+Some tables have a column referring to the older Cozie v2. That column contains information about the respective field name in the older Cozie v2, e.g., whether the field name was available in the older Cozie version and the field name it have had in the older Cozie version.
 
 ## Prefixes
 | Prefix | Description | 
