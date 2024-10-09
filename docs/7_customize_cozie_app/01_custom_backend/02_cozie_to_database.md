@@ -154,15 +154,53 @@ The example below shows the payload from a watch survey response. The fields wit
 ]
 ```
 
+## Payload data structure for push notification meta data 
+**This payload is currently being developed**
 
-### Lambda function code
+The example below shows the payload for meta data from a received push notifications. 
+```js title="Push notification meta data payload example"
+[
+   {
+      "time":"2022-09-01T07:02:51.578+0800",
+      "measurement":"dev",
+      "tags":{
+         "id_onesignal":"35E2A783-35DA-4C5F-B54E-5DAC30B6E860",
+         "id_participant":"dev01",
+         "id_password":"5DAC30B6E86"
+      },
+      "fields":{
+         "notification_title":"Test Title",
+         "notification_subtitle":"Test Subtitle",
+         "notification_text":"This a notification test text.",
+         "action_button_shown": "First button label, Second button label, Third button label",
+         "transmit_trigger":"push_notification_reception",
+      }
+   }
+]
+```
+The field `action_button_shown` contains and empty string "", if there are no action buttons to be shown.
+
+When an action button is pressed the same payload is submitted again with the following modifications:
+ * `time` field is updated to the time of the button press
+ * `action_button` with the value set to the label of the action button that has been pressed.
+ * `transmit_trigger` field is set to the value "push_notification_action_button"
+
+When the 'Dismiss' button is pressed at the bottom of the push notification, the payload is also submitted again with following modifications:
+ * `time` field is updated to the time of the button press
+ * `transmit_trigger` field is set to the value "push_notification_dismiss_button"
+
+When the push notification is swiped away, the payload is also submitted again with following modifications:
+ * `time` field is updated to the time of the button press
+ * `transmit_trigger` field is set to the value "push_notification_swipe"
+
+## Lambda function code
 - [cozie-apple-v3-app-write-queue](https://github.com/cozie-app/cozie-apple-backend/tree/main/lambda_cozie-apple-v3-app-write-queue)
 - [cozie-apple-v3-app-write-influx-queue](https://github.com/cozie-app/cozie-apple-backend/tree/main/lambda_cozie-apple-v3-app-write-influx-queue)
 
 
-### Lambda configuration
+## Lambda configuration
 
-#### cozie-apple-v3-app-write-queue
+### cozie-apple-v3-app-write-queue
 | Configuration | Value | Comment |
 |:--------------|:------|:--------|
 | **General configuration** | | |
