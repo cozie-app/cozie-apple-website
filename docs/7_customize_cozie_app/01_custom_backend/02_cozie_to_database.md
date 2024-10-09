@@ -301,7 +301,7 @@ When the push notification is swiped away, the payload is also submitted again w
 
 - Currently, it the datatype of field values needs to be checked on the backend. Otherwise, one risks loosing data if the datatype varies. This can happen in unfortunate circumstances, e.g., a field value that is normally a float (`50.56`), but also can happen to be an integer (`51`). Whatever datatype is inserted first into InfluxDB defines the datatype of the column of a particular experiment ID (or `measurement`).
 
-  This could be avoided if the datatype is encoded in the payload. This will likely be addressed in the near future, e.g., 
+  This could be avoided if the datatype is encoded in the payload. This might be addressed in the near future, e.g., 
   ```js title="Watch survey payload example"
    [
       {
