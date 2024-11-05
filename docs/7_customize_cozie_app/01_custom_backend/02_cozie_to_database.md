@@ -185,13 +185,9 @@ When an action button is pressed the same payload is submitted again with the fo
  * `action_button` with the value set to the label of the action button that has been pressed.
  * `transmit_trigger` field is set to the value "push_notification_action_button"
 
-When the 'Dismiss' button is pressed at the bottom of the push notification, the payload is also submitted again with following modifications:
+When the 'Dismiss' button is pressed at the bottom of the push notification, or the push notification is swiped away, the payload is also submitted again with following modifications:
  * `time` field is updated to the time of the button press
  * `transmit_trigger` field is set to the value "push_notification_dismiss_button"
-
-When the push notification is swiped away, the payload is also submitted again with following modifications:
- * `time` field is updated to the time of the button press
- * `transmit_trigger` field is set to the value "push_notification_swipe"
 
 ## Lambda function code
 - [cozie-apple-v3-app-write-queue](https://github.com/cozie-app/cozie-apple-backend/tree/main/lambda_cozie-apple-v3-app-write-queue)
