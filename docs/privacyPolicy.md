@@ -61,7 +61,7 @@ Users of the Cozie app will be asked to provide permission to share physiologica
 
 All data transmitted by the Cozie app to the Database and requested by the Cozie app from the database is transmitted using HTTPS requests. All data transmitted by the Cozie app is stored in a password-protected database. The data in the database is stored in clear text. All data transmitted to the database is tagged with the “experiment ID” and “participant ID”.
 
-The data in the database can be retrieved using web API calls, as shown in the documentation. Only the “experiment ID” and the ”participant ID” are required to retrieve any data that is associated with those two identifiers. Hence, the “experiment ID” and “participant ID” have password character and should not be shared with anyone.
+The data in the database can be retrieved using web API calls, as shown in the documentation. Only the “experiment ID” and the ”participant ID” are required to retrieve any data that is associated with those two identifiers. Hence, the “Experiment ID”, “Participant ID”, and "Participant Password" have password character and should not be shared with anyone.
 
 ## Data Storage
 The database and related services are located in Singapore.
