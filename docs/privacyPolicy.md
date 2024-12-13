@@ -79,3 +79,5 @@ The data is used for the purpose of improving the Cozie app and the accompanying
 
 ## 3rd Party Services
 Cozie uses OneSignal as the provider of push notification services. Please see their privacy policy for more information: https://onesignal.com/privacy_policy
+
+The phone survey button opens a internet browser tab with a third party survey service, e.g., Google Forms or Qualtrix. Please see their privacy policy for more information.
