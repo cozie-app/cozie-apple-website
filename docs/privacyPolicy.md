@@ -18,14 +18,20 @@ All data that the Cozie app collects is listed below.
   - Heart rate
   - Heart rate variability
   - Resting heart rate
-  - Blood pressure
   - Noise level
   - Blood oxygen saturation
   - Step count
   - Stand time
   - Walking distance
   - Wrist temperature
-  - Sleep analysis
+  - Sleep phases
+  - Sleep apnea events
+  - Active Energy
+  - Environmental sound levels
+  - Headphone Audio levels
+  - Exercise minutes
+  - Move minutes
+  - Workout type
 - Location (background)
    - Longitude
    - Latitude
