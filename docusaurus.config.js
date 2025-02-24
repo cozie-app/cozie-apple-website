@@ -63,7 +63,7 @@ module.exports = {
             },
             {
               label: "Contact us",
-              href: "mailto:cozie.app@gmail.com",
+              href: "mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20Contact%20Link",
             },
             {
               label: "Forum",

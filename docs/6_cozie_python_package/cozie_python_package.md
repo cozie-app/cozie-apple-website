@@ -47,7 +47,7 @@ df.head()
 ```
 
 ### Download data using the web API
-`api_key` is provided by us. Please contact us at cozie.app@gmail.com if you need one.
+`api_key` is provided by us. Please contact us at [cozie.app@gmail.com](mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20API%20key%20request) if you need one.
 ```python
 df = cozie.load(
     id_experiment="example_experiment",

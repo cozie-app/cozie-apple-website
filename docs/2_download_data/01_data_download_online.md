@@ -16,7 +16,7 @@ Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`
 
 | Parameter                        | Description |
 |:---------------------------------|:------------|
-| `x-api-key` <br/>(String)        | Data retrieval API key needed in the request header. You can request an `API_KEY` by emailing us a request at cozie.app@gmail.com. |
+| `x-api-key` <br/>(String)        | Data retrieval API key needed in the request header. You can request an `API_KEY` by emailing us a request at [cozie.app@gmail.com](mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20API%20key%20request). |
 | `id_participant` <br/>(String)   | Identifier for an individual participant. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Participant ID). |
 | `id_experiment` <br/>(String)    | Identifier for a group of participants. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Experiment ID). |
 | `id_password` <br/>(String)      | Password for participant data. <br/> Can be found in the 'Backend' tab of the Cozie phone app (Participant Password). |

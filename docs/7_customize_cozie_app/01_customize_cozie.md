@@ -17,4 +17,4 @@ The [custom watch surveys](/docs/custom_surveys/custom_watch_survey) and [custom
 
 In [Design Decisions](./design_decisions), we have written down some of the decisions that we have made when creating Cozie. These notes might be helpful for people who want to modify or replicate Cozie.
 
-We are still working on completing the remainder of the documentation. If you happen to want make use of custumizations that are not already documented, contact us at [cozie.app@gmail.com](mailto:cozie.app@gmail.com).
+We are still working on completing the remainder of the documentation. If you happen to want make use of customizations that are not already documented, contact us at [cozie.app@gmail.com](mailto:cozie.app@gmail.com?subject=Cozie%20Apple).

@@ -11,7 +11,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 You can send push notifications to the Cozie app using a web API as shown in the Python code example below. 
 
 Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`, `ID_PASSWORD` and `API_KEY`.
-You can request an `API_KEY` by emailing us a request at cozie.app@gmail.com.
+You can request an `API_KEY` by emailing us a request at [cozie.app@gmail.com](mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20API%20key%20request%20for%20push%20notifications).
 
 `ID_PARTICIPANT` and `ID_EXPERIMENT` can be found in the 'Settings' tab of the Cozie iPhone app.
 `ID_PASSWORD` can be found in the 'Backend' tab of the Cozie iPhone app.

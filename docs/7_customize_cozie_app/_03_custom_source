@@ -1,0 +1,31 @@
+---
+id: customize_cozie_source
+title: Customize Cozie Source Code
+sidebar_label: Customize Source code
+sidebar_position: 1
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+The source code for Cozie is open source and [freely available on Github](https://github.com/cozie-app/cozie-apple).
+
+
+You need to have an Apple computer running iOS and [XCode](https://developer.apple.com/xcode/) to modify and compile the Cozie source code.
+
+# Setup Cozie in Xcode and run it in a Simulator
+1. Download the Cozie source code from [Github](https://github.com/cozie-app/cozie-apple).
+2. Install CocoaPods
+3. Open the project file with XCode
+4. Create an iPhone simulator device
+5. Create an Apple Watch simulator device
+6. Compile Cozie for the Apple Watch simulator and run it
+7. Compile Cozie for the iPhone simulator and run it
+
+# Create your own Cozie version
+1. Create new identifiers
+2. Create a new app
+3. Create a OneSignal account
+4. Create a OneSignal app
+5. Connect your Cozie version with your OneSignal app
+6. Compile your Cozie version for TestFlight
+7. Publish you Cozie version on the AppStore

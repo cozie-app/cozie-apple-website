@@ -14,7 +14,7 @@ There are several ways to get help for Cozie:
     - Any kind of technical issue
 - Post something on GitHub Discussions: https://github.com/cozie-app/cozie-apple/discussions
     - Request watch survey icon upload
-    - Show your Cozie depoloyment
+    - Show your Cozie deployment
     - Feature requests
-- Contact us at [cozie.app@gmail.com](mailto:cozie.app@gmail.com)
+- Contact us at [cozie.app@gmail.com](mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20Support%20Link)
     - Request an API key

@@ -15,7 +15,7 @@ Cozie Apple is [open-source](https://github.com/cozie-app/cozie-apple). Feel fre
 The app is provided as is. We currently allow free access to our backend infrastructure for data logging. However, we do not guarantee the availability, uptime, or service quality of the app or the database. Database downtimes for maintenance, technical issues, and changes to APIs are to be expected. For a better experience, we recommend two things:
 1. Set up your own backend infrastructure that operates independently from ours. 
 This does not require any changes to the app as all backend settings can be changed in the app.
-2. [Contact us](mailto:cozie.app@gmail.com) so that we can negotiate schedules and conditions.
+2. [Contact us](mailto:cozie.app@gmail.com?subject=Cozie%20Apple) so that we can negotiate schedules and conditions.
 
 We developed the app with the following conditions in mind:
 * One iPhone and one Apple Watch per participant
