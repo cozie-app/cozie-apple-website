@@ -176,16 +176,16 @@ It is very likely that the `ts_` data and `ws_` data will not be identical. Here
  ```
 
 ## Location data
-Location data, e.g., `ts_latitude`, `ts_longitude`, with the `ts_` prefix is only sent every time the participant changes their location more than 50 meters, i.e., when and while the participant changes the location. Location data with the `ws_` prefix is sent when the submit button at the end of the watch survey is pressed, exactly the same as all other data with the `ws_` prefix ([see **](#logging-rate)).
+Location data, e.g., `ts_latitude`, `ts_longitude`, with the `ts_` prefix, is only sent every time the participant changes their location more than 50 meters, i.e., when and while the participant changes the location. Location data with the `ws_` prefix is sent when the submit button at the end of the watch survey is pressed, exactly the same as all other data with the `ws_` prefix ([see **](#logging-rate)).
 
-Unlike the HealthKit data, e.g., `ts_heart_rate`/`ws_heart_rate`, the `ws_` and `ts_` location data are not to be expected to be the same. Nevertheless, you might consider combining the corresponding columns, depending on your application.
+Unlike the HealthKit data, e.g., `ts_heart_rate`/`ws_heart_rate`, the `ws_` and `ts_` location data are not expected to be the same. Nevertheless, you might consider combining the corresponding columns, depending on your application.
 
 
 ## Logging rate
-Within the context of Cozie 'logging' refers to data being sent to the backend to be stored in the database (see also [Lambda timestamp](#lambda-timestamp-and-trigger)).
-'Sampling' refers to the creation of measurement value. Sampling occurs more frequently. Several samples can be sent to the database in one action. For example, the heart rate is sampled at approximately 1 sample every three 3 minutes. All new heart rate samples are logged as `ws_heart_rate` when the watch survey is submitted. 
+Within the context of Cozie, 'logging' refers to data being sent to the backend to be stored in the database (see also [Lambda timestamp](#lambda-timestamp-and-trigger)).
+'Sampling' refers to the creation of a measurement value. Sampling occurs more frequently. Several samples can be sent to the database in one action. For example, the heart rate is sampled at approximately 1 sample every three 3 minutes. All new heart rate samples are logged as `ws_heart_rate` when the watch survey is submitted. 
 We put a lot of effort into increasing the logging rate as much as possible. However, there are limiting factors. HealthKit information can only be accessed while the device unlocked and background tasks run irregularly if at all.
-Most frequent logging rate to  be expected is whenever a watch survey is submitted.
+The most frequent logging rate to be expected is whenever a watch surveys are submitted.
 
 There are three modes of logging:
  - When the iPhone app is open / interacted with (*)
@@ -193,7 +193,7 @@ There are three modes of logging:
  - On location change (***)
 
 ## Lambda timestamp and trigger
-For some of the field names there are two more accompanying fields for the timestamp of when the data was inserted into the database and what trigger the logging action. The field `lambda_timestamp` serves the same purpose. However this field value might over written in instances where values with identical `id_participant`, `id_experiment`, and `timestamp` are logged. The table below shows an example for `ts_HRV`. The columns `ts_HRV_lambda` and `ts_HRV_trigger` are used for debugging and development purposes. Unless you are investigating data anomalies or are working on app development, you can ignore these fields.
+For some of the field names, there are two more accompanying fields for the timestamp of when the data was inserted into the database and what triggered the logging action. The field `lambda_timestamp` serves the same purpose. However, this field value might be overwritten in instances where values with identical `id_participant`, `id_experiment`, and `timestamp` are logged. The table below shows an example for `ts_HRV`. The columns `ts_HRV_lambda` and `ts_HRV_trigger` are used for debugging and development purposes. Unless you are investigating data anomalies or are working on app development, you can ignore these fields.
 
 | Field name | Type | Logging rate | Description/Question | Field name in Cozie v2|
 |--------------|------|---------------|----------------------|-------------------------|
