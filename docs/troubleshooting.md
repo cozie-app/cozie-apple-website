@@ -42,10 +42,15 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   - Firewalls can cause this error.
 
 
-* ### Watch survey data is not logged (e.g., `ws_heart_rate`)
+* ### No data from the Cozie Watch app is logged (e.g., `ws_survey_count`, `ws_heart_rate`, `q_...`)
   - Make sure that the Apple Watch is connected to the iPhone.
   - Make sure that the iPhone has access to the internet.
   - Make sure there is no update for the WatchOS pending.
+  - Make sure there is no VPN service active. See iPhone/Settings/General/VPN & Device Management:<br/><br/>
+    <img alt="Screenshot of settings menu" src={useBaseUrl('img/troubleshooting_vpn_1.jpeg')}width="30%" /> &nbsp;
+    <img alt="Screenshot of General submenu in settings menu" src={useBaseUrl('img/troubleshooting_vpn_2.jpeg')}width="30%" /> &nbsp;
+    <img alt="Screenshot of VPN submenu in settings menu" src={useBaseUrl('img/troubleshooting_vpn_3.jpeg')}width="30%" />
+   <br/> 
 
 
 * ### I added a new data field to be stored in the InfluxDB. However, when I submit data, it is not stored
