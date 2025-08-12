@@ -21,7 +21,10 @@ Once, the data from the Cozie watch app is transferred to the Cozie iPhone app, 
 * Press the 'Download' button
 * Save the file in a convenient location or send it to a recipient of your choice.
 
-The log file contains all Cozie data in a JSON format. The log file can easily be parsed with the CoziePy Python package. The same package can also be used for plotting. 
+The log file contains all Cozie data in a JSON format. 
+The log file can easily be parsed with the CoziePy Python package. 
+You can install the package using pip with the following command: `pip install coziepy`.
+The same package can also be used for plotting. 
 
 Below is a basic code snippet that parses the log file and plots the heart rate data.
 
