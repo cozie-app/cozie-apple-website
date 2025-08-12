@@ -1,62 +1,109 @@
-# Website
+# Cozie Apple Website
 
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+This repository contains the code for the [Cozie Apple](https://cozie.app/) project, built with [Docusaurus 2](https://docusaurus.io/).
+
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Local Development](#local-development)
+- [Deployment](#deployment)
+- [Upgrade Docusaurus](#upgrade-docusaurus)
+- [Contributing](#contributing)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+
+## Features
+
+- 📚 Documentation powered by Docusaurus 2
+- ⚡ Fast local development with hot reload
+- 🚀 Automated deployment via GitHub Actions
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (version 16.x or later recommended)
+- [Yarn](https://yarnpkg.com/) (preferred over npm)
+
+Check your Node.js and Yarn versions:
+
+```bash
+node -v
+yarn -v
+```
 
 ## Getting Started
 
-To get started with this project, you need to have [Node.js](https://nodejs.org/) installed on your machine.
-You can check if you have Node.js installed by running:
-
-```
-node -v
-```
-
-If you don't have Node.js installed, you can download it from the [official website](https://nodejs.org/en/download/).
-
-## Installation
-
-First, clone the repository:
+Clone the repository:
 
 ```bash
 git clone https://github.com/cozie-app/cozie-apple-website.git
+cd cozie-apple-website
 ```
 
-Then, navigate into the project directory:
+Install dependencies:
 
 ```bash
-cd cozie-apple-website
 yarn install
 ```
 
-### Local Development
+## Local Development
+
+Start the development server:
 
 ```bash
 yarn start
 ```
 
-This command starts a local development server and open up a browser window. 
-Most changes are reflected live without having to restart the server.
+- The site will open automatically in your browser.
+- Changes are hot-reloaded.
 
-### Build
+## Deployment
 
-```
-$ yarn build
-```
+Deployment is automated via GitHub Actions on every push to the `main` branch.
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+To deploy manually (or from a different branch):
 
-### Deployment
-
-On Linux (or using Git Bash on Windows) you can deploy using the following command:
-```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+```bash
+yarn build
+GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- Ensure you have push access to the repository.
+- See [Docusaurus deployment docs](https://docusaurus.io/docs/deployment) for more options.
 
-### Upgrade Docusaurus
+## Upgrade Docusaurus
 
-```
-yarn upgrade 
+To upgrade Docusaurus and its core packages:
+
+```bash
+yarn upgrade
 yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ```
+
+## Contributing
+
+We welcome contributions! To get started:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes following [best practices](https://docusaurus.io/docs).
+4. Commit and push: `git commit -m "Add feature"` then `git push origin feature/your-feature-name`
+5. Open a Pull Request.
+
+Please follow the existing code style and add documentation/tests as appropriate.
+
+## Troubleshooting
+
+- **Port already in use:** Change the port with `yarn start --port 3001`
+- **Build errors:** Ensure Node.js and Yarn versions are up to date.
+- **Deployment issues:** Check your SSH keys and GitHub permissions.
+
+For more help, see the [Docusaurus Troubleshooting Guide](https://docusaurus.io/docs/troubleshooting).
+
+## License
+
+[MIT](LICENSE)
+
+---
+For questions or support, open an issue or contact the [Cozie team](https://cozie.app/).
