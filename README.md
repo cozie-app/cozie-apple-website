@@ -2,22 +2,40 @@
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
-### Installation
+## Getting Started
 
-Change directory to my-website
+To get started with this project, you need to have [Node.js](https://nodejs.org/) installed on your machine.
+You can check if you have Node.js installed by running:
 
 ```
-$ cd my-website
-$ yarn install
+node -v
+```
+
+If you don't have Node.js installed, you can download it from the [official website](https://nodejs.org/en/download/).
+
+## Installation
+
+First, clone the repository:
+
+```bash
+git clone https://github.com/cozie-app/cozie-apple-website.git
+```
+
+Then, navigate into the project directory:
+
+```bash
+cd cozie-apple-website
+yarn install
 ```
 
 ### Local Development
 
-```
-$ yarn start
+```bash
+yarn start
 ```
 
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local development server and open up a browser window. 
+Most changes are reflected live without having to restart the server.
 
 ### Build
 
