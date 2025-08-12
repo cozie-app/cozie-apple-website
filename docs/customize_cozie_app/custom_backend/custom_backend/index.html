@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WC21KB6YKB"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-WC21KB6YKB",{anonymize_ip:!0})</script><link rel="stylesheet" href="/assets/css/styles.9fb778d9.css">
-<script src="/assets/js/runtime~main.af22c5d4.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ab577490.js" defer="defer"></script>
 <script src="/assets/js/main.f473c5a5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -58,7 +58,7 @@
 <p>Similarly, retrieving Cozie data for research, can take a few minutes if the dataset includes dozens of participants who provided data for several weeks. This can lead to memory issues in InfluxDB and/or wait times for the researcher requesting the data.</p>
 <p>To speed up the data retrieval, Cozie data can be retrieved and pre-processed in regular intervals. The pre-processed data can then be cached using <strong>AWS Simple Storage Service (S3)</strong>. When a research wants to retrieve the Cozie data, the pre-processed data is fetched from the S3 cache and only the Cozie data that has not already been cached needs to be fetched from the database. This process is much faster and more gentle on the memory of the InfluxDB.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="influxdb">InfluxDB<a href="#influxdb" class="hash-link" aria-label="Direct link to InfluxDB" title="Direct link to InfluxDB">​</a></h2>
-<p>InfluxDB is the database engine that we use in the backend of Cozie. It is a database optimized for time-series data. It uses a query language that is similar to SQL.</p>
+<p>InfluxDB 1.8.x is the database engine used in the backend of Cozie. It is a database optimized for time-series data. It uses a query language that is similar to SQL.</p>
 <p>There are a few key differences on the surface. Being aware of these conventions makes it much easier to understand this documentation.
 What is called a <code>table</code> in MySQL is a <code>measurement</code> in InfluxDB.
 There are two different kinds of <code>column</code> types in InfluxDB. They are called <code>tags</code> and <code>fields</code>. The <code>column name</code> is either a <code>field key</code> or <code>tag key</code>. The value in a column is either a <code>tag value</code> or <code>key value</code>.
