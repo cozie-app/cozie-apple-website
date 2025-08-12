@@ -1,7 +1,7 @@
 ---
 id: installation
-title: Installation
-sidebar_label: Installation
+title: Installation - Apple Store
+sidebar_label: Installation - Apple Store
 sidebar_position: 2
 slug: /installation
 ---

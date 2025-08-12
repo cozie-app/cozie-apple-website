@@ -4,76 +4,108 @@ title: CoziePy
 sidebar_label: Cozie Python Package
 ---
 
-
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # CoziePy: Python Package for Cozie
 
-We have created a Python package for Cozie to make data wrangling with Cozie data as convenient as possible. The package is called CoziePy and is available on [pypi.org](https://pypi.org/project/coziepy/)
+**CoziePy** is a Python package designed to make working with Cozie data easy and efficient. 
+It provides tools for downloading, parsing, and visualizing data collected from the Cozie app.
 
-The packages helps with download in Cozie data from the backend, parsing the log file from the Cozie app, and it as some plotting functionality. 
+- **PyPI:** [coziepy](https://pypi.org/project/coziepy/)
 
-<b>
-Please note the CoziePy is still in early development. Hence, frequent changes are to be expected.
-</b>
+## Features
 
-<br/>
-<br/>
+- Download data from the Cozie backend via API
+- Parse log files exported from the Cozie app
+- Save and load data in efficient formats (Parquet, CSV)
+- Basic plotting for experiment monitoring and debugging
 
+> **Note:** CoziePy is in early development. Expect frequent updates and changes.
 
-# Load data
-There are several ways to load Cozie data. We have listed a few examples below.
+## Installation
 
-### Import CoziePy and create a `Cozie` instance
+Install the latest version from PyPI:
+
+```bash
+pip install coziepy
+```
+
+## Getting Started
+
+### 1. Import CoziePy and Create a `Cozie` Instance
+
 ```python
 from coziepy import Cozie
+
 cozie = Cozie()
 ```
 
-### Parse from Cozie app log file
-`log_file` is the path to the file [downloaded from within the Cozie app](/docs/download_data/download).
+### 2. Parse Data from a Cozie App Log File
 
+- `log_file`: Path to the log file [downloaded from the Cozie app](/docs/download_data/download).
+- `output_file`: (Optional) Path to save the parsed data (recommended: `.parquet.gzip` for efficiency).
+- `clean_up`: Set to `False` when parsing offline log files.
 
-`output_file` is an optional input parameter to save the Cozie dataframe as zipped parquet file. Alternatively, .csv is also a valid file extension but results in approximately ten times larger files.
-
-`clean_up` currently needs to set to 'False' when parsing offline log files.
 ```python
 df = cozie.load(
-    log_file="/content/cozie_example_participant_01_example_experiment_logs.txt",
+    log_file="/path/to/cozie_log.txt",
     clean_up=False,
     output_file="example.parquet.gzip",
 )
 df.head()
 ```
 
-### Download data using the web API
-`api_key` is provided by us. Please contact us at [cozie.app@gmail.com](mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20API%20key%20request) if you need one.
+### 3. Download Data Using the Web API
+
+- `api_key`: Provided by the Cozie team. [Request one](mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20API%20key%20request).
+- `id_experiment`: Experiment identifier.
+- `participant_list`: List of participant IDs.
+- `timezone`: E.g., `"Asia/Singapore"`.
+- `api_url`: Default API endpoint.
+
 ```python
 df = cozie.load(
     id_experiment="example_experiment",
     participant_list=["example_participant_01", "example_participant_02"],
     timezone="Asia/Singapore",
     api_url="https://m7cy76lxmi.execute-api.ap-southeast-1.amazonaws.com/default/cozie-apple-researcher-read-influx",
-    api_key="XXX",
+    api_key="YOUR_API_KEY",
     output_file="example.parquet.gzip",
 )
 df.head()
-
 ```
 
-### Load data from previously processed data
+### 4. Load Data from a Previously Processed File
+
 ```python
 df = cozie.load(input_file="example.parquet.gzip")
 df.head()
 ```
 
 ## Plotting
-CoziePy has some plotting functionality which is mainly focused on experiment monitoring and debugging. In the examples below it is assumed that you have already generated a Pandas dataframe containing Cozie data using one of the examples above.
 
-### Plot time-series data for one participant
+CoziePy includes basic plotting tools for quick data inspection. These are mainly intended for experiment monitoring and debugging.
+
+### Plot Time-Series Data for One Participant
+
 ```python
-fig = cp.ts_inspection(
+fig = cozie.ts_inspection(
     id_participant="example_participant_01", column_name="ts_heart_rate"
 )
 fig.show()
 ```
+
+## Troubleshooting
+
+- **Installation issues:** Ensure you are using Python 3.7+ and the latest `pip`.
+- **API access:** Contact [cozie.app@gmail.com](mailto:cozie.app@gmail.com) for API keys.
+- **Large files:** Prefer `.parquet.gzip` over `.csv` for storage efficiency.
+- **Questions or bugs:** Please reach out to the Cozie team.
+
+## Learn More
+
+- [CoziePy on PyPI](https://pypi.org/project/coziepy/)
+- [Contact us](mailto:cozie.app@gmail.com)
+
+---
+_Last updated: 2025-08_
