@@ -52,7 +52,7 @@ Similarly, retrieving Cozie data for research, can take a few minutes if the dat
 To speed up the data retrieval, Cozie data can be retrieved and pre-processed in regular intervals. The pre-processed data can then be cached using **AWS Simple Storage Service (S3)**. When a research wants to retrieve the Cozie data, the pre-processed data is fetched from the S3 cache and only the Cozie data that has not already been cached needs to be fetched from the database. This process is much faster and more gentle on the memory of the InfluxDB.
 
 ## InfluxDB
-InfluxDB is the database engine that we use in the backend of Cozie. It is a database optimized for time-series data. It uses a query language that is similar to SQL. 
+InfluxDB 1.8.x is the database engine used in the backend of Cozie. It is a database optimized for time-series data. It uses a query language that is similar to SQL. 
 
 There are a few key differences on the surface. Being aware of these conventions makes it much easier to understand this documentation.
 What is called a `table` in MySQL is a `measurement` in InfluxDB.
