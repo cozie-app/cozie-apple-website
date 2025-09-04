@@ -1,10 +1,7 @@
 ---
 slug: web_api_update
 title: Update - Web API
-author: Mario Frei
-author_title: Postdoc at BUDS Lab
-author_url: https://github.com/mariofrei
-author_image_url: ../img/mario.jpeg
+authors: mario
 tags: [cozie-apple, cozie, app store, web API]
 ---
 
@@ -15,6 +12,8 @@ We have updated the web APi for [Cozie data retrieval](/docs/download_data/data_
 ```
 import shutil
 ```
+
+<!--truncate-->
 
 2. The new web API doesn't serve the data as JSON string. Instead, it is a two-step process. Firstly, a link is provided to a zipped .csv-file containing the data. Hence, the provided link needs to be called to then download the actual data.
 

@@ -1,0 +1,11 @@
+federico:
+  name: Federico Tartarini
+  title: senior lecturer
+  url: https://github.com/FedericoTartarini
+  image_url: https://federicotartarini.github.io/img/profile.jpg
+
+mario:
+  name: Mario Frei
+  title: Postdoctoral Researcher
+  url: https://github.com/mariofrei
+  image_url: ../img/mario.jpeg
