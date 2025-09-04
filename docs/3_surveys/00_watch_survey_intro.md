@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Watch Survey and Phone Survey
 
-Cozie comes with many built-in watch surveys a phone survey.
+Cozie comes with many [built-in](surveys/04_dd_ws_thermal_short.md) watch surveys a phone survey.
 
 ## Built-in Watch Surveys
 
