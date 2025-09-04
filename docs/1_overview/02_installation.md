@@ -8,6 +8,13 @@ slug: /installation
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+:::warning
+
+Cozie is currently available on the Apple App Store. 
+However, please note that we cannot update the app on the Apple App Store until the next version is approved by Apple.
+Hence, if you wish to use the latest features, please consider following the instruction in [Customize Cozie](../docs/customize_cozie_app/customize_cozie) to build the app from source code.
+
+:::
 
 This short guide will explain how to set up and install Cozie on your iPhone and Apple Watch.
 
@@ -16,29 +23,23 @@ This short guide will explain how to set up and install Cozie on your iPhone and
 
     <img alt="Notification accept" src={useBaseUrl('img/installation_notification_accept.png')}width="30%" /> &nbsp;
     <img alt="Health data accept" src={useBaseUrl('img/installation_health_data_accept.png')}width="30%" />  &nbsp;
-    <img alt="Health data accept" src={useBaseUrl('img/installation_location_data_accept.png')}width="30%" /> 
-    <br/>  
+    <img alt="Health data accept" src={useBaseUrl('img/installation_location_data_accept.png')}width="30%" /> &nbsp;
 
-3. In the Cozie app, you will see three tabs: the *Data* tab, *Settings* tab, and *Backend* tab. 
+3. In the Cozie app, you will see three tabs: the **Data** tab, **Settings** tab, and **Backend** tab. 
 
     <img alt="Data tab" src={useBaseUrl('img/cozie_tab_data.png')}width="30%" /> &nbsp;
     <img alt="Settings tab" src={useBaseUrl('img/cozie_tab_settings.png')}width="30%" /> &nbsp;
-    <img alt="Backend tab" src={useBaseUrl('img/cozie_tab_backend.png')}width="30%" />
-    <br/> 
-
+    <img alt="Backend tab" src={useBaseUrl('img/cozie_tab_backend.png')}width="30%" /> &nbsp;
 
 4. Go to the watch app on your iPhone. Ensure that the Cozie application is successfully installed on your Apple Watch. If it hasn't been installed, tab on `INSTALL`.
 
    <img alt="Watch app icon" src={useBaseUrl('img/installation_watch_app_icon.png')} width="15%"/> &nbsp; 
-   <img alt="Install Cozie on watch" src={useBaseUrl('img/installation_watch_app_installation.png')} width="63%"/>g
-   <br/> 
-
+   <img alt="Install Cozie on watch" src={useBaseUrl('img/installation_watch_app_installation.png')} width="63%"/> &nbsp;
 
 5. Open the Cozie application on your Apple Watch. You will be asked to allow Cozie to use your location. Tap on "allow while using app" and access your health data.
 
    <img alt="Cozie - allow location" src={useBaseUrl('img/installation_watch_app_allow_location_1.png')} width="20%" /> &nbsp;
    <img alt="Cozie - allow location" src={useBaseUrl('img/installation_watch_app_allow_location_2.png')} width="20%" /> &nbsp;
-   <img alt="Cozie - allow health" src={useBaseUrl('img/installation_watch_app_allow_health.png')} width="20%" />
-   <br/> 
+   <img alt="Cozie - allow health" src={useBaseUrl('img/installation_watch_app_allow_health.png')} width="20%" /> &nbsp;
 
 6. At this point, Cozie is not yet operational but ready to be configured. Please proceed to [setup guide](setup).
