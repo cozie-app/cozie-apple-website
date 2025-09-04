@@ -43,7 +43,7 @@ Alternatively, you may modify the settings first as shown below:
          <td>
             <ul>
                <li><strong>Watch Survey: </strong>
-               Select one of the built-in watch surveys. I can add your own watch survey. A guide for custom watch surveys is available [here](custom_surveys/custom_watch_survey).</li>
+               Select one of the built-in watch surveys. I can add your own watch survey. A guide for custom watch surveys is available [here](surveys/custom_watch_survey).</li>
                <li><strong>Watch Survey Response Goal: </strong>
                This the the number of watch survey responses that are expected for completion. The value set here will be shown in the Data tab under Valid Survey Count after the slash.</li>
                <li><strong>Enable Reminders: </strong>

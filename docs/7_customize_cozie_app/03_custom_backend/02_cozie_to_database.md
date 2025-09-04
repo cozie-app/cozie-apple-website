@@ -62,7 +62,7 @@ The field names listed under `fields` are listed in the [data overview](../../do
 
 
 ## Payload data structure for watch survey
-The example below shows the payload from a watch survey response. The fields with the prefix `q_` are defined in the [JSON file for the watch survey](../../custom_surveys/custom_watch_survey).
+The example below shows the payload from a watch survey response. The fields with the prefix `q_` are defined in the [JSON file for the watch survey](../../surveys/custom_watch_survey).
 ```js title="Watch survey payload example"
 [
    {

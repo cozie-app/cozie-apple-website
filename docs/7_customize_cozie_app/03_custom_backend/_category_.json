@@ -1,6 +1,6 @@
 {
-  "position": 1,
-  "label": "Custom Backend",
+  "position": 3,
+  "label": "Cozie Original Backend",
   "link": {
     "type": "doc",
     "id": "custom_backend"}

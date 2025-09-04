@@ -1,7 +1,7 @@
 ---
 id: custom_backend
-title: Custom Backend
-sidebar_label: Custom backend
+title: Cozie Original Backend
+sidebar_label: Cozie Original backend
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl'; 

@@ -12,18 +12,20 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 You can download the data you have collected using the Cozie Apple Watch survey using the following Python code.
 
-Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`, `ID_PASSWORD` and `API_KEY`. All request parameters are described in the table below.
+Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`, `ID_PASSWORD` and `API_KEY`. All
+request parameters are described in the table below.
 
-| Parameter                        | Description |
-|:---------------------------------|:------------|
+| Parameter                        | Description                                                                                                                                                                                                  |
+|:---------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `x-api-key` <br/>(String)        | Data retrieval API key needed in the request header. You can request an `API_KEY` by emailing us a request at [cozie.app@gmail.com](mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20API%20key%20request). |
-| `id_participant` <br/>(String)   | Identifier for an individual participant. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Participant ID). |
-| `id_experiment` <br/>(String)    | Identifier for a group of participants. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Experiment ID). |
-| `id_password` <br/>(String)      | Password for participant data. <br/> Can be found in the 'Backend' tab of the Cozie phone app (Participant Password). |
-| `columns` <br/>(List of strings) | Specifies the [columns](data_overview) that are retrieved. If this parameter is omitted, all columns will be retrieved. |
-| `days` <br/>(Integer)            | Specifies the number of days included in the query starting from now looking back. If this parameter is omitted, all data will be retrieved. |
+| `id_participant` <br/>(String)   | Identifier for an individual participant. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Participant ID).                                                                                  |
+| `id_experiment` <br/>(String)    | Identifier for a group of participants. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Experiment ID).                                                                                     |
+| `id_password` <br/>(String)      | Password for participant data. <br/> Can be found in the 'Backend' tab of the Cozie phone app (Participant Password).                                                                                        |
+| `columns` <br/>(List of strings) | Specifies the [columns](data_overview) that are retrieved. If this parameter is omitted, all columns will be retrieved.                                                                                      |
+| `days` <br/>(Integer)            | Specifies the number of days included in the query starting from now looking back. If this parameter is omitted, all data will be retrieved.                                                                 |
 
-The example script below shows how to call the Cozie data retrieval API and convert the received data into a Pandas dataframe (`df`). The example below is tested with Pandas version 1.3.5.
+The example script below shows how to call the Cozie data retrieval API and convert the received data into a Pandas
+dataframe (`df`). The example below is tested with Pandas version 1.3.5.
 
 ```python
 import requests
@@ -76,7 +78,9 @@ df.head()
 ```
 
 ### Watch survey data
-If you want to focus on the analysis of the watch-based survey data use the code below to filter the dataframe retrieved above.
+
+If you want to focus on the analysis of the watch-based survey data use the code below to filter the dataframe retrieved
+above.
 
 ```python
 # Get only question flow responses
@@ -85,7 +89,8 @@ df_questions.head()
 ```
 
 ### Physiological data
-Use the code below to plot noise and heart rate data contained in the dataframe retrieved above. 
+
+Use the code below to plot noise and heart rate data contained in the dataframe retrieved above.
 
 ```python
 # Plot time-series data
@@ -105,12 +110,14 @@ ax[1].set_xlabel("Time", fontsize=14)
 ```
 
 ## Column names & watch surveys
+
 The description for all features and the watch survey questions are available on separate pages:
+
 * [Column names](data_overview)
-* [Thermal (short)](ws_thermal_short)
-* [Thermal (long)](ws_thermal_long)
-* [Noise and Privacy](ws_noise_and_privacy)
-* [Infection Risk](ws_infection_risk)
-* [Movement](ws_movement)
-* [Privacy](ws_privacy)
-* [Interaction](ws_interaction)
+* [Thermal (short)](surveys/ws_thermal_short)
+* [Thermal (long)](surveys/ws_thermal_long)
+* [Noise and Privacy](surveys/ws_noise_and_privacy)
+* [Infection Risk](surveys/ws_infection_risk)
+* [Movement](surveys/ws_movement)
+* [Privacy](surveys/ws_privacy)
+* [Interaction](surveys/ws_interaction)

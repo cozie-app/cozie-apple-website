@@ -48,7 +48,7 @@ Creating a new watch survey is an iterative process and requires testing in the 
 We usually use [Miro](https://miro.com/) and start by adding all questions to the Miro board, adding response options, and deciding which response options lead to which follow-up question. 
 At this point, you can also start sourcing the icons for the response options. Here are some sources for free icons:
 
-* [Cozie icon library](../custom_surveys/watch_survey_icons)
+* [Cozie icon library](../surveys/watch_survey_icons)
 * [SF Symbols](https://developer.apple.com/sf-symbols/)
 * [Flaticon](https://www.flaticon.com/)
 * [The Noun Project](https://thenounproject.com/)
@@ -59,7 +59,7 @@ At this point, you can also start sourcing the icons for the response options. H
 * [Google Fonts](https://fonts.google.com/icons)
 * [W3 Schools](https://www.w3schools.com/icons/icons_reference.asp)
 
-With a complete visual draft of the watch survey, you can create the JSON file that can be loaded into the Cozie app. An example and guide for how to create a watch survey JSON file is available [here](../custom_surveys/custom_watch_survey).
+With a complete visual draft of the watch survey, you can create the JSON file that can be loaded into the Cozie app. An example and guide for how to create a watch survey JSON file is available [here](../surveys/custom_watch_survey).
 
 Once, your custom watch survey is available, you can start using Cozie with the watch survey. While responding to watch surveys during your daily routine, you will likely notice that changes are needed. Common issues that we encounter in this phase are:
   * Missing or superfluous response options based on context
@@ -71,7 +71,7 @@ We recommend that while you are testing the watch survey, you do it under the sa
 Further, while you are already using Cozie to collect data you should also start testing your [data monitoring](#monitoring) setup. It is vital to monitor the quality of incoming data throughout the data collection, so that in case there is an issue you can take immediate measures instead of discovering issues after the fact. Analyzing the data already at this stage can help you to familiarize yourself with the data quality, e.g., sampling rate, logging rate, accuracy, etc. The sampling rate varies wildly, e.g., heart rate data is usually sampled at a 1-6-minute interval, while the wrist temperature data is only sampled at a 24-hour interval. Have a good look at the data that is important for your research to avoid any disappointment further down the line. More details about the data monitoring are discussed [below](#monitoring).
 
 ### Creating a phone survey
-The phone survey needs to be created with a third-party service such as Google Forms, Qualtrics, or similar. A guide on how to add a phone survey to the Cozie app is available [here](../custom_surveys/custom_phone_survey). The phone survey turns out to be less dependent on the context. Further, it is less frequently used than the watch survey. Overall, less testing is required compared with the watch survey. 
+The phone survey needs to be created with a third-party service such as Google Forms, Qualtrics, or similar. A guide on how to add a phone survey to the Cozie app is available [here](../surveys/custom_phone_survey). The phone survey turns out to be less dependent on the context. Further, it is less frequently used than the watch survey. Overall, less testing is required compared with the watch survey. 
 
 ### Test deployment
 As a final testing step before the actual deployment, we strongly recommend that you do a dry run of your deployment, i.e., deploy Cozie exactly as you would later, with at least five people who were not involved in any of the preparations. This will help to identify issues that need an outside perspective. e.g., phrasing, terms, or icons in the watch survey might not be known by people outside of your team or domain. People not intimately familiar with your project will not pay attention to details that are important for your research and might generally behave unexpectedly.
