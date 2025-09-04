@@ -2,6 +2,7 @@
 id: privacyPolicy
 title: Cozie Privacy Policy
 sidebar_label: Privacy Policy
+sidebar_position: 11
 ---
 
 # Privacy Statement

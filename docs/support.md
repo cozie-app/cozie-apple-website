@@ -2,6 +2,7 @@
 id: support
 title: Cozie Support
 sidebar_label: Support
+sidebar_position: 12
 ---
 
 # Support

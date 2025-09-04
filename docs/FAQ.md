@@ -2,7 +2,7 @@
 id: faq
 title: Frequently Asked Questions
 sidebar_label: FAQ
-sidebar_position: 4
+sidebar_position: 10
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
