@@ -66,3 +66,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     - Check the correctness of the Player ID on [OneSignal.com](https://onesignal.com/).
     - Make sure you created the .p12 certificate for the main identifier.
     - Send a test push notification from the dashboard on [OneSignal.com](https://onesignal.com/).
+    - Check the "Subscriptions" under the user profile in the OneSignal dashboard. If it is marked with "Never Subscribed", do the following:
+      - Check if push notifications are enabled on the iPhone for Cozie.
+      - Force close and open the Cozie app.
+      - Restart the iPhone.
+      - Re-install the Cozie app.
