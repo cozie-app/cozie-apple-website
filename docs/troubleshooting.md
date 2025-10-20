@@ -51,6 +51,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     <img alt="Screenshot of General submenu in settings menu" src={useBaseUrl('img/troubleshooting_vpn_2.jpeg')}width="30%" /> &nbsp;
     <img alt="Screenshot of VPN submenu in settings menu" src={useBaseUrl('img/troubleshooting_vpn_3.jpeg')}width="30%" /> &nbsp;
 
+* **Heart rate data is not being logged in Cozie nor in the Apple Health app (e.g., `ts_heart_rate`, `ws_heart_rate`)**
+
+  - Restart the Apple Watch.
+
 * **I added a new data field to be stored in the InfluxDB. However, when I submit data, it is not stored**
 
   The first time data with a new field name is saved in the database, the database sets the data type, e.g., if you were to implement the extraction of stride length information, you could save it as `ts_stride_length`. If you submit the value `1.04`, the value will be stored as a floating point number (float). The stride length might vary. If you happen to submit the value `1`, the database will attempt to store it as an integer. It would then see that there is already a floating point number stored under `ts_stride_length` and reject the new value of `ts_stride_length`, which is then lost. 
