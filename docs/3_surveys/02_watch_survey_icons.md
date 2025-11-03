@@ -16,6 +16,10 @@ There are two ways to add icons to the watch survey response options:
 
 All built-in Symbols are listed in the table below. If you cannot find suitable icons in the table below or among SF symbols, you can post your icons in our [GitHub discussion for watch survey icon requests](https://github.com/cozie-app/cozie-apple/discussions/82). Please note that it might take a few days for icons to be included in the app and the new app version to be accepted in the App Store. Please note that the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) apply. 
 
+:::caution
+Please note that some icons are currently not available in the App Store version of Cozie. You can use the [source code](https://github.com/cozie-app/cozie-apple) to build your own Cozie version to access all the icons.
+:::
+
 
 | &nbsp;&nbsp;&nbsp;&nbsp;Icon&nbsp;&nbsp;&nbsp;&nbsp; | Filename | Tags | Attribution | Source |
 |------------------------------------------------------|----------|------|-------------|--------|
