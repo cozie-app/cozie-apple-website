@@ -75,3 +75,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
       - Force close and open the Cozie app.
       - Restart the iPhone.
       - Re-install the Cozie app.
+
+* **"Show App on Apple Watch" toggle is missing in TestFlight.**
+
+  - Reinstall TestFlight
