@@ -75,7 +75,7 @@ const contributors = [
   {
     name: <>Clayton Miller</>,
     imageUrl: "img/clayton.png",
-    profession: <>Associate Professor at NUS</>,
+    profession: <>Associate Professor at Singapore Management University</>,
     link: "https://www.linkedin.com/in/claytonmiller/",
   },
   {
