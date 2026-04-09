@@ -133,7 +133,8 @@ We assembled a short onboarding checklist for your convenience.
 * Onboarding interview or survey
 * QR code for Cozie on the App Store
 * Personalized QR code to setup Cozie
-* Test watch survey response
+* Test watch survey response, i.e., let the participant submit a watch survey response
+* Send test push notification, i.e., let the participant interact with the push notification (Make sure focus modes are turned off)
 * Sign equipment receipt
 * Q&A
 
