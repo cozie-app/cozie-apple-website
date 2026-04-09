@@ -79,3 +79,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 * **"Show App on Apple Watch" toggle is missing in TestFlight.**
 
   - Reinstall TestFlight
+  - 
+* **Sleep data is missing.**
+
+  - Check if sleep data is recorded in the Apple Health app.
+  - Ensure the Cozie app is allowed to access sleep data. (Settings / Privacy & Security / Health / Cozie)
+  - Enable sleep tracking (Watch App / Sleep / Track Sleep with Apple Watch)
+    - Note: [Reportedly, the Apple Watch (watchOS 11 and newer) can track sleep without enabling Sleep Focus Mode.](https://support.apple.com/en-sg/guide/watch/apd830528336/watchos)
+  - Ensure the Apple Watch is worn at night.
+  - Ensure the Apple Watch is worn snug enough.
+  - Ensure battery charge state is above 30% before going to sleep.
+  - Enable sleep focus
+  - Enable sleep schedule and use it for Sleep Focus (Health App / Browse / Sleep)
+  - [Apple's user guide for sleep tracking with the Apple Watch.](https://support.apple.com/en-sg/guide/watch/apd830528336/watchos)
