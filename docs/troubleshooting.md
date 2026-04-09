@@ -93,3 +93,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   - Enable sleep focus
   - Enable sleep schedule and use it for Sleep Focus (Health App / Browse / Sleep)
   - [Apple's user guide for sleep tracking with the Apple Watch.](https://support.apple.com/en-sg/guide/watch/apd830528336/watchos)
+ 
+* **Location data is missing.**
+
+  - Ensure iOS and watchOS are up-to-date.
+  - Ensure Cozie has been given permission to access location data. (Settings / Privacy & Security / Location Services)
