@@ -119,6 +119,7 @@ The participant is now part of the experiment. We usually start the experiment w
 
 After the onboarding survey, Cozie can be installed. If the participant doesn't have an iPhone and/or an Apple Watch, we provide the devices to them. We have the participant sign an equipment receipt where we note the devices and their serial numbers.
 For a quick installation process, we prepare a QR code that leads to Cozie on the app store.
+Disable all focus modes on the iPhone before installing Cozie.
 Once, Cozie is installed, the settings can be changed for the participant. This can also be accelerated with a [QR code](qr_code). 
 
 With everything set up, we ask the participant to take one watch survey. This serves two purposes: Firstly, you can check if the data arrives in the database as expected. Secondly, the participant gets to use the watch survey and can ask for clarification if needed.
