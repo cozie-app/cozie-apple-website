@@ -79,7 +79,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 * **"Show App on Apple Watch" toggle is missing in TestFlight.**
 
   - Reinstall TestFlight
-  - 
+
 * **Sleep data is missing.**
 
   - Check if sleep data is recorded in the Apple Health app.
