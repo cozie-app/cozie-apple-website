@@ -63,7 +63,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 * **Push notifications from OneSignal don't show up on my device.**
 
-  - Ensure focus modes on the iPhone and Apple Watch are disabled.
+  - Ensure focus modes on the iPhone and Apple Watch are disabled during the installation of the Cozie app and testing of the push notifications.
   - Check the correctness of the Player ID in the Cozie data tab.
   - Check the correctness of the API key.
   - Check the correctness of the information in the *Backend* tab and in your Python notebook.
