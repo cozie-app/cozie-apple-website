@@ -9,13 +9,15 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Troubleshooting
 
+## Installation and setup
+
 * **I cannot install the Cozie app on the Apple Watch.**
 
   * Make sure that the Apple Watch and iPhone are still fully supported by Apple (see [here](https://cozie-apple.app/docs/faq/#what-is-the-minimal-requirement-for-the-apple-watch-and-iphone-to-run-cozie) for more information).
   * Make sure that the Apple Watch is currently connected to the iPhone.
   * Make sure that the iPhone is connected to the internet.
   * Make sure there is no update for WatchOS or iOS pending. If there are updates available, install the iOS and watchOS first. Then, proceed to install the Cozie watch app.
-  * Turn the airplane mode on the Apple Watch on and off.
+  * Turn airplane mode on the Apple Watch on and off.
   * Turn on 'Automatic downloads' and 'Automatic Updates' in the Settings of the App Store app on the Apple Watch.
   * On the Apple Watch, in the Settings app, turn off and on Wifi, Mobile data, and Bluetooth.
   * On the iPhone, in the Settings app, turn off and on Wifi, Mobile data, and Bluetooth.
@@ -41,26 +43,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   - Make sure the watch survey's JSON file is valid and has all fields required by the Cozie specification. There are online tools available to check the JSON validity, e.g., we use [JSON Formatter & Validator](https://jsonformatter.curiousconcept.com/#)
   - Firewalls can cause this error.
 
-* **No data from the Cozie Watch app is logged (e.g., `ws_survey_count`, `ws_heart_rate`, `q_...`)**
-
-  - Make sure that the Apple Watch is connected to the iPhone.
-  - Make sure that the iPhone has access to the internet.
-  - Make sure there is no update for the WatchOS pending.
-  - Make sure there is no VPN service active. See iPhone/Settings/General/VPN & Device Management:<br/><br/>
-    <img alt="Screenshot of settings menu" src={useBaseUrl('img/troubleshooting_vpn_1.jpeg')}width="30%" /> &nbsp;
-    <img alt="Screenshot of General submenu in settings menu" src={useBaseUrl('img/troubleshooting_vpn_2.jpeg')}width="30%" /> &nbsp;
-    <img alt="Screenshot of VPN submenu in settings menu" src={useBaseUrl('img/troubleshooting_vpn_3.jpeg')}width="30%" /> &nbsp;
-
-* **Heart rate data is not being logged in Cozie nor in the Apple Health app (e.g., `ts_heart_rate`, `ws_heart_rate`)**
-
-  - Restart the Apple Watch.
-
-* **I added a new data field to be stored in the InfluxDB. However, when I submit data, it is not stored**
-
-  The first time data with a new field name is saved in the database, the database sets the data type, e.g., if you were to implement the extraction of stride length information, you could save it as `ts_stride_length`. If you submit the value `1.04`, the value will be stored as a floating point number (float). The stride length might vary. If you happen to submit the value `1`, the database will attempt to store it as an integer. It would then see that there is already a floating point number stored under `ts_stride_length` and reject the new value of `ts_stride_length`, which is then lost. 
-
-  To avoid this issue, we force-cast the type for each field name in the backend. Let us know what type and field name you would like to add to Cozie, we can help you with this issue.
-
 * **Push notifications from OneSignal don't show up on my device.**
 
   - Ensure focus modes on the iPhone and Apple Watch are disabled during the installation of the Cozie app and testing of the push notifications.
@@ -80,6 +62,33 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 * **"Show App on Apple Watch" toggle is missing in TestFlight.**
 
   - Reinstall TestFlight
+
+## Missing data
+
+* **No data from the Cozie Watch app is logged (e.g., `ws_survey_count`, `ws_heart_rate`, `q_...`)**
+
+  - Make sure that the Apple Watch is connected to the iPhone.
+  - Make sure that the iPhone has access to the internet.
+  - Make sure there is no update for the WatchOS pending.
+  - Make sure there is no VPN service active. See iPhone/Settings/General/VPN & Device Management:<br/><br/>
+    <img alt="Screenshot of settings menu" src={useBaseUrl('img/troubleshooting_vpn_1.jpeg')}width="30%" /> &nbsp;
+    <img alt="Screenshot of General submenu in settings menu" src={useBaseUrl('img/troubleshooting_vpn_2.jpeg')}width="30%" /> &nbsp;
+    <img alt="Screenshot of VPN submenu in settings menu" src={useBaseUrl('img/troubleshooting_vpn_3.jpeg')}width="30%" /> &nbsp;
+
+* **Heart rate data is not being logged in Cozie nor in the Apple Health app (e.g., `ts_heart_rate`, `ws_heart_rate`)**
+
+  - Ensure the Cozie app has permission to access the heart rate data (Settings / Privacy & Security / Health / Cozie)
+  - Restart the Apple Watch.
+  - There are some phyiscal issue that can cause gaps in the heart rate data:
+    - Dust, sweat, water, oils on the heart rate sensor.
+    - Tattoos and/or dark skin where the watch is worn.
+    - Body lotion on the wrist.
+
+* **I added a new data field to be stored in the InfluxDB. However, when I submit data, it is not stored**
+
+  The first time data with a new field name is saved in the database, the database sets the data type, e.g., if you were to implement the extraction of stride length information, you could save it as `ts_stride_length`. If you submit the value `1.04`, the value will be stored as a floating-point number (float). The stride length might vary. If you happen to submit the value `1`, the database will attempt to store it as an integer. It would then see that there is already a floating point number stored under `ts_stride_length` and reject the new value of `ts_stride_length`, which is then lost. 
+
+  To avoid this issue, we force-cast the type for each field name in the backend. Let us know what type and field name you would like to add to Cozie, we can help you with this issue.
 
 * **Sleep data is missing.**
 
