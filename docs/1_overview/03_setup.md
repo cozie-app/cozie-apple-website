@@ -82,20 +82,20 @@ Alternatively, you may modify the settings first as shown below:
       </tr>
    </table>
 
-4. **Synchronization:**
+#### 4. Synchronization {#synchronization}
 
-   While keeping the Cozie application open on your iPhone, open the Cozie app on your Apple Watch. In the *Settings* tab, press the sync icon (&#x1f5d8;). If the sync is successful, the first question of the watch survey will be shown on the Apple watch and the watch icons in the settings app change their color from grey to orange. You might see a different first question depending on what watch survey you have selected above.
+While keeping the Cozie application open on your iPhone, open the Cozie app on your Apple Watch. In the *Settings* tab, press the sync icon (&#x1f5d8;). If the sync is successful, the first question of the watch survey will be shown on the Apple watch and the watch icons in the settings app change their color from grey to orange. You might see a different first question depending on what watch survey you have selected above.
 
-   <img alt="Screenshot of first screen on watch app" src={useBaseUrl('img/cozie_watch_app_first_screen.png')}width="24%" /> &nbsp;
-   <img alt="Screenshot of sync icon in settings tab" src={useBaseUrl('img/cozie_settings_tab_sync.png')}width="37%" /> &nbsp;
-   <img alt="Screenshot of first watch survey question" src={useBaseUrl('img/cozie_watch_app_thermal_first_question.png')}width="24%" /> &nbsp;
+<img alt="Screenshot of first screen on watch app" src={useBaseUrl('img/cozie_watch_app_first_screen.png')}width="24%" /> &nbsp;
+<img alt="Screenshot of sync icon in settings tab" src={useBaseUrl('img/cozie_settings_tab_sync.png')}width="37%" /> &nbsp;
+<img alt="Screenshot of first watch survey question" src={useBaseUrl('img/cozie_watch_app_thermal_first_question.png')}width="24%" /> &nbsp;
 
-   You can proceed to complete the watch survey on the Apple Watch. Submit the watch survey by pressing 'Submit survey' after the last question.
+You can proceed to complete the watch survey on the Apple Watch. Submit the watch survey by pressing 'Submit survey' after the last question.
 
-   <img alt="Watch survey, first question" src={useBaseUrl('img/cozie_watch_app_thermal_first_question.png')}width="24%" />&nbsp;
-   <img alt="Watch survey, submit screen" src={useBaseUrl('img/cozie_watch_app_submit_screen.png')}width="24%" />&nbsp;
-   <img alt="Watch survey, after submission screen" src={useBaseUrl('img/cozie_watch_app_after_submission_screen.png')}width="24%" /> &nbsp;
+<img alt="Watch survey, first question" src={useBaseUrl('img/cozie_watch_app_thermal_first_question.png')}width="24%" />&nbsp;
+<img alt="Watch survey, submit screen" src={useBaseUrl('img/cozie_watch_app_submit_screen.png')}width="24%" />&nbsp;
+<img alt="Watch survey, after submission screen" src={useBaseUrl('img/cozie_watch_app_after_submission_screen.png')}width="24%" /> &nbsp;
 
-   If the Watch icons in the *Settings* tab remain grey, close and open again the Cozie app on the Apple Watch and try step 4 again. 
-   
-   The Cozie app is now ready to collect data. To download the data follow our guide [here](download_data/download).
+If the Watch icons in the *Settings* tab remain grey, close and open again the Cozie app on the Apple Watch and try step 4 again. 
+
+The Cozie app is now ready to collect data. To download the data follow our guide [here](download_data/download).
