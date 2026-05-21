@@ -93,12 +93,12 @@ The watch survey JSON file needs to be made available online. It cannot be uploa
 
 
 ## How to load the watch survey into the Cozie app
-1. Open the Cozie app and go to the *Backend* tab.
+1. Open the Cozie app and go to the *Advanced* tab.
 2. Add the URL to the watch survey file in the input field labeled *Watch 
 Survey Link* [Link to example survey](https://raw.githubusercontent.com/cozie-app/cozie-apple-website/master/static/watch_surveys/watch_survey_example.json))
 <img alt="Screenshot backend watch survey configuration" src={useBaseUrl('img/backend_watch_survey.png')}width="30%" />  &nbsp;
 
-3. Press the sync button in the *Backend* tab. The watch survey should now be available to select in the *Settings* tab.
+3. Press the sync button in the *Advanced* tab. The watch survey should now be available to select in the *Settings* tab.
 
 4. Go to the *Settings* tab and select your watch survey. The watch survey defined in the JSON file provided with the link above should be in the pop-up list. Select it.
 

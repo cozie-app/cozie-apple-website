@@ -20,7 +20,7 @@ request parameters are described in the table below.
 | `x-api-key` <br/>(String)        | Data retrieval API key needed in the request header. You can request an `API_KEY` by emailing us a request at [cozie.app@gmail.com](mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20API%20key%20request). |
 | `id_participant` <br/>(String)   | Identifier for an individual participant. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Participant ID).                                                                                  |
 | `id_experiment` <br/>(String)    | Identifier for a group of participants. <br/> Can be found in the 'Settings' tab of the Cozie phone app (Experiment ID).                                                                                     |
-| `id_password` <br/>(String)      | Password for participant data. <br/> Can be found in the 'Backend' tab of the Cozie phone app (Participant Password).                                                                                        |
+| `id_password` <br/>(String)      | Password for participant data. <br/> Can be found in the 'Advanced' tab of the Cozie phone app (Participant Password).                                                                                       |
 | `columns` <br/>(List of strings) | Specifies the [columns](data_overview) that are retrieved. If this parameter is omitted, all columns will be retrieved.                                                                                      |
 | `days` <br/>(Integer)            | Specifies the number of days included in the query starting from now looking back. If this parameter is omitted, all data will be retrieved.                                                                 |
 

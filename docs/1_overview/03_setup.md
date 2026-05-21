@@ -98,4 +98,10 @@ You can proceed to complete the watch survey on the Apple Watch. Submit the watc
 
 If the Watch icons in the *Settings* tab remain grey, close and open again the Cozie app on the Apple Watch and try step 4 again. 
 
+:::important
+
+After completing the steps above, restart the Cozie app on both your iPhone and Apple Watch to refresh the cache.
+
+:::
+
 The Cozie app is now ready to collect data. To download the data follow our guide [here](download_data/download).
