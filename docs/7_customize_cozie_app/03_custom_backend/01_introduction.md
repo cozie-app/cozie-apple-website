@@ -8,7 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The backend of Cozie is fairly simple and the creation of your own Cozie backend should be manageable provided you have some experience with web technology and databases. By creating your own backend you can operate the Cozie app fully independent and you can make changes in order to be compliant with your domestic data privacy laws.
 
-Most changes in the backend of Cozie can be accommodated by updating the settings in the 'Backend tab' of the Cozie app. However, if you want to send push notifications independent of us, you will need create a copy of the Cozie app and publish your own version. We will show how it can be done.
+Most changes in the backend of Cozie can be accommodated by updating the settings in the 'Advanced tab' of the Cozie app. However, if you want to send push notifications independent of us, you will need create a copy of the Cozie app and publish your own version. We will show how it can be done.
 
 ## Overview
 The Cozie backend is created using Amazon Web Services (AWS). We primarily use AWS Lambda functions for web interfaces and data processing and InfluxDB as database engine. All services are hosted in the AWS region South East Asia (Singapore) / ap-southeast-1.

@@ -62,11 +62,11 @@ module.exports = {
             },
             {
               label: "Own App",
-              to: "docs/customize_cozie_app/customize_cozie",
+              to: "docs/customize_cozie_app/design_decisions",
             },
             {
               label: "Own Backend",
-              to: "docs/customize_cozie_app/custom_backend/custom_backend",
+              to: "docs/customize_cozie_app/custom_backend/backend_design_decisions",
             },
           ],
         },

@@ -9,6 +9,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Troubleshooting
 
+This page covers general installation, sync, and data collection issues for the Cozie AppStore app. For backend, API, and database issues, see [Backend Troubleshooting](/docs/customize_cozie_app/custom_backend/backend_troubleshooting). For custom app, TestFlight, and custom survey issues, see [App Developer Troubleshooting](/docs/customize_cozie_app/app_developer_troubleshooting).
+
 ## Installation and setup
 
 * **I cannot install the Cozie app on the Apple Watch.**
@@ -35,34 +37,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   * Wait a few minutes and try again. We've noticed that when the app is installed freshly, it might take 2-3 minutes until syncing is possible.
   * Uninstall the Cozie app from the iPhone and the Apple Watch. Then, install the app again on both devices.
 
-* **When I press the sync button in the *Data* or *Backend* tab I get an "JSON error"**
-
-  - Make sure you have internet access.
-  - Make sure you have a good network connection. Flakey Wi-Fi can cause this error.
-  - Make sure the JSON file for the watch survey is reachable from Safari on the iPhone.
-  - Make sure the watch survey's JSON file is valid and has all fields required by the Cozie specification. There are online tools available to check the JSON validity, e.g., we use [JSON Formatter & Validator](https://jsonformatter.curiousconcept.com/#)
-  - Firewalls can cause this error.
-
-* **Push notifications from OneSignal don't show up on my device.**
-
-  - Ensure focus modes on the iPhone and Apple Watch are disabled during the installation of the Cozie app and testing of the push notifications.
-  - Check the correctness of the Player ID in the Cozie data tab.
-  - Check the correctness of the API key.
-  - Check the correctness of the information in the *Backend* tab and in your Python notebook.
-  - If you have created your own Cozie app:
-    - Check the correctness of the Player ID on [OneSignal.com](https://onesignal.com/).
-    - Make sure you created the .p12 certificate for the main identifier.
-    - Send a test push notification from the dashboard on [OneSignal.com](https://onesignal.com/).
-    - Check the "Subscriptions" under the user profile in the OneSignal dashboard. If it is marked with "Never Subscribed", do the following:
-      - Check if push notifications are enabled on the iPhone for Cozie.
-      - Force close and open the Cozie app.
-      - Restart the iPhone.
-      - Re-install the Cozie app.
-
-* **"Show App on Apple Watch" toggle is missing in TestFlight.**
-
-  - Reinstall TestFlight
-
 ## Missing data
 
 * **No data from the Cozie Watch app is logged (e.g., `ws_survey_count`, `ws_heart_rate`, `q_...`)**
@@ -83,12 +57,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     - Dust, sweat, water, oils on the heart rate sensor.
     - Tattoos and/or dark skin where the watch is worn.
     - Body lotion on the wrist.
-
-* **I added a new data field to be stored in the InfluxDB. However, when I submit data, it is not stored**
-
-  The first time data with a new field name is saved in the database, the database sets the data type, e.g., if you were to implement the extraction of stride length information, you could save it as `ts_stride_length`. If you submit the value `1.04`, the value will be stored as a floating-point number (float). The stride length might vary. If you happen to submit the value `1`, the database will attempt to store it as an integer. It would then see that there is already a floating point number stored under `ts_stride_length` and reject the new value of `ts_stride_length`, which is then lost. 
-
-  To avoid this issue, we force-cast the type for each field name in the backend. Let us know what type and field name you would like to add to Cozie, we can help you with this issue.
 
 * **Sleep data is missing.**
 

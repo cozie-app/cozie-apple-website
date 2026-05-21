@@ -9,18 +9,7 @@ module.exports = {
       },
       items: ["overview/installation", "overview/setup"],
     },
-    {
-      type: "category",
-      label: "Data and Download",
-      link: {
-        type: "doc",
-        id: "download_data/data_download_online",
-      },
-      items: [
-        "download_data/data_download_offline",
-        "download_data/data_overview",
-      ],
-    },
+    "customize_cozie_app/customize_cozie",
     {
       type: "category",
       label: "Surveys",
@@ -50,28 +39,42 @@ module.exports = {
         },
       ],
     },
+    {
+      type: "category",
+      label: "Data and Download",
+      link: {
+        type: "doc",
+        id: "download_data/data_download_online",
+      },
+      items: [
+        "download_data/data_download_offline",
+        "download_data/data_overview",
+        "cozie_python_package/coziepy",
+      ],
+    },
     "push_notifications/push_notifications",
     {
       type: "category",
-      label: "Field Deployment",
+      label: "Deployment Guide",
       link: {
         type: "doc",
         id: "deployment/deployment",
       },
       items: ["deployment/qr_code"],
     },
-    "cozie_python_package/coziepy",
     "troubleshooting",
-    "glossary",
     "faq",
+    "glossary",
     "privacyPolicy",
     "support",
   ],
 
   ownAppSidebar: [
-    "customize_cozie_app/customize_cozie",
     "customize_cozie_app/design_decisions",
     "customize_cozie_app/modify_source_code/introduction",
+    "customize_cozie_app/app_developer_faq",
+    "customize_cozie_app/app_developer_troubleshooting",
+    "customize_cozie_app/app_developer_support",
   ],
 
   ownBackendSidebar: [
@@ -90,5 +93,8 @@ module.exports = {
         "customize_cozie_app/custom_backend/backend_push_notifications",
       ],
     },
+    "customize_cozie_app/custom_backend/backend_faq",
+    "customize_cozie_app/custom_backend/backend_troubleshooting",
+    "customize_cozie_app/custom_backend/backend_support",
   ],
 };
