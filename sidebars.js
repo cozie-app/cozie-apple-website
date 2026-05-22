@@ -52,7 +52,15 @@ module.exports = {
         "cozie_python_package/coziepy",
       ],
     },
-    "push_notifications/push_notifications",
+    {
+      type: "category",
+      label: "Push Notifications",
+      link: {
+        type: "doc",
+        id: "push_notifications/push_notifications",
+      },
+      items: ["push_notifications/direct_onesignal_api_push"],
+    },
     {
       type: "category",
       label: "Deployment Guide",

@@ -26,6 +26,15 @@ This page covers backend, API, and database issues. For general installation, sy
       - Restart the iPhone.
       - Re-install the Cozie app.
 
+* **OneSignal shows "Prompted But Never Answered" for a participant.**
+
+  In rare cases, when the Cozie iPhone app is launched for the first time, multiple iOS permission pop-ups may appear close together. The notification permission prompt may not be clearly answered, and OneSignal may show the subscription status as "Prompted But Never Answered".
+
+  - Check `Settings > Notifications > Cozie` on the iPhone and allow notifications if they are disabled.
+  - Force close and reopen the Cozie app.
+  - Send a test push notification from the OneSignal dashboard or from your Cloud Scheduler job.
+  - If the device still does not receive notifications, reinstall the Cozie app and complete the permission prompts again.
+
 ## Missing data
 
 * **I added a new data field to be stored in the InfluxDB. However, when I submit data, it is not stored**
