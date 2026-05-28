@@ -14,10 +14,10 @@ Please note that you will have to specify your `ID_PARTICIPANT`, `ID_EXPERIMENT`
 You can request an `API_KEY` by emailing us a request at [cozie.app@gmail.com](mailto:cozie.app@gmail.com?subject=Cozie%20Apple%20API%20key%20request%20for%20push%20notifications).
 
 `ID_PARTICIPANT` and `ID_EXPERIMENT` can be found in the 'Settings' tab of the Cozie iPhone app.
-`ID_PASSWORD` can be found in the 'Backend' tab of the Cozie iPhone app.
+`ID_PASSWORD` can be found in the 'Advanced' tab of the Cozie iPhone app.
 
 <img alt="Screenshot of Cozie Settings tab" src={useBaseUrl('img/cozie_settings_tab_ids.png')}width="30%" /> &nbsp;
-<img alt="Screenshot of Cozie Backend tab" src={useBaseUrl('img/cozie_backend_tab_id_participant.png')}width="30%" /> &nbsp;
+<img alt="Screenshot of Cozie Advanced tab" src={useBaseUrl('img/cozie_backend_tab_id_participant.png')}width="30%" /> &nbsp;
 
 
 

@@ -13,6 +13,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 We use OneSignal as a push notification service provider. We offer an API to send push notifications to Cozie. 
 If you want to send push notifications to Cozie independent of us, you will need to copy the Cozie source code and publish your own version of the Cozie app, while doing so you need to setup your own OneSignal account and replace the OneSignal credentials in the Cozie source code.
 
+For custom app builds that call OneSignal directly without the Cozie hosted API or an AWS backend, see [Direct OneSignal API Push](/docs/push_notifications/direct_onesignal_api_push).
+
 ## Lambda function code
 - [cozie-apple-v3-researcher-push-notification](https://github.com/cozie-app/cozie-apple-backend/tree/main/lambda_cozie-apple-v3-researcher-push-notification)
 
@@ -40,4 +42,3 @@ If you want to send push notifications to Cozie independent of us, you will need
 | **Layers** | | |
 | AWSSDKPandas-Python311 |  | AWS Layer for Pandas, Numpy, requests |
 | Influx |  | Custom layer for InfluxDB client |
-

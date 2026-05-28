@@ -26,7 +26,7 @@ The response body of the read API looks as follows:
 ```
 
 ## Changes in the Cozie app
-In order to have Cozie app read the data from your own backend, you need to update `API Read URL` and the `API Read Key` in the 'Backend' tab of the Cozie app.
+In order to have Cozie app read the data from your own backend, you need to update `API Read URL` and the `API Read Key` in the 'Advanced' tab of the Cozie app.
 
 ### Lambda function code
 - [cozie-apple-v3-app-read-influx-cozie](https://github.com/cozie-app/cozie-apple-backend/tree/main/lambda_cozie-apple-v3-app-read-influx-cozie)

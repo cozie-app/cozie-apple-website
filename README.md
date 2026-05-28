@@ -22,8 +22,8 @@ This repository contains the code for the [Cozie Apple](https://cozie.app/) proj
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) (version 16.x or later recommended)
-- [Yarn](https://yarnpkg.com/) (preferred over npm)
+- [Node.js](https://nodejs.org/) (version 20.x or later)
+- [Yarn Classic](https://yarnpkg.com/) 1.22.22
 
 Check your Node.js and Yarn versions:
 
@@ -60,7 +60,7 @@ yarn start
 
 ## Deployment
 
-Deployment is automated via GitHub Actions on every push to the `main` branch.
+Deployment is automated via GitHub Actions on every push to the `master` branch.
 
 To deploy manually (or from a different branch):
 
