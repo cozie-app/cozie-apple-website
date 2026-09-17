@@ -22,6 +22,9 @@ You can request an `API_KEY` by emailing us a request at [cozie.app@gmail.com](m
 
 
 ```python
+import requests
+import json
+
 # Credentials
 ID_PARTICIPANT = 'ExternalUser'
 ID_EXPERIMENT = 'AppleStore'
@@ -63,6 +66,10 @@ Buttons in the push notifications below the push notification message are called
 
 
 ```python
+import requests
+import json
+
+# Credentials
 ID_PARTICIPANT = 'ExternalUser'
 ID_EXPERIMENT = 'AppleStore'
 ID_PASSWORD = 'XXX'
