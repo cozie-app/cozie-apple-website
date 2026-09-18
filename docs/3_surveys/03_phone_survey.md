@@ -13,7 +13,7 @@ longer questions and provide a wider range of response options.
 We have used phone surveys for *End of Week Surveys* and *End of Day Surveys*.
 
 In Cozie, it is possible to create a custom phone survey. A link to any web 
-survey can be entered in the *Backend* tab. Once, the URL is provided, the
+survey can be entered in the *Advanced* tab. Once, the URL is provided, the
 phone survey can be opened by pressing the *Phone Survey* button at the bottom
 of the *Data* tab.
 
@@ -104,7 +104,7 @@ You can now add the participant ID and experiment ID as URL parameters to the UR
 
 
 ## How to load the phone survey into the Cozie app
-1. Open the Cozie app and go to the *Backend* tab.
+1. Open the Cozie app and go to the *Advanced* tab.
 2. Add the URL to the phone survey in the input field labelled *Phone Survey Link*.
 <img alt="Screenshot backend phone survey configuration" src={useBaseUrl('img/backend_phone_survey.png')}width="30%" />  &nbsp;
 

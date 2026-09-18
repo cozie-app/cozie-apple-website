@@ -15,9 +15,21 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/",
-          activeBasePath: "docs",
-          label: "Documentation",
+          type: "docSidebar",
+          sidebarId: "cozieSidebar",
+          label: "Cozie AppStore",
+          position: "left",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "ownAppSidebar",
+          label: "Own App",
+          position: "left",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "ownBackendSidebar",
+          label: "Own Backend",
           position: "left",
         },
         { to: "blog", label: "Updates", position: "left" },
@@ -45,8 +57,16 @@ module.exports = {
           title: "Documentation",
           items: [
             {
-              label: "Introduction", 
+              label: "Cozie AppStore",
               to: "docs/",
+            },
+            {
+              label: "Own App",
+              to: "docs/customize_cozie_app/design_decisions",
+            },
+            {
+              label: "Own Backend",
+              to: "docs/customize_cozie_app/custom_backend/backend_design_decisions",
             },
           ],
         },

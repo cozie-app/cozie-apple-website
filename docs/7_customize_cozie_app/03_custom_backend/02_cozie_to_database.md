@@ -12,7 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <img alt="Data flow from Cozie app to database" src={useBaseUrl('img/backend/backend_write_influx_with_SQS.jpg')}width="30%" />
 
 ## Overview
-The Cozie app calls the AWS API Gateway using the API Gateway Key. The `API Write URL` and `API Write Key` are provided in the 'Backend' tab of the Cozie app. The API Gateway checks the API key and then forwards the request to the Lambda function 'cozie-apple-v3-app-write-queue'. This Lambda function splits the payload into chunks of 100 rows each and inserts it into the SQS queue 'cozie-apple-app-write-influx-queue'.
+The Cozie app calls the AWS API Gateway using the API Gateway Key. The `API Write URL` and `API Write Key` are provided in the 'Advanced' tab of the Cozie app. The API Gateway checks the API key and then forwards the request to the Lambda function 'cozie-apple-v3-app-write-queue'. This Lambda function splits the payload into chunks of 100 rows each and inserts it into the SQS queue 'cozie-apple-app-write-influx-queue'.
 
 The SQS queue, then triggers the Lambda function 'cozie-apple-v3-app-write-influx-queue' which then processes the payload and inserts it into InfluxDB. The processing includes:
  - checking the datatype of field values
@@ -21,7 +21,7 @@ The SQS queue, then triggers the Lambda function 'cozie-apple-v3-app-write-influ
 
 
 ## Changes in the Cozie app
-In order to have Cozie app send the data to your own backend, you need to update `API Write URL` and the `API Write Key` in the 'Backend' tab of the Cozie app.
+In order to have Cozie app send the data to your own backend, you need to update `API Write URL` and the `API Write Key` in the 'Advanced' tab of the Cozie app.
 
 ## Payload data structure
 The Cozie app sends data to the backend in the same payload format for all types of data. The payload format is inspired by the InfluxDB Python client and how it can use dictionaries as input.

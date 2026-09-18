@@ -25,11 +25,11 @@ This short guide will explain how to set up and install Cozie on your iPhone and
     <img alt="Health data accept" src={useBaseUrl('img/installation_health_data_accept.png')}width="30%" />  &nbsp;
     <img alt="Health data accept" src={useBaseUrl('img/installation_location_data_accept.png')}width="30%" /> &nbsp;
 
-3. In the Cozie app, you will see three tabs: the **Data** tab, **Settings** tab, and **Backend** tab. 
+3. In the Cozie app, you will see three tabs: the **Data** tab, **Settings** tab, and **Advanced** tab. 
 
     <img alt="Data tab" src={useBaseUrl('img/cozie_tab_data.png')}width="30%" /> &nbsp;
     <img alt="Settings tab" src={useBaseUrl('img/cozie_tab_settings.png')}width="30%" /> &nbsp;
-    <img alt="Backend tab" src={useBaseUrl('img/cozie_tab_backend.png')}width="30%" /> &nbsp;
+    <img alt="Advanced tab" src={useBaseUrl('img/cozie_tab_backend.png')}width="30%" /> &nbsp;
 
 4. Go to the watch app on your iPhone. Ensure that the Cozie application is successfully installed on your Apple Watch. If it hasn't been installed, tab on `INSTALL`.
 

@@ -2,22 +2,30 @@
   "name": "my-website",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=20.0"
+  },
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "upgrade": "yarn upgrade && yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest",
+    "upgrade": "yarn upgrade",
+    "audit": "yarn audit --level moderate",
     "deploy-gh-pages": "cmd /C 'set \"GIT_USER=FedericoTartarini\" && yarn deploy'"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.8.1",
-    "@docusaurus/plugin-google-analytics": "^3.8.1",
-    "@docusaurus/preset-classic": "^3.8.1",
-    "@easyops-cn/docusaurus-search-local": "^0.52.1",
+    "@docusaurus/core": "^3.10.1",
+    "@docusaurus/plugin-google-analytics": "^3.10.1",
+    "@docusaurus/preset-classic": "^3.10.1",
+    "@easyops-cn/docusaurus-search-local": "^0.52.3",
     "clsx": "^1.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "resolutions": {
+    "serialize-javascript": "7.0.5"
   },
   "browserslist": {
     "production": [
@@ -30,8 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "docusaurus": "^1.14.7"
   }
 }

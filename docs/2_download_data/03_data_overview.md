@@ -29,7 +29,7 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `id_experiment` | String | Logged with any other data point | - | Unique identifier for each experiment | `id_experiment` | 
 | `id_onesignal` | String | Logged with any other data point | - |Unique OneSignal player id provided by OneSignal | `id_one_signal` |
 | `id_participant` | String | Logged with any other data point | - | Unique identifier for each participant | `id_participant` |
-| `id_password` | String | Logged with any other data point | - | 'Backend tab': Password for participant. It should be unique for each participant. It prevents data corruption by participants changing their `id_participant` or `id_experiment` | not available |
+| `id_password` | String | Logged with any other data point | - | 'Advanced tab': Password for participant. It should be unique for each participant. It prevents data corruption by participants changing their `id_participant` or `id_experiment` | not available |
 | `location_change` | Boolean | [***](#logging-rate) | - | Indicates location change of more than 50m | not available |
 | `pss_reminder_days` | String | Logged when any sync button in the Cozie iPhone app  | -| Days on which the phone survey reminder is shown. | not available |
 | `pss_reminder_enabled` | Boolean | Logged when any sync button in the Cozie iPhone app | - | Indicates whether the a phone survey reminder is enabled. (enabled: `True`) | not available |
@@ -128,12 +128,12 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 ## Settings and metadata
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
 |------------|------|-------------------|------------------|-------------|-----------------------|
-| `api_phone_survey_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the phone survey, e.g., Qualtrics, Google Form or similar| not available |
-| `api_read_key` | String  | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': Access key for the `api_read_url` | not available |
-| `api_read_url` | String  | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the database read API | not available |
-| `api_watch_survey_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the JSON file with a custom watch survey | not available |
-| `api_write_key` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': Access key for the `api_write_url` | not available |
-| `api_write_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Backend tab': URL pointing to the database write API | not available |
+| `api_phone_survey_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Advanced tab': URL pointing to the phone survey, e.g., Qualtrics, Google Form or similar| not available |
+| `api_read_key` | String  | Logged when any sync button in the Cozie iPhone app | - | 'Advanced tab': Access key for the `api_read_url` | not available |
+| `api_read_url` | String  | Logged when any sync button in the Cozie iPhone app | - | 'Advanced tab': URL pointing to the database read API | not available |
+| `api_watch_survey_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Advanced tab': URL pointing to the JSON file with a custom watch survey | not available |
+| `api_write_key` | String | Logged when any sync button in the Cozie iPhone app | - | 'Advanced tab': Access key for the `api_write_url` | not available |
+| `api_write_url` | String | Logged when any sync button in the Cozie iPhone app | - | 'Advanced tab': URL pointing to the database write API | not available |
 | `app_bundle_build_`<br/>`number` | String | Logged when any sync button in the Cozie iPhone app | - | Build number of iOS application | not available |
 | `app_bundle_build_`<br/>`version` | String | Logged when any sync button in the Cozie iPhone app | - | Build version of iOS application | not available |
 | `app_bundle_name` | String | Logged when any sync button in the Cozie iPhone app | - | iOS application name | not available |
