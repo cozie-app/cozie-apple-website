@@ -15,25 +15,25 @@
             <pubDate>Fri, 20 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[We are happy to announce that we have published version three of Cozie-Apple. We worked towards a cleaner, simpler code base in the app and the backend while also improving reliability. We have already started working with Cozie v3 and it is already deployed for research.]]></description>
             <content:encoded><![CDATA[<p>We are happy to announce that we have published version three of Cozie-Apple. We worked towards a cleaner, simpler code base in the app and the backend while also improving reliability. We have already started working with Cozie v3 and it is already deployed for research.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="new-features-in-cozie-v3">New features in Cozie v3<a href="https://cozie-apple.app/blog/update_cozie_v3#new-features-in-cozie-v3" class="hash-link" aria-label="Direct link to New features in Cozie v3" title="Direct link to New features in Cozie v3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-features-in-cozie-v3">New features in Cozie v3<a href="https://cozie-apple.app/blog/update_cozie_v3#new-features-in-cozie-v3" class="hash-link" aria-label="Direct link to New features in Cozie v3" title="Direct link to New features in Cozie v3" translate="no">​</a></h2>
 <ul>
-<li>New HealthKit <a href="https://cozie-apple.app/docs/download_data/data_overview">data points</a>
+<li class="">New HealthKit <a class="" href="https://cozie-apple.app/docs/download_data/data_overview">data points</a>
 <ul>
-<li>Heart rate variability (HRV)</li>
-<li>Wrist temperature</li>
-<li>Sleep analysis</li>
+<li class="">Heart rate variability (HRV)</li>
+<li class="">Wrist temperature</li>
+<li class="">Sleep analysis</li>
 </ul>
 </li>
-<li><a href="https://cozie-apple.app/docs/download_data/data_download_offline">Offline data logging (in-app file download)</a></li>
-<li><a href="https://cozie-apple.app/docs/customize_cozie_app/customize_cozie">Customizable backend configuration in the app</a></li>
-<li><a href="https://cozie-apple.app/docs/surveys/custom_watch_survey">Customizable watch surveys using JSON files</a></li>
-<li><a href="https://cozie-apple.app/docs/surveys/custom_watch_survey">Customizable phone survey using browser-based surveys (e.g., Qualtrics, Google Forms, etc.)</a></li>
+<li class=""><a class="" href="https://cozie-apple.app/docs/download_data/data_download_offline">Offline data logging (in-app file download)</a></li>
+<li class=""><a class="" href="https://cozie-apple.app/docs/customize_cozie_app/customize_cozie">Customizable backend configuration in the app</a></li>
+<li class=""><a class="" href="https://cozie-apple.app/docs/surveys/custom_watch_survey">Customizable watch surveys using JSON files</a></li>
+<li class=""><a class="" href="https://cozie-apple.app/docs/surveys/custom_watch_survey">Customizable phone survey using browser-based surveys (e.g., Qualtrics, Google Forms, etc.)</a></li>
 </ul>
 <p>We have added more content to the website:</p>
 <ul>
-<li><a href="https://cozie-apple.app/docs/deployment/deployment">Deployment guide</a></li>
-<li><a href="https://cozie-apple.app/docs/faq">Frequently asked questions (FAQ)</a></li>
-<li><a href="https://cozie-apple.app/docs/troubleshooting">Troubleshooting guide</a></li>
+<li class=""><a class="" href="https://cozie-apple.app/docs/deployment/deployment">Deployment guide</a></li>
+<li class=""><a class="" href="https://cozie-apple.app/docs/faq">Frequently asked questions (FAQ)</a></li>
+<li class=""><a class="" href="https://cozie-apple.app/docs/troubleshooting">Troubleshooting guide</a></li>
 </ul>]]></content:encoded>
             <category>cozie-apple</category>
             <category>cozie</category>
@@ -46,16 +46,16 @@
             <guid>https://cozie-apple.app/blog/web_api_update</guid>
             <pubDate>Tue, 07 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[We have updated the web APi for Cozie data retrieval. The change became necessary as the requests from some users exceeded the current payload limit of 6 MB.]]></description>
-            <content:encoded><![CDATA[<p>We have updated the web APi for <a href="https://cozie-apple.app/docs/download_data/data_download_offline">Cozie data retrieval</a>. The change became necessary as the requests from some users exceeded the current payload limit of 6 MB.
-<a href="https://cozie-apple.app/docs/download_data/data_download_offline">The example script</a> was changed in to places:</p>
+            <content:encoded><![CDATA[<p>We have updated the web APi for <a class="" href="https://cozie-apple.app/docs/download_data/data_download_offline">Cozie data retrieval</a>. The change became necessary as the requests from some users exceeded the current payload limit of 6 MB.
+<a class="" href="https://cozie-apple.app/docs/download_data/data_download_offline">The example script</a> was changed in to places:</p>
 <ol>
-<li>The 'shutil' module needs to be imported at the beginning</li>
+<li class="">The 'shutil' module needs to be imported at the beginning</li>
 </ol>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">import shutil</span><br></span></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token plain">import shutil</span><br></div></code></pre></div></div>
 <ol start="2">
-<li>The new web API doesn't serve the data as JSON string. Instead, it is a two-step process. Firstly, a link is provided to a zipped .csv-file containing the data. Hence, the provided link needs to be called to then download the actual data.</li>
+<li class="">The new web API doesn't serve the data as JSON string. Instead, it is a two-step process. Firstly, a link is provided to a zipped .csv-file containing the data. Hence, the provided link needs to be called to then download the actual data.</li>
 </ol>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain"># Download zipped CSV file with Cozie data</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">with requests.get(url, stream=True) as r:</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">    with open('cozie.zip', 'wb') as f:</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">        shutil.copyfileobj(r.raw, f)</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"># Convert zipped CSV file with Cozie to dataframe</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">with open('cozie.zip', 'rb') as f:</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">      df = pd.read_csv(f, compression={'method': 'zip', 'archive_name': 'sample.csv'})</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">df = df.drop(columns=['Unnamed: 0'])</span><br></span></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token plain"># Download zipped CSV file with Cozie data</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">with requests.get(url, stream=True) as r:</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    with open('cozie.zip', 'wb') as f:</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        shutil.copyfileobj(r.raw, f)</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"># Convert zipped CSV file with Cozie to dataframe</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">with open('cozie.zip', 'rb') as f:</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      df = pd.read_csv(f, compression={'method': 'zip', 'archive_name': 'sample.csv'})</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">df = df.drop(columns=['Unnamed: 0'])</span><br></div></code></pre></div></div>
 <p>The initial call of the web API and the timezone manipulation of the dataframe remains the same, as does the resulting Pandas dataframe.</p>]]></content:encoded>
             <category>cozie-apple</category>
             <category>cozie</category>
@@ -68,9 +68,9 @@
             <guid>https://cozie-apple.app/blog/appStore</guid>
             <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Cozie is now available on the official Apple App Store. Thank you to all of you who help us test during the development]]></description>
-            <content:encoded><![CDATA[<p>Cozie is now available on the official <a href="https://apps.apple.com/sg/app/cozie/id1625029501" target="_blank" rel="noopener noreferrer">Apple App Store</a>. Thank you to all of you who help us test during the development</p>
+            <content:encoded><![CDATA[<p>Cozie is now available on the official <a href="https://apps.apple.com/sg/app/cozie/id1625029501" target="_blank" rel="noopener noreferrer" class="">Apple App Store</a>. Thank you to all of you who help us test during the development</p>
 <p>Until now, Cozie for Apple has been deployed four times in research experiments with up to 50 participants and counting.</p>
-<p>We have updated the documentation for <a href="https://cozie-apple.app/docs/installation">installation</a>, <a href="https://cozie-apple.app/docs/setup">setup</a>, and <a href="https://cozie-apple.app/docs/download_data/data_download_offline">data retrieval</a>. We are still working on updating the documentation for customization of Cozie.</p>]]></content:encoded>
+<p>We have updated the documentation for <a class="" href="https://cozie-apple.app/docs/installation">installation</a>, <a class="" href="https://cozie-apple.app/docs/setup">setup</a>, and <a class="" href="https://cozie-apple.app/docs/download_data/data_download_offline">data retrieval</a>. We are still working on updating the documentation for customization of Cozie.</p>]]></content:encoded>
             <category>cozie-apple</category>
             <category>cozie</category>
             <category>app store</category>
@@ -84,7 +84,7 @@
             <content:encoded><![CDATA[<p>Apologies on the lack of updates for some time. The latest version of Cozie is now available for testing!</p>
 <p>Thank to all of you who help us testing the Alpha and Beta version.</p>
 <p>Please use the link in the home page and click on the 'contact us' button if you are interested and would like to learn more on this project.
-You can also proceed to <a href="https://cozie-apple.app/docs/installation">Installation</a> and follow the steps to install the latest version.</p>]]></content:encoded>
+You can also proceed to <a class="" href="https://cozie-apple.app/docs/installation">Installation</a> and follow the steps to install the latest version.</p>]]></content:encoded>
             <category>cozie-apple</category>
             <category>cozie</category>
         </item>
@@ -112,14 +112,14 @@ You can also proceed to <a href="https://cozie-apple.app/docs/installation">Inst
 Apple and I am planning to release it by the end of 2020.</p>
 <p>Please contact me if you are interested and would like to learn more or to contribute to the project.</p>
 <p>Cozie Apple is iOS app for human comfort data collection.</p>
-<p>Cozie Apple complements the <a href="https://cozie-fitbit.app/" target="_blank" rel="noopener noreferrer">Cozie clock face for Fitbit</a>. With Apple
+<p>Cozie Apple complements the <a href="https://cozie-fitbit.app/" target="_blank" rel="noopener noreferrer" class="">Cozie clock face for Fitbit</a>. With Apple
 dominating the global smartwatch market share we decided to develop Cozie Apple.</p>
 <p>Cozie Apple will include the following functionalities, such as:</p>
 <ul>
-<li>The consent procedure will be embedded in the app, using Apple Research Kit.</li>
-<li>Push notifications.</li>
-<li>Integration with all the Apple watch sensors.</li>
-<li>Integration with Apple Health Kit.</li>
+<li class="">The consent procedure will be embedded in the app, using Apple Research Kit.</li>
+<li class="">Push notifications.</li>
+<li class="">Integration with all the Apple watch sensors.</li>
+<li class="">Integration with Apple Health Kit.</li>
 </ul>]]></content:encoded>
             <category>cozie-apple</category>
             <category>cozie</category>
