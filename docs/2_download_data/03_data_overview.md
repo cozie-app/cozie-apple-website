@@ -21,7 +21,7 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | si_ | System information |
 | ts_ | Time series |
 | ws_ | Watch survey |
-| wss_ | watch survey settings |
+| wss_ | Watch survey settings |
 
 ## Settings and index
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
