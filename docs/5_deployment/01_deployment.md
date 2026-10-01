@@ -190,6 +190,9 @@ Monitoring of the data quality is one of the most crucial aspects during a Cozie
 
 The list is not exhaustive. Make sure you know what data quality aspects matter for your research and critically analyze the data from the test run.
 
+:::warning
+Cozie (App Store version) currently cannot distinguish between data from different devices. Cozie reads health data such as heart rate and sleep from Apple HealthKit, which merges the data of all devices connected to the Health app. If a participant wears another wearable in addition to the Apple Watch (e.g., an Oura ring, a Whoop band, or a Garmin watch, etc.), the data of both devices is mixed in the Cozie data without any indication of its source. Ask participants not to wear other wearables during the experiment, or to stop them from syncing to the Health app.
+:::
 
 ## Conclusion
 The deployment of Cozie is a labor-intensive endeavor. For good results and a good experience ensure the following:
