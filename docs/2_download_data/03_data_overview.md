@@ -41,7 +41,7 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 ## Data logged on the iPhone
 | Field name | Type | Logging&nbsp;rate | Sampling interval| Description | Field name in Cozie v2|
 |------------|------|-------------------|------------------|-------------|-----------------------|
-| `ts_HRV` | Integer | [*](#logging-rate) | 4h | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn). The sampling interval can vary between 15min, 2h, and 4h. | not available |
+| `ts_HRV` | Integer | [*](#logging-rate) | 4h | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn). The sampling interval can vary between 15min, 2h, and 4h (see [Increasing the HRV sampling rate](#increasing-the-hrv-sampling-rate)). | not available |
 | `ts_altitude` | Integer | [***](#logging-rate) | - | Altitude in m | not available |
 | `ts_audio_exposure_`<br/>`environment` | Integer | [*](#logging-rate) | 30min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | `ts_hearingEnvironmental`<br/>`Exposure`, `sound_pressure` | 
 | `ts_audio_exposure_`<br/>`headphones` | Float? | [*](#logging-rate) | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
@@ -93,7 +93,7 @@ Some tables have a column referring to the older Cozie v2. That column contains 
 | `ws_heart_rate`| Float? | [**](#logging-rate) | 3-6min (sometimes less) |Heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615138-heartrate), submitted when iPhone Cozie app is opened. | not available |
 | `ws_audio_exposure_`<br/>`environment` | Float? | [**](#logging-rate) | 15min | Noise level in dB(A), provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081271-environmentalaudioexposure) | not available |
 | `ws_audio_exposure_`<br/>`headphones` | Float? | [**](#logging-rate) | 30s? | Audio exposure in dB(A) from headphones, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/3081272-headphoneaudioexposure) | not available |
-| `ws_HRV` | Float? | [**](#logging-rate) | 4h | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn). The sampling interval can vary between 15min, 2h, and 4h. | not available |
+| `ws_HRV` | Float? | [**](#logging-rate) | 4h | Heart Rate Variability in ms, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2881127-heartratevariabilitysdnn). The sampling interval can vary between 15min, 2h, and 4h (see [Increasing the HRV sampling rate](#increasing-the-hrv-sampling-rate)). | not available |
 | `ws_oxygen_saturation` | Integer | [**](#logging-rate) | 1h | Blood oxygen saturation in % provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/1615377-oxygensaturation) | not available |
 | `ws_resting_heart_rate` | Float? | [**](#logging-rate) | 1d | Resting heart rate in bpm, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier/2867756-restingheartrate) | not available |
 | `ws_sleep_REM` | Float? | [**](#logging-rate) | - | Duration of REM sleep in min, provided by [Apple HealthKit](https://developer.apple.com/documentation/healthkit/hkcategoryvaluesleepanalysis) | not available |
@@ -191,6 +191,12 @@ There are three modes of logging:
  - When the iPhone app is open / interacted with (*)
  - When a watch survey is submitted (**)
  - On location change (***)
+
+## Increasing the HRV sampling rate
+Heart rate variability (`ts_HRV`, `ws_HRV`) is sampled by the Apple Watch only a few times per day. 
+However, two settings and actions on the participant's devices lead to more HRV samples:
+
+ - **AFib History:** With the *AFib History* feature enabled (iPhone: Health app → Browse → Heart → AFib History), the Apple Watch records HRV considerably more often than without it ([Apple Developer Forums](https://developer.apple.com/forums/thread/756622), [Reddit](https://www.reddit.com/r/bevelhealth/comments/1s2tbd5/a_trick_to_get_more_hrv_sampling_with_apple_watch/)).
 
 ## Lambda timestamp and trigger
 For some of the field names, there are two more accompanying fields for the timestamp of when the data was inserted into the database and what triggered the logging action. The field `lambda_timestamp` serves the same purpose. However, this field value might be overwritten in instances where values with identical `id_participant`, `id_experiment`, and `timestamp` are logged. The table below shows an example for `ts_HRV`. The columns `ts_HRV_lambda` and `ts_HRV_trigger` are used for debugging and development purposes. Unless you are investigating data anomalies or are working on app development, you can ignore these fields.
